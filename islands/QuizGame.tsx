@@ -119,7 +119,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
       {/* Dropdown filter bab */}
       <div class="mb-4">
-        {/* <label class="mr-2 font-semibold"></label> */}
+        <label class="mr-2 font-semibold"></label>
         <select
           value={selectedBab}
           onChange={handleBabChange}
@@ -145,7 +145,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
         {/* Feedback */}
         {feedback && (
-          <p class={`mt-2 font-semibold ${feedback.startsWith("Benar") ? "text-green-400" : "text-red-400"}`}>
+          <p class={`mt-2 font-semibold ${feedback.startsWith("正解") ? "text-green-400" : "text-red-400"}`}>
             {feedback}
           </p>
         )}
