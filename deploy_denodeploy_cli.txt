@@ -1,0 +1,26 @@
+# Deployment Fresh ke Deno Deploy via CLI (deployctl)
+
+## 1. Pastikan Deno sudah terinstall
+Cek versi Deno dengan:
+    deno --version
+
+Jika sudah muncul versi, lanjut.
+
+## 2. Install deployctl
+    deno install -gArf jsr:@deno/deployctl
+
+## 3. Deploy project Fresh
+Jalankan perintah dari root project:
+    deployctl deploy --project=nama-proyek --entrypoint=main.ts --prod
+
+Keterangan:
+- --project: nama proyek di Deno Deploy (akan dibuat jika belum ada)
+- --entrypoint: file utama project (untuk Fresh: main.ts)
+
+## 4. Update deployment ke produksi
+Jika sudah pernah deploy dan ingin update langsung ke production:
+    deployctl deploy --prod
+
+## 5. Cek hasil deploy
+Setelah selesai, project dapat diakses di:
+    https://<nama-proyek>.deno.dev
