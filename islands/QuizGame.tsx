@@ -158,7 +158,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
 
       {/* Filter bab + mode switch */}
-      <div class="flex gap-2 mb-4">
+      <div class="flex flex-col sm:flex-row gap-2 w-full my-4">
         <select
           value={selectedBab}
           onChange={handleBabChange}
@@ -174,6 +174,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           ))}
         </select>
 
+        
         <select
           value={quizMode}
           onChange={handleModeChange}
