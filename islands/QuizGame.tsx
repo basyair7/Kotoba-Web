@@ -25,7 +25,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [babList, setBabList] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<string>("");
   const [answered, setAnswered] = useState(false);
-  const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("jpToId");
+  const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("idToJp");
 
   useEffect(() => {
     fetchWords();
