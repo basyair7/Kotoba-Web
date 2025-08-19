@@ -3,10 +3,10 @@ import { useEffect, useState } from "preact/hooks";
 import dbModels from "../models/dbModels.ts";
 
 interface Word {
-  id: string;
-  kanji: string;
-  furigana: string;
-  bab: string;
+  id: string;       // arti bahasa Indonesia
+  kanji: string;    // kanji/kotoba
+  furigana: string; // furigana
+  bab: string;      // bab
 }
 
 interface QuizGameProps {
@@ -22,8 +22,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [loading, setLoading] = useState(true);
   const [selectedBab, setSelectedBab] = useState<string>("all");
   const [babList, setBabList] = useState<string[]>([]);
-  const [feedback, setFeedback] = useState<string>(""); // teks feedback
-  const [answered, setAnswered] = useState(false); // mencegah klik ganda
+  const [feedback, setFeedback] = useState<string>("");
+  const [answered, setAnswered] = useState(false);
+  const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("jpToId");
 
   useEffect(() => {
     fetchWords();
@@ -46,24 +47,42 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       });
     });
 
-    parsed.sort(() => Math.random() - 0.5);
-    setAllWords(parsed);
+    const shuffled = parsed.sort(() => Math.random() - 0.5);
+    setAllWords(shuffled);
     setBabList(Array.from(babs));
+    setWords(shuffled);
     setLoading(false);
-    setWords(parsed);
-    generateOptions(parsed, 0);
+    generateOptions(shuffled, 0);
+  }
+
+  function resetQuiz(baseList: Word[]) {
+    const shuffled = [...baseList].sort(() => Math.random() - 0.5);
+    setWords(shuffled);
+    setCurrentIndex(0);
+    generateOptions(shuffled, 0);
+    setScore(0);
+    setFeedback("");
+    setAnswered(false);
   }
 
   function handleBabChange(e: Event) {
     const bab = (e.target as HTMLSelectElement).value;
     setSelectedBab(bab);
-    const filtered = bab === "all" ? allWords : allWords.filter(w => w.bab === bab);
-    setWords(filtered);
-    setCurrentIndex(0);
-    generateOptions(filtered, 0);
-    setScore(0);
-    setFeedback("");
-    setAnswered(false);
+    const filtered =
+      bab === "all" ? allWords : allWords.filter((w) => w.bab === bab);
+    resetQuiz(filtered);
+  }
+
+  function handleModeChange(e: Event) {
+    const mode = (e.target as HTMLSelectElement).value as "jpToId" | "idToJp";
+    setQuizMode(mode);
+
+    // filter sesuai bab yg aktif, lalu reset & acak ulang
+    const filtered =
+      selectedBab === "all"
+        ? allWords
+        : allWords.filter((w) => w.bab === selectedBab);
+    resetQuiz(filtered);
   }
 
   function generateOptions(wordList: Word[], index: number) {
@@ -78,19 +97,31 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
 
   function handleAnswer(selected: Word) {
-    if (answered) return; // mencegah klik ganda
+    if (answered) return;
     setAnswered(true);
 
     const correctWord = words[currentIndex];
+    let isCorrect = false;
 
-    if (selected.id === correctWord.id) {
-      setScore(prev => prev + 1);
-      setFeedback("正解! 🎉");
+    if (quizMode === "jpToId") {
+      isCorrect = selected.id === correctWord.id;
     } else {
-      setFeedback(`不正解！ 正しい答え: ${correctWord.id}`);
+      isCorrect = selected.kanji === correctWord.kanji;
     }
 
-    // pindah ke soal berikutnya setelah 1,5 detik
+    if (isCorrect) {
+      setScore((prev) => prev + 1);
+      setFeedback("正解! 🎉");
+    } else {
+      setFeedback(
+        quizMode === "jpToId"
+          ? `不正解！ 正しい答え: ${correctWord.id}`
+          : `不正解！ 正しい答え: ${correctWord.kanji}${
+              correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
+            }`
+      );
+    }
+
     setTimeout(() => {
       const nextIndex = currentIndex + 1;
       if (nextIndex < words.length) {
@@ -99,7 +130,11 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         setFeedback("");
         setAnswered(false);
       } else {
-        alert(`ゲーム終了！ 最終スコア: ${selected.id === correctWord.id ? score + 1 : score}/${words.length}`);
+        alert(
+          `ゲーム終了！ 最終スコア: ${
+            isCorrect ? score + 1 : score
+          }/${words.length}`
+        );
       }
     }, 1500);
   }
@@ -111,55 +146,89 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
   const bgColor = theme === "dark" ? "bg-gray-800" : "bg-white";
   const textColor = theme === "dark" ? "text-white" : "text-black";
-  const buttonBg = theme === "dark" ? "bg-blue-700 hover:bg-blue-600" : "bg-blue-500 hover:bg-blue-600";
+  const buttonBg =
+    theme === "dark"
+      ? "bg-blue-700 hover:bg-blue-600"
+      : "bg-blue-500 hover:bg-blue-600";
 
   return (
-    <div class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}>
+    <div
+      class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
+    >
       <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
 
-      {/* Dropdown filter bab */}
-      <div class="mb-4">
-        <label class="mr-2 font-semibold"></label>
+      {/* Filter bab + mode switch */}
+      <div class="flex gap-2 mb-4">
         <select
           value={selectedBab}
           onChange={handleBabChange}
-          class={`p-2 border rounded ${theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""}`}
+          class={`p-2 border rounded ${
+            theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""
+          }`}
         >
           <option value="all">全部</option>
-          {babList.map(b => (
-            <option value={b} key={b}>{b}</option>
+          {babList.map((b) => (
+            <option value={b} key={b}>
+              {b}
+            </option>
           ))}
+        </select>
+
+        <select
+          value={quizMode}
+          onChange={handleModeChange}
+          class={`p-2 border rounded ${
+            theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""
+          }`}
+        >
+          <option value="jpToId">日本語 → インドネシア語</option>
+          <option value="idToJp">インドネシア語 → 日本語</option>
         </select>
       </div>
 
-      <p class="mb-2">問題 {currentIndex + 1} / 全{words.length}問</p>
+      <p class="mb-2">
+        問題 {currentIndex + 1} / 全{words.length}問
+      </p>
       <p class="mb-4 font-semibold">Score: {score}</p>
 
+      {/* Pertanyaan */}
       <div class="mb-4">
-        <p class="text-lg">
-          {" "}
-          <span class="font-bold">
-            {currentWord.kanji} {currentWord.furigana == "" ? "" : "「"+ currentWord.furigana + "」"}
-          </span>
+        <p class="text-lg font-bold">
+          {quizMode === "jpToId"
+            ? `${currentWord.kanji} ${
+                currentWord.furigana
+                  ? "「" + currentWord.furigana + "」"
+                  : ""
+              }`
+            : currentWord.id}
         </p>
 
         {/* Feedback */}
         {feedback && (
-          <p class={`mt-2 font-semibold ${feedback.startsWith("正解") ? "text-green-400" : "text-red-400"}`}>
+          <p
+            class={`mt-2 font-semibold ${
+              feedback.startsWith("正解") ? "text-green-400" : "text-red-400"
+            }`}
+          >
             {feedback}
           </p>
         )}
       </div>
 
+      {/* Pilihan jawaban */}
       <div class="grid grid-cols-1 gap-4">
         {options.map((option, index) => (
           <button
             key={`${option.id}-${index}`}
             onClick={() => handleAnswer(option)}
             class={`p-4 rounded-lg ${buttonBg} text-white`}
-            disabled={answered} // tombol disabled jika sudah dijawab
+            disabled={answered}
           >
-            {option.id || "(kosong)"}
+            {quizMode === "jpToId"
+              ? option.id || "(kosong)"
+              : `${option.kanji} ${
+                  option.furigana ? "「" + option.furigana + "」" : ""
+                }`}
           </button>
         ))}
       </div>
