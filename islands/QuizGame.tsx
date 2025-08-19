@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 // routes/QuizGame.tsx
 import { useEffect, useState } from "preact/hooks";
 import dbModels from "../models/dbModels.ts";
