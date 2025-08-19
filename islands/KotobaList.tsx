@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 import { useEffect, useState } from "preact/hooks";
 import WordCard from "../components/WordCard.tsx";
 import dbModels from "../models/dbModels.ts";
