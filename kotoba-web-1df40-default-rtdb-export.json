@@ -1,257 +1,221 @@
 {
-  "第１課": {
+  "第01課": {
     "001-watashi": {
       "furigana": "わたし",
       "id": "Saya",
       "kanji": "私",
       "romaji": "watashi"
     },
-
     "002-anata": {
       "furigana": "",
       "id": "Kamu",
       "kanji": "あなた",
       "romaji": "anata"
     },
-
     "003-anohito": {
       "furigana": "あのひと",
       "id": "Orang itu",
       "kanji": "あの人",
       "romaji": "ano hito"
     },
-
     "004-anokata": {
       "furigana": "あのかた",
       "id": "Orang itu (formal)",
       "kanji": "あの方",
       "romaji": "ano kata"
     },
-
     "005-san": {
       "furigana": "",
       "id": "Tuan/Nyonya/Saudara...",
       "kanji": "～さん",
       "romaji": "san"
     },
-
     "006-chan": {
       "furigana": "",
       "id": "Panggilan untuk anak perempuan/laki-laki",
       "kanji": "～ちゃん",
       "romaji": "chan"
     },
-
     "007-jin": {
       "furigana": "～じん",
       "id": "Orang...",
       "kanji": "～人",
       "romaji": "jin"
     },
-
     "008-sensei": {
       "furigana": "せんせい",
       "id": "Guru, Dosen",
       "kanji": "先生",
       "romaji": "sensei"
     },
-
     "009-kyoushi": {
       "furigana": "きょうし",
       "id": "Guru, Dosen (profesi)",
       "kanji": "教師",
       "romaji": "kyoushi"
     },
-
     "010-gakusei": {
       "furigana": "がくせい",
       "id": "Mahasiswa, Pelajar",
       "kanji": "学生",
       "romaji": "gakusei"
     },
-
     "011-kaishain": {
       "furigana": "かいしゃいん",
       "id": "Karyawan Perusahaan",
       "kanji": "会社員",
       "romaji": "kaishain"
     },
-
     "012-shain": {
       "furigana": "しゃいん",
       "id": "Karyawan (umum)",
       "kanji": "社員",
       "romaji": "shain"
     },
-
     "013-ginkouin": {
       "furigana": "ぎんこういん",
       "id": "Pegawai Bank",
       "kanji": "銀行員",
       "romaji": "ginkouin"
     },
-
     "014-isha": {
       "furigana": "いしゃ",
       "id": "Dokter",
       "kanji": "医者",
       "romaji": "isha"
     },
-
     "015-kenkyuusha": {
       "furigana": "けんきゅうしゃ",
       "id": "Peneliti",
       "kanji": "研究者",
       "romaji": "kenkyuusha"
     },
-
     "016-daigaku": {
       "furigana": "だいがく",
       "id": "Universitas",
       "kanji": "大学",
       "romaji": "daigaku"
     },
-
     "017-byouin": {
       "furigana": "びょういん",
       "id": "Rumah Sakit",
       "kanji": "病院",
       "romaji": "byouin"
     },
-
     "018-dare": {
       "furigana": "だれ",
       "id": "Siapa?",
       "kanji": "誰",
       "romaji": "dare"
     },
-
     "019-donata": {
       "furigana": "",
       "id": "Siapa? (formal)",
       "kanji": "どなた",
       "romaji": "donata"
     },
-
     "020-sai": {
       "furigana": "～さん",
       "id": "Usia...",
       "kanji": "歳",
       "romaji": "sai"
     },
-
     "021-nansai": {
       "furigana": "なんさい",
       "id": "Berapa usia?",
       "kanji": "何歳",
       "romaji": "nansai"
     },
-
     "022-oikutsu": {
       "furigana": "",
       "id": "Berapa usia? (formal)",
       "kanji": "おいくつ",
       "romaji": "oikutsu"
     },
-
     "023-hai": {
       "furigana": "",
       "id": "Ya",
       "kanji": "はい",
       "romaji": "hai"
     },
-
     "024-iie": {
       "furigana": "",
       "id": "Tidak",
       "kanji": "いいえ",
       "romaji": "iie"
     },
-
     "025-hajime mashite": {
       "furigana": "はじめまして",
       "id": "Salam perkenalan",
       "kanji": "初めまして",
       "romaji": "hajime mashite"
     },
-
     "026-karakimasita": {
       "furigana": "～からきました",
       "id": "Saya datang dari...",
       "kanji": "～から来ました",
       "romaji": "kara kimashita"
     },
-
     "027-dozo yoroshiku": {
       "furigana": "",
       "id": "Senang berkenalan dengan Anda",
       "kanji": "どうぞよろしく",
       "romaji": "douzo yoroshiku"
     },
-
     "028-shitsurei shimasu": {
       "furigana": "しつれいします",
       "id": "Permisi (saat masuk ruangan orang lain)/ Maaf mengganggu/ Permisi (saat mengakhiri percakapan)",
       "kanji": "失礼します",
       "romaji": "shitsurei shimasu"
     },
-
     "029-onamae wa": {
       "furigana": "おなまえは",
       "id": "Siapa nama Anda?",
       "kanji": "お名前は",
       "romaji": "onamae wa"
     },
-
     "030-amerika": {
       "furigana": "あめりか",
       "id": "Amerika",
       "kanji": "アメリカ",
       "romaji": "amerika"
     },
-
     "031-igirisu": {
       "furigana": "いぎりす",
       "id": "Inggris",
       "kanji": "イギリス",
       "romaji": "igirisu"
     },
-
     "032-indo": {
       "furigana": "いんど",
       "id": "India",
       "kanji": "インド",
       "romaji": "indo"
     },
-
     "033-indonesia": {
       "furigana": "いんどねしあ",
       "id": "Indonesia",
       "kanji": "インドネシア",
       "romaji": "indonesia"
     },
-
     "034-kankoku": {
       "furigana": "かんこく",
       "id": "Korea",
       "kanji": "韓国",
       "romaji": "kankoku"
     },
-
     "035-chuukoku": {
       "furigana": "ちゅうごく",
       "id": "Tiongkok/Cina",
       "kanji": "中国",
       "romaji": "chuugoku"
     },
-
     "036-nihon": {
       "furigana": "にほん",
       "id": "Jepang",
       "kanji": "日本",
       "romaji": "nihon"
     },
-
     "037-furansu": {
       "furigana": "ふらんす",
       "id": "Prancis",
@@ -259,8 +223,8 @@
       "romaji": "furansu"
     }
   },
-  
-  "第２課": {
+
+  "第02課": {
     "001-kore": {
       "furigana": "",
       "id": "Ini",
@@ -539,7 +503,7 @@
     }
   },
 
-  "第３課": {
+  "第03課": {
     "001-koko": {
       "furigana": "",
       "id": "Di sini",
@@ -944,7 +908,7 @@
     }
   },
 
-  "第４課": {
+  "第04課": {
     "001-okimasu": {
       "furigana": "おきます",
       "id": "Bangun",
@@ -1313,7 +1277,7 @@
     }
   },
 
-  "第５課": {
+  "第05課": {
     "001-ikimasu": {
       "furigana": "いきます",
       "id": "Pergi",
@@ -1766,7 +1730,7 @@
     }
   },
 
-  "第６課": {
+  "第06課": {
     "001-tabemasu": {
       "furigana": "たべます",
       "id": "Makan",
@@ -2303,7 +2267,7 @@
     }
   },
 
-  "第７課": {
+  "第07課": {
     "001-kirimasu": {
       "furigana": "きります",
       "id": "Memotong, Mengiris",
@@ -2750,7 +2714,7 @@
     }
   },
 
-  "第８課": {
+  "第08課": {
     "001-hansamu (na)": {
       "kanji": "ハンサム（な）",
       "furigana": "はんさむ（な）",
@@ -3155,7 +3119,7 @@
     }
   },
 
-  "第９話": {
+  "第09話": {
     "001-wakarimasu": {
       "kanji": "分かります",
       "furigana": "わかります",
@@ -3250,7 +3214,7 @@
       "kanji": "ジャス",
       "furigana": "じゃす",
       "romaji": "jasu",
-      "id": "Jaz"
+      "id": "Jazz"
     },
     "017-konsaato": {
       "kanji": "コンサート",
@@ -3288,353 +3252,416 @@
       "romaji": "kanji",
       "id": "Kanji (Huruf China)"
     },
-	"023-hiragana": {
-		"kanji": "平仮名",
-		"furigana": "ひらがな",
-		"romaji": "hiragana",
-		"id": "Huruf hiragana"
-	},
-	"024-katakana": {
-		"kanji": "片仮名",
-		"furigana": "カタカナ",
-		"romaji": "katakana",
-		"id": "Huruf katakana"
-	},
-	"025-roomaji": {
-		"kanji": "ローマジ",
-		"furigana": "ろーまじ",
-		"romaji": "roomaji",
-		"id": "Huruf latin"
-	},
-	"026-komakai okane": {
-		"kanji": "細かいお金",
-		"furigana": "こまかいおかね",
-		"romaji": "komakai okane",
-		"id": "Uang kecil, uang receh"
-	},
-	"027-chiketto": {
-		"kanji": "チケット",
-		"furigana": "ちけっと",
-		"romaji": "chiketto",
-		"id": "Tiket"
-	},
-	"028-jikan": {
-		"kanji": "時間",
-		"furigana": "じかん",
-		"romaji": "jikan",
-		"id": "Waktu"
-	},
-	"029-yooji": {
-		"kanji": "用事",
-		"furigana": "ようじ",
-		"romaji": "yooji",
-		"id": "Urusan"
-	},
-	"030-arubaito": {
-		"kanji": "アルバイト",
-		"furigana": "あるばいと",
-		"romaji": "arubaito",
-		"id": "Kerja paruh waktu"
-	},
-	"031-otto, shujin": {
-		"kanji": "夫、主人",
-		"furigana": "おっと、しゅじん",
-		"romaji": "otto, shujin",
-		"id": "Suami"
-	},
-	"032-tsuma, kanai": {
-		"kanji": "妻、家内",
-		"furigana": "つま、かない",
-		"romaji": "tsuma, kanai",
-		"id": "Istri"
-	},
-	"033-goshujin": {
-		"kanji": "ご主人",
-		"furigana": "ごしゅじん",
-		"romaji": "goshujin",
-		"id": "Suami (Orang lain)"
-	},
-	"034-okusan": {
-		"kanji": "奥さん",
-		"furigana": "おくさん",
-		"romaji": "okusan",
-		"id": "Istri (Orang lain)"
-	},
-	"035-yakusoku": {
-		"kanji": "約束",
-		"furigana": "やくそく",
-		"romaji": "yakusoku",
-		"id": "Janji"
-	},
-	"037-yoku": {
-		"kanji": "よく",
-		"furigana": "",
-		"romaji": "yoku",
-		"id": "Dengan baik"
-	},
-	"038-daitai": {
-		"kanji": "だいたい",
-		"furigana": "",
-		"romaji": "daitai",
-		"id": "Kira-kira"
-	},
-	"039-takusan": {
-		"kanji": "たくさん",
-		"furigana": "",
-		"romaji": "takusan",
-		"id": "Banyak"
-	},
-	"040-sukoshi": {
-		"kanji": "少し",
-		"furigana": "すこし",
-		"romaji": "sukoshi",
-		"id": "Sedikit"
-	},
-	"041-zenzen": {
-		"kanji": "全然",
-		"furigana": "ぜんぜん",
-		"romaji": "zenzen",
-		"id": "Sama sekali"
-	},
-	"042-hayaku": {
-		"kanji": "早く、速く",
-		"furigana": "はやく、はやく",
-		"romaji": "hayaku",
-		"id": "Dengan cepat"
-	},
-	"043-kara": {
-		"kanji": "～から",
-		"furigana": "",
-		"romaji": "kara",
-		"id": "Karena..."
-	},
-	"044-doushite": {
-		"kanji": "どうして",
-		"furigana": "",
-		"romaji": "doushite",
-		"id": "Kenapa?"
-	},
-	"045-kashite kudasai": {
-		"kanji": "貸してください",
-		"furigana": "かしてください",
-		"romaji": "kashite kudasai",
-		"id": "Tolong pinjamkan"
-	},
-	"046-iidesuyo": {
-		"kanji": "いいですよ",
-		"furigana": "",
-		"romaji": "iidesuyo",
-		"id": "Boleh"
-	},
-	"047-zannendesu": {
-		"kanji": "残念です",
-		"furigana": "ざんねんです",
-		"romaji": "zannendesu",
-		"id": "Sayang sekali"
-	},
-	"048-issho ni ikaga desuka": {
-		"kanji": "いっしょにいかがですか",
-		"furigana": "",
-		"romaji": "issho ni ikaga desuka",
-		"id": "Bagaimana kalau bersama-sama"
-	},
-	"049-chotto": {
-		"kanji": "～ちょっと",
-		"furigana": "",
-		"romaji": "chotto",
-		"id": "Gimana ya... (Mau nolak secara halus)"
-	},
-	"050-dame desuka": {
-		"kanji": "だめですか",
-		"furigana": "",
-		"romaji": "dame desuka",
-		"id": "Boleh ya?"
-	},
-	"051-mata kondo onegaishimasu": {
-		"kanji": "また今度お願いします",
-		"furigana": "またこんどおねがいします",
-		"romaji": "mata kondo onegaishimasu",
-		"id": "Maaf lain kali saja"
-	},
-	"052-poppusu": {
-		"kanji": "ポップス",
-		"furigana": "ぽっぷ",
-		"romaji": "poppusu",
-		"id": "Pop"
-	},
-	"053-rokku": {
-		"kanji": "ロック",
-		"furigana": "ろっく",
-		"romaji": "rokku",
-		"id": "Rock"
-	},
-	"054-raten": {
-		"kanji": "ラテン",
-		"furigana": "らてん",
-		"romaji": "raten",
-		"id": "Musik latin"
-	},
-	"055-minyou": {
-		"kanji": "民謡",
-		"furigana": "みんよう",
-		"romaji": "minyou",
-		"id": "Musik rakyat/nyanyian daerah"
-	},
-	"056-enka": {
-		"kanji": "演歌",
-		"furigana": "えんか",
-		"romaji": "enka",
-		"id": "Lagu tradisional Jepang populer"
-	},
-	"057-myuujikaru": {
-		"kanji": "ミュージカル",
-		"furigana": "みゅーじかる",
-		"romaji": "myuujikaru",
-		"id": "Drama musik"
-	},
-	"058-opera": {
-		"kanji": "オペラ",
-		"furigana": "おぺら",
-		"romaji": "opera",
-		"id": "Opera"
-	},
-	"059-horaa": {
-		"kanji": "ホラー",
-		"furigana": "ほらー",
-		"romaji": "horaa",
-		"id": "Film horor"
-	},
-	"060-anime": {
-		"kanji": "アニメ",
-		"furigana": "あにめ",
-		"romaji": "anime",
-		"id": "Film kartun, animasi"
-	},
-	"061-dokyumentarii": {
-		"kanji": "ドキュメンタリー",
-		"furigana": "どきゅめんたりー",
-		"romaji": "dokyumentarii",
-		"id": "Film dokumentasi"
-	},
-	"062-renai": {
-		"kanji": "恋愛",
-		"furigana": "れんあい",
-		"romaji": "renai",
-		"id": "Film percintaan"
-	},
-	"063-misuterii": {
-		"kanji": "ミステリー",
-		"furigana": "みすてりー",
-		"romaji": "misuterii",
-		"id": "Film misteri"
-	},
-	"064-bungei": {
-		"kanji": "文芸",
-		"furigana": "ぶんげい",
-		"romaji": "bungei",
-		"id": "Film kesusastraan"
-	},
-	"065-sensou": {
-		"kanji": "戦争",
-		"furigana": "せんそう",
-		"romaji": "sensou",
-		"id": "Film peperangan"
-	},
-	"066-akushon": {
-		"kanji": "アクション",
-		"furigana": "あくしょん",
-		"romaji": "akushon",
-		"id": "Film aksi (action)"
-	},
-	"067-kigeki": {
-		"kanji": "喜劇",
-		"furigana": "きげき",
-		"romaji": "kigeki",
-		"id": "Film komedi"
-	},
-	"068-sofutobooru": {
-		"kanji": "ソフトボール",
-		"furigana": "そふとぼーる",
-		"romaji": "sofutobooru",
-		"id": "Soft ball"
-	},
-	"069-sakkaa": {
-		"kanji": "サッカー",
-		"furigana": "さっかー",
-		"romaji": "sakkaa",
-		"id": "Sepak bola"
-	},
-	"070-ragubii": {
-		"kanji": "ラグビー",
-		"furigana": "らぐびー",
-		"romaji": "ragubii",
-		"id": "Rugby"
-	},
-	"071-bareebooru": {
-		"kanji": "バレーボール",
-		"furigana": "ばれーぼーる",
-		"romaji": "bareebooru",
-		"id": "Voli"
-	},
-	"072-tenisu": {
-		"kanji": "テニス",
-		"furigana": "てにす",
-		"romaji": "tenisu",
-		"id": "Tenis"
-	},
-	"073-bouringu": {
-		"kanji": "ボウリング",
-		"furigana": "ぼうりんぐ",
-		"romaji": "bouringu",
-		"id": "Bowling"
-	},
-	"074-sukii": {
-		"kanji": "スキー",
-		"furigana": "すきー",
-		"romaji": "sukii",
-		"id": "Sky (Ski)"
-	},
-	"075-sukeeto": {
-		"kanji": "スケート",
-		"furigana": "すけーと",
-		"romaji": "sukeeto",
-		"id": "Skate"
-	},
-	"076-1-takkyuu": {
-		"kanji": "卓球",
-		"furigana": "たっきゅう",
-		"romaji": "takkyuu",
-		"id": "Pingpong"
-	},
-	"076-2-pinpon": {
-		"kanji": "ピンポン",
-		"furigana": "ぴんぽん",
-		"romaji": "pinpon",
-		"id": "Pingpong"
-	},
-	"077-sumou": {
-		"kanji": "相撲",
-		"furigana": "すもう",
-		"romaji": "sumou",
-		"id": "Sumo"
-	},
-	"078-juudou": {
-		"kanji": "柔道",
-		"furigana": "じゅうどう",
-		"romaji": "juudou",
-		"id": "Judo"
-	},
-	"079-kendou": {
-		"kanji": "剣道",
-		"furigana": "けんどう",
-		"romaji": "kendou",
-		"id": "Kendo"
-	},
-	"080-suiei": {
-		"kanji": "水泳",
-		"furigana": "すいえい",
-		"romaji": "suiei",
-		"id": "Olahraga renang"
-	}
+    "023-hiragana": {
+      "kanji": "平仮名",
+      "furigana": "ひらがな",
+      "romaji": "hiragana",
+      "id": "Huruf hiragana"
+    },
+    "024-katakana": {
+      "kanji": "片仮名",
+      "furigana": "カタカナ",
+      "romaji": "katakana",
+      "id": "Huruf katakana"
+    },
+    "025-roomaji": {
+      "kanji": "ローマジ",
+      "furigana": "ろーまじ",
+      "romaji": "roomaji",
+      "id": "Huruf latin"
+    },
+    "026-komakai okane": {
+      "kanji": "細かいお金",
+      "furigana": "こまかいおかね",
+      "romaji": "komakai okane",
+      "id": "Uang kecil, uang receh"
+    },
+    "027-chiketto": {
+      "kanji": "チケット",
+      "furigana": "ちけっと",
+      "romaji": "chiketto",
+      "id": "Tiket"
+    },
+    "028-jikan": {
+      "kanji": "時間",
+      "furigana": "じかん",
+      "romaji": "jikan",
+      "id": "Waktu"
+    },
+    "029-yooji": {
+      "kanji": "用事",
+      "furigana": "ようじ",
+      "romaji": "yooji",
+      "id": "Urusan"
+    },
+    "030-arubaito": {
+      "kanji": "アルバイト",
+      "furigana": "あるばいと",
+      "romaji": "arubaito",
+      "id": "Kerja paruh waktu"
+    },
+    "031-otto, shujin": {
+      "kanji": "夫、主人",
+      "furigana": "おっと、しゅじん",
+      "romaji": "otto, shujin",
+      "id": "Suami"
+    },
+    "032-tsuma, kanai": {
+      "kanji": "妻、家内",
+      "furigana": "つま、かない",
+      "romaji": "tsuma, kanai",
+      "id": "Istri"
+    },
+    "033-goshujin": {
+      "kanji": "ご主人",
+      "furigana": "ごしゅじん",
+      "romaji": "goshujin",
+      "id": "Suami (Orang lain)"
+    },
+    "034-okusan": {
+      "kanji": "奥さん",
+      "furigana": "おくさん",
+      "romaji": "okusan",
+      "id": "Istri (Orang lain)"
+    },
+    "035-yakusoku": {
+      "kanji": "約束",
+      "furigana": "やくそく",
+      "romaji": "yakusoku",
+      "id": "Janji"
+    },
+    "037-yoku": {
+      "kanji": "よく",
+      "furigana": "",
+      "romaji": "yoku",
+      "id": "Dengan baik"
+    },
+    "038-daitai": {
+      "kanji": "だいたい",
+      "furigana": "",
+      "romaji": "daitai",
+      "id": "Kira-kira"
+    },
+    "039-takusan": {
+      "kanji": "たくさん",
+      "furigana": "",
+      "romaji": "takusan",
+      "id": "Banyak"
+    },
+    "040-sukoshi": {
+      "kanji": "少し",
+      "furigana": "すこし",
+      "romaji": "sukoshi",
+      "id": "Sedikit"
+    },
+    "041-zenzen": {
+      "kanji": "全然",
+      "furigana": "ぜんぜん",
+      "romaji": "zenzen",
+      "id": "Sama sekali"
+    },
+    "042-hayaku": {
+      "kanji": "早く、速く",
+      "furigana": "はやく、はやく",
+      "romaji": "hayaku",
+      "id": "Dengan cepat"
+    },
+    "043-kara": {
+      "kanji": "～から",
+      "furigana": "",
+      "romaji": "kara",
+      "id": "Karena..."
+    },
+    "044-doushite": {
+      "kanji": "どうして",
+      "furigana": "",
+      "romaji": "doushite",
+      "id": "Kenapa?"
+    },
+    "045-kashite kudasai": {
+      "kanji": "貸してください",
+      "furigana": "かしてください",
+      "romaji": "kashite kudasai",
+      "id": "Tolong pinjamkan"
+    },
+    "046-iidesuyo": {
+      "kanji": "いいですよ",
+      "furigana": "",
+      "romaji": "iidesuyo",
+      "id": "Boleh"
+    },
+    "047-zannendesu": {
+      "kanji": "残念です",
+      "furigana": "ざんねんです",
+      "romaji": "zannendesu",
+      "id": "Sayang sekali"
+    },
+    "048-issho ni ikaga desuka": {
+      "kanji": "いっしょにいかがですか",
+      "furigana": "",
+      "romaji": "issho ni ikaga desuka",
+      "id": "Bagaimana kalau bersama-sama"
+    },
+    "049-chotto": {
+      "kanji": "～ちょっと",
+      "furigana": "",
+      "romaji": "chotto",
+      "id": "Gimana ya... (Mau nolak secara halus)"
+    },
+    "050-dame desuka": {
+      "kanji": "だめですか",
+      "furigana": "",
+      "romaji": "dame desuka",
+      "id": "Engga boleh ya?"
+    },
+    "051-mata kondo onegaishimasu": {
+      "kanji": "また今度お願いします",
+      "furigana": "またこんどおねがいします",
+      "romaji": "mata kondo onegaishimasu",
+      "id": "Maaf lain kali saja"
+    },
+    "052-poppusu": {
+      "kanji": "ポップス",
+      "furigana": "ぽっぷす",
+      "romaji": "poppusu",
+      "id": "Pop"
+    },
+    "053-rokku": {
+      "kanji": "ロック",
+      "furigana": "ろっく",
+      "romaji": "rokku",
+      "id": "Rock"
+    },
+    "054-raten": {
+      "kanji": "ラテン",
+      "furigana": "らてん",
+      "romaji": "raten",
+      "id": "Musik latin"
+    },
+    "055-minyou": {
+      "kanji": "民謡",
+      "furigana": "みんよう",
+      "romaji": "minyou",
+      "id": "Musik rakyat/nyanyian daerah"
+    },
+    "056-enka": {
+      "kanji": "演歌",
+      "furigana": "えんか",
+      "romaji": "enka",
+      "id": "Lagu tradisional Jepang populer"
+    },
+    "057-myuujikaru": {
+      "kanji": "ミュージカル",
+      "furigana": "みゅーじかる",
+      "romaji": "myuujikaru",
+      "id": "Drama musik"
+    },
+    "058-opera": {
+      "kanji": "オペラ",
+      "furigana": "おぺら",
+      "romaji": "opera",
+      "id": "Opera"
+    },
+    "059-horaa": {
+      "kanji": "ホラー",
+      "furigana": "ほらー",
+      "romaji": "horaa",
+      "id": "Film horor"
+    },
+    "060-anime": {
+      "kanji": "アニメ",
+      "furigana": "あにめ",
+      "romaji": "anime",
+      "id": "Film kartun, animasi"
+    },
+    "061-dokyumentarii": {
+      "kanji": "ドキュメンタリー",
+      "furigana": "どきゅめんたりー",
+      "romaji": "dokyumentarii",
+      "id": "Film dokumentasi"
+    },
+    "062-renai": {
+      "kanji": "恋愛",
+      "furigana": "れんあい",
+      "romaji": "renai",
+      "id": "Film percintaan"
+    },
+    "063-misuterii": {
+      "kanji": "ミステリー",
+      "furigana": "みすてりー",
+      "romaji": "misuterii",
+      "id": "Film misteri"
+    },
+    "064-bungei": {
+      "kanji": "文芸",
+      "furigana": "ぶんげい",
+      "romaji": "bungei",
+      "id": "Film kesusastraan"
+    },
+    "065-sensou": {
+      "kanji": "戦争",
+      "furigana": "せんそう",
+      "romaji": "sensou",
+      "id": "Film peperangan"
+    },
+    "066-akushon": {
+      "kanji": "アクション",
+      "furigana": "あくしょん",
+      "romaji": "akushon",
+      "id": "Film aksi (action)"
+    },
+    "067-kigeki": {
+      "kanji": "喜劇",
+      "furigana": "きげき",
+      "romaji": "kigeki",
+      "id": "Film komedi"
+    },
+    "068-sofutobooru": {
+      "kanji": "ソフトボール",
+      "furigana": "そふとぼーる",
+      "romaji": "sofutobooru",
+      "id": "Soft ball"
+    },
+    "069-sakkaa": {
+      "kanji": "サッカー",
+      "furigana": "さっかー",
+      "romaji": "sakkaa",
+      "id": "Sepak bola"
+    },
+    "070-ragubii": {
+      "kanji": "ラグビー",
+      "furigana": "らぐびー",
+      "romaji": "ragubii",
+      "id": "Rugby"
+    },
+    "071-bareebooru": {
+      "kanji": "バレーボール",
+      "furigana": "ばれーぼーる",
+      "romaji": "bareebooru",
+      "id": "Voli"
+    },
+    "072-tenisu": {
+      "kanji": "テニス",
+      "furigana": "てにす",
+      "romaji": "tenisu",
+      "id": "Tenis"
+    },
+    "073-bouringu": {
+      "kanji": "ボウリング",
+      "furigana": "ぼうりんぐ",
+      "romaji": "bouringu",
+      "id": "Bowling"
+    },
+    "074-sukii": {
+      "kanji": "スキー",
+      "furigana": "すきー",
+      "romaji": "sukii",
+      "id": "Sky (Ski)"
+    },
+    "075-sukeeto": {
+      "kanji": "スケート",
+      "furigana": "すけーと",
+      "romaji": "sukeeto",
+      "id": "Skate"
+    },
+    "076-1-takkyuu": {
+      "kanji": "卓球",
+      "furigana": "たっきゅう",
+      "romaji": "takkyuu",
+      "id": "Pingpong"
+    },
+    "076-2-pinpon": {
+      "kanji": "ピンポン",
+      "furigana": "ぴんぽん",
+      "romaji": "pinpon",
+      "id": "Pingpong"
+    },
+    "077-sumou": {
+      "kanji": "相撲",
+      "furigana": "すもう",
+      "romaji": "sumou",
+      "id": "Sumo"
+    },
+    "078-juudou": {
+      "kanji": "柔道",
+      "furigana": "じゅうどう",
+      "romaji": "juudou",
+      "id": "Judo"
+    },
+    "079-kendou": {
+      "kanji": "剣道",
+      "furigana": "けんどう",
+      "romaji": "kendou",
+      "id": "Kendo"
+    },
+    "080-suiei": {
+      "kanji": "水泳",
+      "furigana": "すいえい",
+      "romaji": "suiei",
+      "id": "Olahraga renang"
+    }
+  },
+
+  "第10課": {
+    "001-arimasu": {
+      "kanji": "あります",
+      "furigana": "",
+      "romaji": "arimasu",
+      "id": "Ada (benda mati)"
+    },
+    "002-imasu": {
+      "kanji": "います",
+      "furigana": "",
+      "romaji": "imasu",
+      "id": "Ada (benda hidup)"
+    },
+    "003-iroiro (na)": {
+      "kanji": "色々（な）",
+      "furigana": "いろいろ（な）",
+      "romaji": "iroiro (na)",
+      "id": "Berbagai/ macam-macam"
+    },
+    "004-otoko no hito": {
+      "kanji": "男の人",
+      "furigana": "おとこのひと",
+      "romaji": "otoko no hito",
+      "id": "Orang laki-laki"
+    },
+    "005-onna no hito": {
+      "kanji": "女の人",
+      "furigana": "おんなのひと",
+      "romaji": "onna no hito",
+      "id": "Orang perempuan"
+    },
+    "006-otoko no ko": {
+      "kanji": "男の子",
+      "furigana": "おとこのこ",
+      "romaji": "otoko no ko",
+      "id": "Anak laki-laki"
+    },
+    "007-onna no ko": {
+      "kanji": "女の子",
+      "furigana": "おんなのこ",
+      "romaji": "onna no ko",
+      "id": "Anak perempuan"
+    },
+    "008-inu": {
+      "kanji": "犬",
+      "furigana": "いぬ",
+      "romaji": "inu",
+      "id": "Anjing"
+    },
+    "009-neko": {
+      "kanji": "猫",
+      "furigana": "ねこ",
+      "romaji": "neko",
+      "id": "Kucing"
+    },
+    "010-panda": {
+      "kanji": "パンダ",
+      "furigana": "ぱんだ",
+      "romaji": "panda",
+      "id": "Panda"
+    }
   }
 }
