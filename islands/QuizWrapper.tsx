@@ -2,6 +2,7 @@
 // islands/QuizWrapper.tsx
 import { useState } from "preact/hooks";
 import QuizGame from "./QuizGame.tsx";
+import firebaseConfig from "../database/firebaseKeys/serviceAccount.ts";
 
 export default function QuizWrapper() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -27,6 +28,11 @@ export default function QuizWrapper() {
           class="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-200"
         >
           📚 Kotoba List
+        </a>
+
+        <a href={`https://wa.me/${firebaseConfig.number}`} className="px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white transition-colors duration-200" target="-blank"
+        >
+          電話：バシャイル
         </a>
       </div>
 

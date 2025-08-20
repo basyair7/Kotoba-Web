@@ -2,6 +2,7 @@
 // islands/KotobaWrapper.tsx
 import { useState } from "preact/hooks";
 import KotobaList from "./KotobaList.tsx";
+import firebaseConfig from "../database/firebaseKeys/serviceAccount.ts";
 
 export default function KotobaWrapper() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -25,6 +26,11 @@ export default function KotobaWrapper() {
           class="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-200"
         >
           🎮 Kotoba Quiz
+        </a>
+
+        <a href={`https://wa.me/${firebaseConfig.number}`} className="px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white transition-colors duration-200" target="-blank"
+        >
+          電話：バシャイル
         </a>
       </div>
 
