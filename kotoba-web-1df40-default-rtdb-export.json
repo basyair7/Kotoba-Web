@@ -3805,7 +3805,7 @@
       "kanji": "後、後ろ",
       "furigana": "あと、ご、うしろ",
       "romaji": "ato, go, ushiro",
-      "id": "Belakang, setelah"
+      "id": "Setelah, Siang (Waktu), belakang"
     },
     "036-migi": {
       "kanji": "右",
@@ -4381,8 +4381,8 @@
       "id": "Kopi"
     },
     "076-koucha": {
-      "kanji": "ココア",
-      "furigana": "ここあ",
+      "kanji": "紅茶",
+      "furigana": "こうちゃ",
       "romaji": "koucha",
       "id": "Teh hitam"
     },
