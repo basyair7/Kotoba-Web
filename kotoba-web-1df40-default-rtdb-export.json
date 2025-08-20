@@ -115,7 +115,7 @@
       "romaji": "donata"
     },
     "020-sai": {
-      "furigana": "～さん",
+      "furigana": "～さい",
       "id": "Usia...",
       "kanji": "歳",
       "romaji": "sai"
@@ -1931,7 +1931,7 @@
     },
     "035-niwa": {
       "furigana": "にわ",
-      "id": "Taman",
+      "id": "Halaman",
       "kanji": "庭",
       "romaji": "niwa"
     },
@@ -3662,6 +3662,638 @@
       "furigana": "ぱんだ",
       "romaji": "panda",
       "id": "Panda"
+    },
+    "011-zou": {
+      "kanji": "像",
+      "furigana": "ぞう",
+      "romaji": "zou",
+      "id": "Gajah"
+    },
+    "012-ki": {
+      "kanji": "木",
+      "furigana": "き",
+      "romaji": "ki",
+      "id": "Pohon"
+    },
+    "013-mono": {
+      "kanji": "物",
+      "furigana": "もの",
+      "romaji": "mono",
+      "id": "Barang"
+    },
+    "014-denchi": {
+      "kanji": "電池",
+      "furigana": "でんち",
+      "romaji": "denchi",
+      "id": "Baterai"
+    },
+    "015-hako": {
+      "kanji": "箱",
+      "furigana": "はこ",
+      "romaji": "hako",
+      "id": "Kotak"
+    },
+    "016-suicchi": {
+      "kanji": "スイッチ",
+      "furigana": "すいっち",
+      "romaji": "suicchi",
+      "id": "Saklar"
+    },
+    "017-reizouko": {
+      "kanji": "冷蔵庫",
+      "furigana": "れいぞうこ",
+      "romaji": "reizouko",
+      "id": "Kulkas"
+    },
+    "018-teeburu": {
+      "kanji": "テーブル",
+      "furigana": "てーぶる",
+      "romaji": "teeburu",
+      "id": "Meja makan"
+    },
+    "019-beddo": {
+      "kanji": "ベッド",
+      "furigana": "べっど",
+      "romaji": "beddo",
+      "id": "Tempat tidur"
+    },
+    "020-tana": {
+      "kanji": "棚",
+      "furigana": "たな",
+      "romaji": "tana",
+      "id": "Lemari"
+    },
+    "021-doa": {
+      "kanji": "ドア",
+      "furigana": "どあ",
+      "romaji": "doa",
+      "id": "Pintu"
+    },
+    "022-mado": {
+      "kanji": "窓",
+      "furigana": "まど",
+      "romaji": "mado",
+      "id": "Jendela"
+    },
+    "023-posuto": {
+      "kanji": "ポスト",
+      "furigana": "ぽすと",
+      "romaji": "posuto",
+      "id": "Kotak surat"
+    },
+    "024-biru": {
+      "kanji": "ビル",
+      "furigana": "びる",
+      "romaji": "biru",
+      "id": "Gedung"
+    },
+    "025-ATM": {
+      "kanji": "ATM",
+      "furigana": "",
+      "romaji": "",
+      "id": "Atm (mesin transaksi uang)/Automatic teller machine"
+    },
+    "026-konbini": {
+      "kanji": "コンビニ",
+      "furigana": "こんびに",
+      "romaji": "konbini",
+      "id": "Toko 24 jam"
+    },
+    "027-kouen": {
+      "kanji": "公園",
+      "furigana": "こうえん",
+      "romaji": "kouen",
+      "id": "Taman"
+    },
+    "028-kissaten": {
+      "kanji": "喫茶店",
+      "furigana": "きっさてん",
+      "romaji": "kissaten",
+      "id": "Coffe shop/cafe"
+    },
+    "029-ya": {
+      "kanji": "～屋",
+      "furigana": "～や",
+      "romaji": "ya",
+      "id": "Toko~"
+    },
+    "030-noriba": {
+      "kanji": "乗り場",
+      "furigana": "のりば",
+      "romaji": "noriba",
+      "id": "Tempat naik"
+    },
+    "031-ken": {
+      "kanji": "県",
+      "furigana": "けん",
+      "romaji": "ken",
+      "id": "Prefektur"
+    },
+    "032-ue": {
+      "kanji": "上",
+      "furigana": "うえ",
+      "romaji": "ue",
+      "id": "Atas"
+    },
+    "033-shita": {
+      "kanji": "下",
+      "furigana": "した",
+      "romaji": "shita",
+      "id": "Bawah"
+    },
+    "034-mae, zen": {
+      "kanji": "前",
+      "furigana": "まえ, ぜん",
+      "romaji": "mae, zen",
+      "id": "Depan, sebelum"
+    },
+    "035-ushiro, ato, go": {
+      "kanji": "後、後ろ",
+      "furigana": "あと、ご、うしろ",
+      "romaji": "ato, go, ushiro",
+      "id": "Belakang, setelah"
+    },
+    "036-migi": {
+      "kanji": "右",
+      "furigana": "みぎ",
+      "romaji": "migi",
+      "id": "Kanan"
+    },
+    "037-hidari": {
+      "kanji": "左",
+      "furigana": "ひだり",
+      "romaji": "hidari",
+      "id": "Kiri"
+    },
+    "038-naka, chuu": {
+      "kanji": "中",
+      "furigana": "なか、ちゅう",
+      "romaji": "naka, chuu",
+      "id": "Dalam, tengah"
+    },
+    "039-soto, gai": {
+      "kanji": "外",
+      "furigana": "そと、がい",
+      "romaji": "soto, gai",
+      "id": "Luar"
+    },
+    "040-tonari": {
+      "kanji": "隣",
+      "furigana": "となり",
+      "romaji": "tonari",
+      "id": "Samping/sebelah"
+    },
+    "041-chikaku": {
+      "kanji": "近く",
+      "furigana": "ちかく",
+      "romaji": "chikaku",
+      "id": "Dekat"
+    },
+    "042-aida, kan, ken": {
+      "kanji": "間",
+      "furigana": "あいだ、 かん、けん",
+      "romaji": "aida, kan, ken",
+      "id": "Antara、selang"
+    },
+    "043-doumo sumimasen": {
+      "kanji": "どうもすみません",
+      "furigana": "",
+      "romaji": "doumo sumimasen",
+      "id": "Maaf, terima kasih banyak"
+    },
+    "044-nanpuraa": {
+      "kanji": "ナンプラー",
+      "furigana": "なんぷらー",
+      "romaji": "nanpuraa",
+      "id": "Kecap ikan"
+    },
+    "045-koonaa": {
+      "kanji": "コーナー",
+      "furigana": "こーなー",
+      "romaji": "koonaa",
+      "id": "Tempat/bagian penjualan"
+    },
+    "046-ichiban shita": {
+      "kanji": "一番下",
+      "furigana": "いちばんした",
+      "romaji": "ichiban shita",
+      "id": "Paling bawah"
+    },
+    "047-genkan": {
+      "kanji": "玄関",
+      "furigana": "げんかん",
+      "romaji": "genkan",
+      "id": "Pintu masuk"
+    },
+    "048-furoba": {
+      "kanji": "風呂場",
+      "furigana": "ふろば",
+      "romaji": "furoba",
+      "id": "Kamar mandi"
+    },
+    "049-senmenjo": {
+      "kanji": "洗面所",
+      "furigana": "せんめんじょ",
+      "romaji": "senmenjo",
+      "id": "Tempat cuci tangan"
+    },
+    "050-daidokoro": {
+      "kanji": "台所",
+      "furigana": "だいどころ",
+      "romaji": "daidokoro",
+      "id": "Dapur"
+    },
+    "051-shokudou": {
+      "kanji": "食堂",
+      "furigana": "しょくどう",
+      "romaji": "shokudou",
+      "id": "Kantin/ruang makan"
+    },
+    "052-ima": {
+      "kanji": "居間",
+      "furigana": "いま",
+      "romaji": "ima",
+      "id": "Ruang tamu"
+    },
+    "053-shinshitsu": {
+      "kanji": "寝室",
+      "furigana": "しんしつ",
+      "romaji": "shinshitsu",
+      "id": "Kamar tidur"
+    },
+    "054-rouka": {
+      "kanji": "廊下",
+      "furigana": "ろうか",
+      "romaji": "rouka",
+      "id": "Koridor"
+    },
+    "055-beranda": {
+      "kanji": "ベランダ",
+      "furigana": "べらんだ",
+      "romaji": "beranda",
+      "id": "Teras"
+    }
+  },
+
+  "第11課": {
+    "001-imasu": {
+      "kanji": "います",
+      "furigana": "",
+      "romaji": "imasu",
+      "id": "Ada/mempunyai"
+    },
+    "002-kakarimasu": {
+      "kanji": "かかります",
+      "furigana": "",
+      "romaji": "kakarimasu",
+      "id": "Ada/mempunyai"
+    },
+    "003-yasumimasu (wo)": {
+      "kanji": "休みます（を）",
+      "furigana": "やすみます（を）",
+      "romaji": "yasumimasu (wo)",
+      "id": "Tidak masuk kerja/libur"
+    },
+    "004-hitotsu": {
+      "kanji": "一つ",
+      "furigana": "ひとつ",
+      "romaji": "hitotsu",
+      "id": "1 buah"
+    },
+    "005-futastsu": {
+      "kanji": "二つ",
+      "furigana": "ふたつ",
+      "romaji": "futastsu",
+      "id": "2 buah"
+    },
+    "006-mittsu": {
+      "kanji": "三つ",
+      "furigana": "みっつ",
+      "romaji": "mittsu",
+      "id": "3 buah"
+    },
+    "007-yottsu": {
+      "kanji": "四つ",
+      "furigana": "よっつ",
+      "romaji": "yottsu",
+      "id": "4 buah"
+    },
+    "008-itsutsu": {
+      "kanji": "五つ",
+      "furigana": "いつつ",
+      "romaji": "itsutsu",
+      "id": "5 buah"
+    },
+    "009-muttsu": {
+      "kanji": "六つ",
+      "furigana": "むっつ",
+      "romaji": "muttsu",
+      "id": "6 buah"
+    },
+    "010-nanatsu": {
+      "kanji": "七つ",
+      "furigana": "ななつ",
+      "romaji": "nanatsu",
+      "id": "7 buah"
+    },
+    "011-yattsu": {
+      "kanji": "八つ",
+      "furigana": "やっつ",
+      "romaji": "yattsu",
+      "id": "8 buah"
+    },
+    "012-kokonotsu": {
+      "kanji": "九つ",
+      "furigana": "ここのつ",
+      "romaji": "kokonotsu",
+      "id": "9 buah"
+    },
+    "013-too": {
+      "kanji": "十つ",
+      "furigana": "とお",
+      "romaji": "too",
+      "id": "10 buah"
+    },
+    "014-ikutsu": {
+      "kanji": "いくつ",
+      "furigana": "",
+      "romaji": "ikutsu",
+      "id": "Berapa buah?"
+    },
+    "015-hitori": {
+      "kanji": "一人",
+      "furigana": "ひとり",
+      "romaji": "hitori",
+      "id": "1 orang"
+    },
+    "016-futari": {
+      "kanji": "二人",
+      "furigana": "ふたり",
+      "romaji": "futari",
+      "id": "2 orang"
+    },
+    "017-nin": {
+      "kanji": "～人",
+      "furigana": "～にん",
+      "romaji": "nin",
+      "id": "~Orang"
+    },
+    "018-dai": {
+      "kanji": "～台",
+      "furigana": "～だい",
+      "romaji": "dai",
+      "id": "~Unit"
+    },
+    "019-mai": {
+      "kanji": "～枚",
+      "furigana": "～まい",
+      "romaji": "mai",
+      "id": "~Lembar"
+    },
+    "020-kai": {
+      "kanji": "～回",
+      "furigana": "～かい",
+      "romaji": "kai",
+      "id": "~Kali/frekuensi"
+    },
+    "021-sandoicchi": {
+      "kanji": "サンドイッチ",
+      "furigana": "さんどいっち",
+      "romaji": "sandoicchi",
+      "id": "Sandwich"
+    },
+    "022-karee": {
+      "kanji": "カレー",
+      "furigana": "かれー",
+      "romaji": "karee",
+      "id": "Kari jepang"
+    },
+    "023-aisukuriimu": {
+      "kanji": "アイスクリーム",
+      "furigana": "あいすくりーむ",
+      "romaji": "aisukuriimu",
+      "id": "Es krim"
+    },
+    "024-kitte": {
+      "kanji": "切手",
+      "furigana": "きって",
+      "romaji": "kitte",
+      "id": "Perangko"
+    },
+    "025-hagaki": {
+      "kanji": "葉書",
+      "furigana": "はがき",
+      "romaji": "hagaki",
+      "id": "Kartu pos"
+    },
+    "026-fuutou": {
+      "kanji": "封筒",
+      "furigana": "ふうとう",
+      "romaji": "fuutou",
+      "id": "Amplop"
+    },
+    "027-gaikoku": {
+      "kanji": "外国",
+      "furigana": "がいこく",
+      "romaji": "gaikoku",
+      "id": "Luar negeri"
+    },
+    "028-ryuugakusei": {
+      "kanji": "留学生",
+      "furigana": "りゅうがくせい",
+      "romaji": "ryuugakusei",
+      "id": "Pelajar asing"
+    },
+    "029-kurasu": {
+      "kanji": "クラス",
+      "furigana": "くらす",
+      "romaji": "kurasu",
+      "id": "Kelas"
+    },
+    "030-jikan": {
+      "kanji": "～時間",
+      "furigana": "～じかん",
+      "romaji": "jikan",
+      "id": "~jam (untuk menghitung frekuensi jam)"
+    },
+    "031-shuukan": {
+      "kanji": "～週間",
+      "furigana": "～しゅうかん",
+      "romaji": "shuukan",
+      "id": "~minggu (untuk menghitung frekuensi minggu)"
+    },
+    "032-kagetsu": {
+      "kanji": "～ヶ月",
+      "furigana": "～かげつ",
+      "romaji": "kagetsu",
+      "id": "~bulan (untuk menghitung frekuensi bulan)"
+    },
+    "033-nen": {
+      "kanji": "～年",
+      "furigana": "～ねん",
+      "romaji": "nen",
+      "id": "~Tahun (untuk menghitung frekuensi tahun)"
+    },
+    "034-gurai": {
+      "kanji": "～ぐらい",
+      "furigana": "",
+      "romaji": "gurai",
+      "id": "Kira-kira~"
+    },
+    "035-dono kurai": {
+      "kanji": "どのくらい",
+      "furigana": "",
+      "romaji": "dono kurai",
+      "id": "Berapa lama?"
+    },
+    "036-zenbude": {
+      "kanji": "全部で",
+      "furigana": "ぜんぶで",
+      "romaji": "zenbude",
+      "id": "Semuanya"
+    },
+    "037-minna": {
+      "kanji": "みんな",
+      "furigana": "",
+      "romaji": "minna",
+      "id": "Semua (untuk orang)"
+    },
+    "038-dake": {
+      "kanji": "～だけ",
+      "furigana": "",
+      "romaji": "dake",
+      "id": "Hanya~"
+    },
+    "039-kashikomarimashita": {
+      "kanji": "かしこまりました",
+      "furigana": "",
+      "romaji": "kashikomarimashita",
+      "id": "Baik/mengerti"
+    },
+    "040-iitenkidesune": {
+      "kanji": "いいてんきですね",
+      "furigana": "",
+      "romaji": "iitenkidesune",
+      "id": "Cuacanya bagus ya..."
+    },
+    "041-odekakedesuka": {
+      "kanji": "お出かけですか",
+      "furigana": "おでかけですか",
+      "romaji": "odekakedesuka",
+      "id": "Mau keluar?"
+    },
+    "042-itterasshai": {
+      "kanji": "いってらっしゃい",
+      "furigana": "",
+      "romaji": "itterasshai",
+      "id": "Hati-hati (berangkatnya)"
+    },
+    "043-ittekimasu": {
+      "kanji": "行ってきます",
+      "furigana": "いってきます",
+      "romaji": "ittekimasu",
+      "id": "Sayah berangkat"
+    },
+    "044-funabin": {
+      "kanji": "船便",
+      "furigana": "ふなびん",
+      "romaji": "funabin",
+      "id": "Pos laut"
+    },
+    "045-koukuubin": {
+      "kanji": "航空便",
+      "furigana": "こうくうびん",
+      "romaji": "koukuubin",
+      "id": "Pos udara"
+    },
+    "046-eameeru": {
+      "kanji": "エアメール",
+      "furigana": "えあめーる",
+      "romaji": "eameeru",
+      "id": "Pos udara"
+    },
+    "047-oosutoraria": {
+      "kanji": "オーストラリア",
+      "furigana": "おーすとらりあ",
+      "romaji": "oosutoraria",
+      "id": "Australia"
+    },
+    "048-teishoku": {
+      "kanji": "定食",
+      "furigana": "ていしょく",
+      "romaji": "teishoku",
+      "id": "Makanan paket"
+    },
+    "049-ranchi": {
+      "kanji": "ランチ",
+      "furigana": "らんち",
+      "romaji": "ranchi",
+      "id": "Makan siang"
+    },
+    "050-tendon": {
+      "kanji": "天丼",
+      "furigana": "てんどん",
+      "romaji": "tendon",
+      "id": "Semangkuk Nasi dan tempura"
+    },
+    "051-oyakodon": {
+      "kanji": "親子丼",
+      "furigana": "おやこどん",
+      "romaji": "oyakodon",
+      "id": "Semangkuk Nasi, daging ayam dan telur"
+    },
+    "052-gyuudon": {
+      "kanji": "牛丼",
+      "furigana": "ぎゅうどん",
+      "romaji": "gyuudon",
+      "id": "Semangkuk Nasi daging sapi"
+    },
+    "053-yakiniku": {
+      "kanji": "焼肉",
+      "furigana": "やきにく",
+      "romaji": "yakiniku",
+      "id": "Daging panggang"
+    },
+    "054-yasaitame": {
+      "kanji": "野菜ため",
+      "furigana": "やさいため",
+      "romaji": "yasaitame",
+      "id": "Sayur goreng"
+    },
+    "055-tsukemono": {
+      "kanji": "漬物",
+      "furigana": "つけもの",
+      "romaji": "tsukemono",
+      "id": "Asinan"
+    },
+    "056-misoshiru": {
+      "kanji": "味噌汁",
+      "furigana": "みそしる",
+      "romaji": "misoshiru",
+      "id": "Sup miso"
+    },
+    "057-onigiri": {
+      "kanji": "お握り",
+      "furigana": "おにぎり",
+      "romaji": "onigiri",
+      "id": "Nasi kepal"
+    },
+    "058-tenpura": {
+      "kanji": "天麩羅",
+      "furigana": "てんぷら",
+      "romaji": "tenpura",
+      "id": "Tempura"
+    },
+    "059-sushi": {
+      "kanji": "寿司",
+      "furigana": "すし",
+      "romaji": "sushi",
+      "id": "Nasi dicampur cuka dan diberi ikan mentah"
+    },
+    "060-udon": {
+      "kanji": "うどん",
+      "furigana": "",
+      "romaji": ""
     }
   }
 }
