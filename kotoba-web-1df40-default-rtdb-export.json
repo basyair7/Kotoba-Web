@@ -3564,16 +3564,10 @@
       "romaji": "sukeeto",
       "id": "Skate"
     },
-    "076-1-takkyuu": {
-      "kanji": "卓球",
-      "furigana": "たっきゅう",
-      "romaji": "takkyuu",
-      "id": "Pingpong"
-    },
-    "076-2-pinpon": {
-      "kanji": "ピンポン",
-      "furigana": "ぴんぽん",
-      "romaji": "pinpon",
+    "076-takkyuu-pinpon": {
+      "kanji": "卓球 / ピンポン",
+      "furigana": "たっきゅう / ぴんぽん",
+      "romaji": "takkyuu / pinpon",
       "id": "Pingpong"
     },
     "077-sumou": {
@@ -4293,7 +4287,122 @@
     "060-udon": {
       "kanji": "うどん",
       "furigana": "",
-      "romaji": ""
+      "romaji": "udon",
+      "id": "Mie jepang ukuran besar"
+    },
+    "061-soba": {
+      "kanji": "そば",
+      "furigana": "",
+      "romaji": "soba",
+      "id": "Mie jepang warna abu-abu"
+    },
+    "062-raamen": {
+      "kanji": "ラーメン",
+      "furigana": "らーめん",
+      "romaji": "raamen",
+      "id": "Mie jepang ukuran biasa"
+    },
+    "063-yakisoba": {
+      "kanji": "焼きそば",
+      "furigana": "やきそば",
+      "romaji": "yakisoba",
+      "id": "Mie goreng jepang"
+    },
+    "064-okonomiyaki": {
+      "kanji": "お好み焼き",
+      "furigana": "おこのみやき",
+      "romaji": "okonomiyaki",
+      "id": "Gorengan dicampur daging di loyang"
+    },
+    "065-kareeraisu": {
+      "kanji": "カレーライス",
+      "furigana": "かれーらいす",
+      "romaji": "kareeraisu",
+      "id": "Nasi kare"
+    },
+    "066-hambaagu": {
+      "kanji": "ハンバーグ",
+      "furigana": "はんばーぐ",
+      "romaji": "hambaagu",
+      "id": "Hamburger"
+    },
+    "067-korokke": {
+      "kanji": "コロッケ",
+      "furigana": "ころっけ",
+      "romaji": "korokke",
+      "id": "Kroket"
+    },
+    "068-ebifurai": {
+      "kanji": "海老フライ",
+      "furigana": "えびふらい",
+      "romaji": "ebifurai",
+      "id": "Udang goreng tepung"
+    },
+    "069-furaidochikin": {
+      "kanji": "フライドチキン",
+      "furigana": "ふらいどちきん",
+      "romaji": "furaidochikin",
+      "id": "Ayam goreng"
+    },
+    "070-sarada": {
+      "kanji": "サラダ",
+      "furigana": "さらだ",
+      "romaji": "sarada",
+      "id": "Salad"
+    },
+    "071-suupu": {
+      "kanji": "スープ",
+      "furigana": "すーぷ",
+      "romaji": "suupu",
+      "id": "Sup"
+    },
+    "072-supagetti": {
+      "kanji": "スパゲッティ",
+      "furigana": "すぱげってぃ",
+      "romaji": "supagetti",
+      "id": "Spageti"
+    },
+    "073-piza": {
+      "kanji": "ピザ",
+      "furigana": "ぴざ",
+      "romaji": "piza",
+      "id": "Pizza"
+    },
+    "074-toosuto": {
+      "kanji": "トースト",
+      "furigana": "とーすと",
+      "romaji": "toosuto",
+      "id": "Roti panggang"
+    },
+    "075-koohii": {
+      "kanji": "コーヒー",
+      "furigana": "こーひー",
+      "romaji": "koohii",
+      "id": "Kopi"
+    },
+    "076-koucha": {
+      "kanji": "ココア",
+      "furigana": "ここあ",
+      "romaji": "koucha",
+      "id": "Teh hitam"
+    },
+    "077-kokoa": {
+      "kanji": "ココア",
+      "furigana": "ここあ",
+      "romaji": "kokoa",
+      "id": "Minuman coklat"
+    },
+    "078-juusu": {
+      "kanji": "ジュース",
+      "furigana": "じゅーす",
+      "romaji": "juusu",
+      "id": "Jus"
+    },
+    "079-koora": {
+      "kanji": "コーラ",
+      "furigana": "こーら",
+      "romaji": "koora",
+      "id": "Coca cola"
     }
   }
 }
