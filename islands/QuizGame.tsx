@@ -140,8 +140,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     }, 1500);
   }
 
-  if (loading) return <div>読み込み中...</div>;
-  if (words.length === 0) return <div>データがありません。</div>;
+  if (loading) return <div class="min-h-screen flex justify-center p-4">読み込み中...</div>;
+  if (words.length === 0) return <div class="min-h-screen flex justify-center p-4">データがありません。</div>;
 
   const currentWord = words[currentIndex];
 
