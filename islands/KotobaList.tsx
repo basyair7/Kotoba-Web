@@ -9,10 +9,14 @@ interface KotobaListProps {
 
 export default function KotobaList({ theme = "light" }: KotobaListProps) {
   const [data, setData] = useState<any>({});
-  const [babList, setBabList] = useState<string[]>([]);
-  const [selectedBab, setSelectedBab] = useState<string>("");
+  const [KaList, setKaList] = useState<string[]>([]);
+  const [selectedKa, setSelectedKa] = useState<string>("");
   const [page, setPage] = useState(0);
+  const [searchQuery, setSearchQuery] = useState(""); 
   const perPage = 8;
+
+  const bgColor = theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black";
+  const textColor = theme === "dark" ? "text-white" : "text-black";
 
   useEffect(() => {
     async function fetchData() {
@@ -20,61 +24,125 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
       if (allData) {
         setData(allData);
         const keys = Object.keys(allData);
-        setBabList(keys);
-        setSelectedBab(keys[0]);
+        setKaList(["全部", ...keys]);
+        setSelectedKa("全部");
       }
     }
     fetchData();
   }, []);
 
-  if (!selectedBab) return <div class="p-4">Loading...</div>;
+  if (!selectedKa)
+    return (
+      <div class={`min-h-screen flex justify-center ${bgColor} ${textColor} pt-4`}>
+        読み込み中...
+      </div>
+    );
 
-  const words = Object.values(data[selectedBab] || {});
-  const totalPages = Math.ceil(words.length / perPage);
+
+  // Collect words and include Ka info
+  let words: any[] = [];
+  if (selectedKa === "全部") {
+    words = Object.entries(data).flatMap(([KaName, Ka]: any) =>
+      Object.values(Ka).map((w: any) => ({ ...w, Ka: KaName }))
+    );
+  } else {
+    words = Object.values(data[selectedKa] || {}).map((w: any) => ({
+      ...w,
+      Ka: selectedKa,
+    }));
+  }
+
+  // Filter by search
+  const filteredWords = words.filter((w: any) => {
+    const q = searchQuery.toLowerCase();
+    return (
+      w.kanji?.toLowerCase().includes(q) ||
+      w.furigana?.toLowerCase().includes(q) ||
+      w.romaji?.toLowerCase().includes(q) ||
+      w.id?.toLowerCase().includes(q) // "id" = Indonesian meaning
+    );
+  });
+
+  const totalPages = Math.ceil(filteredWords.length / perPage);
   const start = page * perPage;
-  const currentWords = words.slice(start, start + perPage);
+  const currentWords = filteredWords.slice(start, start + perPage);
 
-  const bgColor = theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black";
   const cardBg = theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black";
   const buttonBg = theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-200 text-black";
   const selectBg = theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black";
+  const inputBg = theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black";
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft" && page > 0) {
+        setPage((p) => p - 1);
+      } else if (e.key === "ArrowRight" && page < totalPages - 1) {
+        setPage((p) => p + 1);
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [page, totalPages]);
+
 
   return (
     <div class={`max-w-5xl mx-auto p-4 ${bgColor} min-h-screen`}>
-      {/* Dropdown pilih bab */}
+      {/* Dropdown for 課を選択 */}
       <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-2">
-        <label class="font-bold">Pilih Bab:</label>
+        <label class="font-bold">課を選択：</label>
         <select
           class={`border p-2 rounded w-full sm:w-auto ${selectBg}`}
-          value={selectedBab}
+          value={selectedKa}
           onChange={(e) => {
-            setSelectedBab((e.target as HTMLSelectElement).value);
+            setSelectedKa((e.target as HTMLSelectElement).value);
             setPage(0);
+            setSearchQuery("");
           }}
         >
-          {babList.map((bab) => (
-            <option value={bab} key={bab}>
-              {bab}
+          {KaList.map((Ka) => (
+            <option value={Ka} key={Ka}>
+              {Ka}
             </option>
           ))}
         </select>
       </div>
 
-      {/* Grid responsif */}
+      {/* Search box */}
+      <div class="mb-4">
+        <input
+          type="text"
+          placeholder="Search kotoba (kanji, hiragana, romaji, meaning)..."
+          class={`border p-2 rounded w-full ${inputBg}`}
+          value={searchQuery}
+          onInput={(e) => {
+            setSearchQuery((e.target as HTMLInputElement).value);
+            setPage(0);
+          }}
+        />
+      </div>
+
+      {/* Responsive grid */}
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {currentWords.map((w: any) => (
-          <WordCard
-            jp={w.kanji}
-            furigana={w.furigana}
-            romaji={w.romaji}
-            id={w.id}
-            theme={theme} // optional, kalau WordCard juga support theme
-            className={cardBg}
-          />
+          <div class="flex flex-col h-full">
+            <WordCard
+              jp={w.kanji}
+              furigana={w.furigana}
+              romaji={w.romaji}
+              id={w.id}
+              theme={theme}
+              className={`${cardBg} flex flex-col h-full justify-between`}
+            />
+            {/* Show Ka info below each card */}
+            {selectedKa === "全部" && (
+              <p class="text-xs text-gray-400 mt-1">From: {w.Ka}</p>
+            )}
+          </div>
         ))}
       </div>
 
-      {/* Pagination responsif */}
+      {/* Pagination */}
       <div class="flex flex-col sm:flex-row justify-between items-center gap-2 mt-6">
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
@@ -84,7 +152,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
           ◀ Back
         </button>
         <span class="px-2">
-          Page {page + 1} of {totalPages}
+          Page {totalPages === 0 ? 0 : page + 1} of {totalPages}
         </span>
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
