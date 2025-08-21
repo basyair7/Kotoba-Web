@@ -2140,7 +2140,7 @@
       "romaji": "naki"
     },
     "070-mikan": {
-      "furigana": "みかん",
+      "furigana": "",
       "id": "Jeruk mandarin",
       "kanji": "みかん",
       "romaji": "mikan"
@@ -3940,7 +3940,7 @@
       "kanji": "かかります",
       "furigana": "",
       "romaji": "kakarimasu",
-      "id": "Ada/mempunyai"
+      "id": "Memerlukan waktu"
     },
     "003-yasumimasu (wo)": {
       "kanji": "休みます（を）",
@@ -4403,6 +4403,557 @@
       "furigana": "こーら",
       "romaji": "koora",
       "id": "Coca cola"
+    }
+  },
+
+  "第12課" : {
+    "001-kantan": {
+      "kanji": "簡単",
+      "furigana": "かんたん",
+      "romaji": "kantan",
+      "id": "Gampang/Mudah"
+    },
+    "002-chikai": {
+      "kanji": "近い",
+      "furigana": "ちかい",
+      "romaji": "chikai",
+      "id": "Dekat"
+    },
+    "003-tooi": {
+      "kanji": "遠い",
+      "furigana": "とおい",
+      "romaji": "tooi",
+      "id": "Jauh"
+    },
+    "004-hayai": {
+      "kanji": "早い",
+      "furigana": "はやい",
+      "romaji": "hayai",
+      "id": "Cepat"
+    },
+    "005-osoi": {
+      "kanji": "遅い",
+      "furigana": "おそい",
+      "romaji": "osoi",
+      "id": "Lambat"
+    },
+    "006-ooi": {
+      "kanji": "多い",
+      "furigana": "おおい",
+      "romaji": "ooi",
+      "id": "Banyak"
+    },
+    "007-sukunai": {
+      "kanji": "少ない",
+      "furigana": "すくない",
+      "romaji": "sukunai",
+      "id": "Sedikit"
+    },
+    "008-atatakai": {
+      "kanji": "暖かい、温かい",
+      "furigana": "あたたかい、あたたかい",
+      "romaji": "atatakai",
+      "id": "Hangat"
+    },
+    "009-suzushii": {
+      "kanji": "涼しい",
+      "furigana": "すずしい",
+      "romaji": "suzushii",
+      "id": "Sejuk"
+    },
+    "010-amai": {
+      "kanji": "甘い",
+      "furigana": "あまい",
+      "romaji": "amai",
+      "id": "Manis"
+    },
+    "011-karai": {
+      "kanji": "辛い",
+      "furigana": "からい",
+      "romaji": "karai",
+      "id": "Pedas"
+    },
+    "012-omoi": {
+      "kanji": "重い",
+      "furigana": "おもい",
+      "romaji": "omoi",
+      "id": "Berat"
+    },
+    "013-karui": {
+      "kanji": "軽い",
+      "furigana": "かるい",
+      "romaji": "karui",
+      "id": "Ringan"
+    },
+    "014-ii": {
+      "kanji": "いい",
+      "furigana": "",
+      "romaji": "ii",
+      "id": "Lebih baik"
+    },
+    "015-kisetsu": {
+      "kanji": "季節",
+      "furigana": "きせつ",
+      "romaji": "kisetsu",
+      "id": "Musim"
+    },
+    "016-tenki": {
+      "kanji": "天気",
+      "furigana": "てんき",
+      "romaji": "tenki",
+      "id": "Cuaca"
+    },
+    "017-ame": {
+      "kanji": "雨",
+      "furigana": "あめ",
+      "romaji": "ame",
+      "id": "Hujan"
+    },
+    "018-yuki": {
+      "kanji": "雪",
+      "furigana": "ゆき",
+      "romaji": "yuki",
+      "id": "Salju"
+    },
+    "019-kumori": {
+      "kanji": "曇り",
+      "furigana": "くもり",
+      "romaji": "kumori",
+      "id": "Mendung"
+    },
+    "020-hoteru": {
+      "kanji": "ホテル",
+      "furigana": "ほてる",
+      "romaji": "hoteru",
+      "id": "Hotel"
+    },
+    "021-kuukou": {
+      "kanji": "空港",
+      "furigana": "くうこう",
+      "romaji": "kuukou",
+      "id": "Bandara"
+    },
+    "022-umi": {
+      "kanji": "海",
+      "furigana": "うみ",
+      "romaji": "umi",
+      "id": "Laut"
+    },
+    "023-sekai": {
+      "kanji": "世界",
+      "furigana": "せかい",
+      "romaji": "sekai",
+      "id": "Dunia"
+    },
+    "024-paatii": {
+      "kanji": "パーティー",
+      "furigana": "ぱーてぃー",
+      "romaji": "paatii",
+      "id": "Pesta"
+    },
+    "025-matsuri": {
+      "kanji": "祭り",
+      "furigana": "まつり",
+      "romaji": "matsuri",
+      "id": "Perayaan"
+    },
+    "026-remon": {
+      "kanji": "レモン",
+      "furigana": "れもん",
+      "romaji": "remon",
+      "id": "Lemon"
+    },
+    "027-ikebana": {
+      "kanji": "生け花",
+      "furigana": "いけばな",
+      "romaji": "ikebana",
+      "id": "Seni merangkai bunga"
+    },
+    "028-momiji": {
+      "kanji": "紅葉",
+      "furigana": "もみじ",
+      "romaji": "momiji",
+      "id": "Maple"
+    },
+    "029-dochira": {
+      "kanji": "どちら",
+      "furigana": "",
+      "romaji": "dochira",
+      "id": "Yang mana"
+    },
+    "030-dochiramo": {
+      "kanji": "どちらも",
+      "furigana": "",
+      "romaji": "dochiramo",
+      "id": "Dua-duanya/yang mana saja"
+    },
+    "031-ichiban": {
+      "kanji": "いちばん",
+      "furigana": "",
+      "romaji": "ichiban",
+      "id": "Yang paling"
+    },
+    "032-zutto": {
+      "kanji": "ずっと",
+      "furigana": "",
+      "romaji": "zutto",
+      "id": "Selamanya"
+    },
+    "033-hajimete": {
+      "kanji": "初めて",
+      "furigana": "はじめて",
+      "romaji": "hajimete",
+      "id": "Pertama kali"
+    },
+    "034-tadaima": {
+      "kanji": "ただいま",
+      "furigana": "",
+      "romaji": "tadaima",
+      "id": "Saya pulang/saya kembali"
+    },
+    "035-okaerinasai": {
+      "kanji": "お帰りなさい",
+      "furigana": "おかえりなさい",
+      "romaji": "okaerinasai",
+      "id": "Selamat kembali/Selamat pulang (Sudah pulang ya...)"
+    },
+    "036-waa, sugoi hito desune": {
+      "kanji": "わあ、すごい人ですね",
+      "furigana": "わあ、すごいひとですね",
+      "romaji": "waa, sugoi hito desune",
+      "id": "Wah... banyak orang"
+    },
+    "037-tsukaremashita": {
+      "kanji": "疲れました",
+      "furigana": "つかれました",
+      "romaji": "tsukaremashita",
+      "id": "Capek/lelah"
+    },
+    "038-honkon": {
+      "kanji": "ホンコン",
+      "furigana": "ほんこん",
+      "romaji": "honkon",
+      "id": "Hongkong"
+    },
+    "039-shingapooru": {
+      "kanji": "シンガポール",
+      "furigana": "しんがぽーる",
+      "romaji": "shingapooru",
+      "id": "Singapura"
+    },
+    "040-meisho": {
+      "kanji": "名称",
+      "furigana": "めいしょ",
+      "romaji": "meisho",
+      "id": "Tempat terkenal"
+    }
+  },
+  "第13課": {
+    "001-asobimasu": {
+      "kanji": "遊びます",
+      "furigana": "あそびます",
+      "romaji": "asobimasu",
+      "id": "Bermain"
+    },
+    "002-oyogimasu": {
+      "kanji": "泳ぎます",
+      "furigana": "およぎます",
+      "romaji": "oyogimasu",
+      "id": "Berenang"
+    },
+    "003-mukaemasu": {
+      "kanji": "迎えます",
+      "furigana": "むかえます",
+      "romaji": "mukaemasu",
+      "id": "Menjemput"
+    },
+    "004-tsukaremasu": {
+      "kanji": "疲れます",
+      "furigana": "つかれます",
+      "romaji": "tsukaremasu",
+      "id": "Lelah"
+    },
+    "005-kekkonshimasu": {
+      "kanji": "結婚します",
+      "furigana": "けっこんします",
+      "romaji": "kekkonshimasu",
+      "id": "Menikah"
+    },
+    "006-kaimonoshimasu": {
+      "kanji": "買い物します",
+      "furigana": "かいものします",
+      "romaji": "kaimonoshimasu",
+      "id": "Berbelanja"
+    },
+    "007-shokujishimasu": {
+      "kanji": "食事します",
+      "furigana": "しょくじします",
+      "romaji": "shokujishimasu",
+      "id": "Makan bersama"
+    },
+    "008-sanposhimasu (wo)": {
+      "kanji": "散歩します（を）",
+      "furigana": "さんぽします（を）",
+      "romaji": "sanposhimasu (wo)",
+      "id": "Jalan-jalan"
+    },
+    "009-taihen (na)": {
+      "kanji": "大変（な）",
+      "furigana": "たいへん（な）",
+      "romaji": "taihen (na)",
+      "id": "Susah, berat"
+    },
+    "010-hoshii": {
+      "kanji": "欲しい",
+      "furigana": "ほしい",
+      "romaji": "hoshii",
+      "id": "Ingin"
+    },
+    "011-hiroi": {
+      "kanji": "広い",
+      "furigana": "ひろい",
+      "romaji": "hiroi",
+      "id": "Luas"
+    },
+    "012-semai": {
+      "kanji": "狭い",
+      "furigana": "せまい",
+      "romaji": "semai",
+      "id": "Luas"
+    },
+    "013-puuru": {
+      "kanji": "プール",
+      "furigana": "ぷーる",
+      "romaji": "puuru",
+      "id": "Kolam renang"
+    },
+    "014-kawa": {
+      "kanji": "川",
+      "furigana": "かわ",
+      "romaji": "kawa",
+      "id": "Sungai"
+    },
+    "015-bijutsu": {
+      "kanji": "美術",
+      "furigana": "びじゅつ",
+      "romaji": "bijutsu",
+      "id": "Seni"
+    },
+    "016-tsuri": {
+      "kanji": "釣り",
+      "furigana": "つり",
+      "romaji": "tsuri",
+      "id": "Pancing, memancing"
+    },
+    "017-sukii": {
+      "kanji": "スキー",
+      "furigana": "すきー",
+      "romaji": "sukii",
+      "id": "Sky"
+    },
+    "018-shuumatsu": {
+      "kanji": "週末",
+      "furigana": "しゅうまつ",
+      "romaji": "shuumatsu",
+      "id": "Akhir pekan"
+    },
+    "019-oshougatsu": {
+      "kanji": "お諸王月",
+      "furigana": "おしょうがつ",
+      "romaji": "oshougatsu",
+      "id": "Tahun baru"
+    },
+    "020-goro": {
+      "kanji": "～ごろ",
+      "furigana": "",
+      "romaji": "goro",
+      "id": "Kira-kira, sekitar"
+    },
+    "021-nanika": {
+      "kanji": "何か",
+      "furigana": "なにか",
+      "romaji": "nanika",
+      "id": "Sesuatu"
+    },
+    "022-dokoka": {
+      "kanji": "どこか",
+      "furigana": "",
+      "romaji": "dokoka",
+      "id": "Suatu tempat"
+    },
+    "023-nodogakawakimasu": {
+      "kanji": "のどがかわきます",
+      "furigana": "",
+      "romaji": "nodo ga kawakimasu",
+      "id": "Haus"
+    },
+    "024-onakagasukimasu": {
+      "kanji": "おなかがすきます",
+      "furigana": "",
+      "romaji": "onakagasukimasu",
+      "id": "Lapar"
+    },
+    "025-soushimashou": {
+      "romaji": "soushimashou",
+      "kanji": "そうしましょう",
+      "furigana": "",
+      "id": "Ya, ayo"
+    },
+    "026-gochuumonwa": {
+      "romaji": "gochuumonwa",
+      "furigana": "ごちゅうもんは",
+      "kanji": "ご注文は",
+      "id": "Mau pesan apa?"
+    },
+    "027-omachikudasai": {
+      "romaji": "omachikudasai",
+      "furigana": "おまちください",
+      "kanji": "お待ちください",
+      "id": "Tunggu sebentar"
+    },
+    "028-betsubetsuni": {
+      "romaji": "betsubetsuni",
+      "furigana": "べつべつに",
+      "kanji": "別々に",
+      "id": "Sendiri-sendiri/masing-masing"
+    },
+    "029-hakubutsukan": {
+      "romaji": "hakubutsukan",
+      "furigana": "はくぶつかん",
+      "kanji": "博物館",
+      "id": "Museum"
+    },
+    "030-bijutsukan": {
+      "romaji": "bijutsukan",
+      "furigana": "びじゅつかん",
+      "kanji": "美術館",
+      "id": "Gedung kesenian"
+    },
+    "031-toshokan": {
+      "romaji": "toshokan",
+      "furigana": "としょかん",
+      "kanji": "図書館",
+      "id": "Perpustakaan"
+    },
+    "032-eigakan": {
+      "romaji": "eigakan",
+      "furigana": "えいがかん",
+      "kanji": "映画館",
+      "id": "Bioskop"
+    },
+    "033-doubutsuen": {
+      "romaji": "doubutsuen",
+      "furigana": "どうぶつえん",
+      "kanji": "動物園",
+      "id": "Kebun binatang"
+    },
+    "034-shokubutsuen": {
+      "romaji": "shokubutsuen",
+      "furigana": "しょくぶつえん",
+      "kanji": "植物園",
+      "id": "Kebun raya"
+    },
+    "035-otera": {
+      "romaji": "otera",
+      "furigana": "おてら",
+      "kanji": "お寺",
+      "id": "Kuil budha"
+    },
+    "036-jinja": {
+      "romaji": "jinja",
+      "furigana": "じんじゃ",
+      "kanji": "神社",
+      "id": "Kuil sinto"
+    },
+    "037-kyoukai": {
+      "romaji": "kyoukai",
+      "furigana": "きょうかい",
+      "kanji": "協会",
+      "id": "Gereja"
+    },
+    "038-taishikan": {
+      "romaji": "taishikan",
+      "furigana": "たいしかん",
+      "kanji": "体育館",
+      "id": "Kedutaan besar"
+    },
+    "039-nyuukokukanrikyoku": {
+      "romaji": "nyuukokukanrikyoku",
+      "furigana": "にゅうこくかんりきょく",
+      "kanji": "入国管理局",
+      "id": "Kantor imigrasi"
+    },
+    "040-shiyakusho": {
+      "romaji": "shiyakusho",
+      "furigana": "しやくしょ",
+      "kanji": "市役所",
+      "id": "Kantor balaikota"
+    },
+    "041-kouban": {
+      "romaji": "kouban",
+      "furigana": "こうばん",
+      "kanji": "交番",
+      "id": "Pos polisi"
+    },
+    "042-chuushajou": {
+      "romaji": "chuushajou",
+      "furigana": "ちゅうしゃじょう",
+      "kanji": "駐車場",
+      "id": "Tempat parkir"
+    },
+    "043-daigaku": {
+      "romaji": "daigaku",
+      "furigana": "だいがく",
+      "kanji": "大学",
+      "id": "Universitas"
+    },
+    "044-koukou": {
+      "romaji": "koukou",
+      "furigana": "こうこう",
+      "kanji": "高校",
+      "id": "SMA"
+    },
+    "045-chuugakkou": {
+      "romaji": "chuugakkou",
+      "furigana": "ちゅうがっこう",
+      "kanji": "中学校",
+      "id": "SMP"
+    },
+    "046-shougakkou": {
+      "romaji": "shougakkou",
+      "furigana": "しょうがっこう",
+      "kanji": "小学校",
+      "id": "SD"
+    },
+    "047-youchien": {
+      "romaji": "youchien",
+      "furigana": "ようちえん",
+      "kanji": "幼稚園",
+      "id": "TK"
+    },
+    "048-nikuya": {
+      "romaji": "nikuya",
+      "furigana": "にくや",
+      "kanji": "肉屋",
+      "id": "Toko daging"
+    },
+    "049-panya": {
+      "romaji": "panya",
+      "kanji": "パンや",
+      "furigana": "ぱんや",
+      "id": "Toko roti"
+    },
+    "050-sakanaya": {
+      "romaji": "sakanaya",
+      "furigana": "さかなや",
+      "kanji": "魚屋",
+      "id": "Toko ikan"
+    },
+    "051-yaoya": {
+      "romaji": "yaoya",
+      "furigana": "やおや",
+      "kanji": "八百屋",
+      "id": "Toko sayuran"
     }
   }
 }
