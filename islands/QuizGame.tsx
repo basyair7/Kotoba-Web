@@ -14,11 +14,18 @@ interface QuizGameProps {
   theme?: "light" | "dark";
 }
 
+interface WrongAnswer {
+  question: Word;
+  yourAnswer: string;
+  correctAnswer: string;
+}
+
 export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [allWords, setAllWords] = useState<Word[]>([]);
   const [words, setWords] = useState<Word[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
   const [options, setOptions] = useState<Word[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedBab, setSelectedBab] = useState<string>("all");
@@ -26,6 +33,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [feedback, setFeedback] = useState<string>("");
   const [answered, setAnswered] = useState(false);
   const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("idToJp");
+  const [isFinished, setIsFinished] = useState(false);
+  const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
 
   useEffect(() => {
     fetchWords();
@@ -61,9 +70,12 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     setWords(shuffled);
     setCurrentIndex(0);
     generateOptions(shuffled, 0);
-    setScore(0);
+    setCorrectCount(0);
+    setWrongCount(0);
     setFeedback("");
     setAnswered(false);
+    setIsFinished(false);
+    setWrongAnswers([]);
   }
 
   function handleBabChange(e: Event) {
@@ -78,7 +90,6 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     const mode = (e.target as HTMLSelectElement).value as "jpToId" | "idToJp";
     setQuizMode(mode);
 
-    // filter sesuai bab yg aktif, lalu reset & acak ulang
     const filtered =
       selectedBab === "all"
         ? allWords
@@ -111,9 +122,24 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     }
 
     if (isCorrect) {
-      setScore((prev) => prev + 1);
+      setCorrectCount((prev) => prev + 1);
       setFeedback("正解! 🎉");
     } else {
+      setWrongCount((prev) => prev + 1);
+      setWrongAnswers((prev) => [
+        ...prev,
+        {
+          question: correctWord,
+          yourAnswer:
+            quizMode === "jpToId"
+              ? selected.id
+              : `${selected.kanji}${selected.furigana ? "「" + selected.furigana + "」" : ""}`,
+          correctAnswer:
+            quizMode === "jpToId"
+              ? correctWord.id
+              : `${correctWord.kanji}${correctWord.furigana ? "「" + correctWord.furigana + "」" : ""}`,
+        },
+      ]);
       setFeedback(
         quizMode === "jpToId"
           ? `不正解！ 正しい答え: ${correctWord.id}`
@@ -131,17 +157,15 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         setFeedback("");
         setAnswered(false);
       } else {
-        alert(
-          `ゲーム終了！ 最終スコア: ${
-            isCorrect ? score + 1 : score
-          }/${words.length}`
-        );
+        setIsFinished(true);
       }
-    }, 1500);
+    }, 1200);
   }
 
-  if (loading) return <div class="min-h-screen flex justify-center p-4">読み込み中...</div>;
-  if (words.length === 0) return <div class="min-h-screen flex justify-center p-4">データがありません。</div>;
+  if (loading)
+    return <div class="min-h-screen flex justify-center p-4">読み込み中...</div>;
+  if (words.length === 0)
+    return <div class="min-h-screen flex justify-center p-4">データがありません。</div>;
 
   const currentWord = words[currentIndex];
 
@@ -152,6 +176,62 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       ? "bg-blue-700 hover:bg-blue-600"
       : "bg-blue-500 hover:bg-blue-600";
 
+  // --- REVIEW PAGE ---
+  if (isFinished) {
+    return (
+      <div class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}>
+        <h1 class="text-2xl font-bold mb-4">結果</h1>
+        <p class="mb-2">正解数: {correctCount}</p>
+        <p class="mb-4">不正解数: {wrongCount}</p>
+
+        {wrongAnswers.length > 0 ? (
+          <div class="mt-4">
+            <h2 class="text-xl font-semibold mb-2">復習しましょう ✍️</h2>
+            <ul class="space-y-3">
+              {wrongAnswers.map((wa, idx) => (
+                <li
+                  key={idx}
+                  class={`p-3 border rounded ${
+                    theme === "dark"
+                      ? "bg-gray-700 text-white border-gray-600"
+                      : "bg-red-50 text-black border-red-200"
+                  }`}
+                >
+                  <p>
+                    <strong>問題:</strong>{" "}
+                    {quizMode === "jpToId"
+                      ? `${wa.question.kanji} ${
+                          wa.question.furigana
+                            ? "「" + wa.question.furigana + "」"
+                            : ""
+                        }`
+                      : wa.question.id}
+                  </p>
+                  <p class="text-red-600">
+                    あなたの答え: {wa.yourAnswer}
+                  </p>
+                  <p class="text-green-600">
+                    正しい答え: {wa.correctAnswer}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <p class="mt-4 text-green-400 font-bold">全部正解！素晴らしい！ 🎉</p>
+        )}
+
+        <button
+          onClick={() => resetQuiz(words)}
+          class={`mt-6 px-4 py-2 rounded ${buttonBg} text-white`}
+        >
+          もう一度プレイ
+        </button>
+      </div>
+    );
+  }
+
+  // --- Quiz main screen ---
   return (
     <div
       class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
@@ -175,7 +255,6 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           ))}
         </select>
 
-        
         <select
           value={quizMode}
           onChange={handleModeChange}
@@ -191,7 +270,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <p class="mb-2">
         問題 {currentIndex + 1} / 全{words.length}問
       </p>
-      <p class="mb-4 font-semibold">Score: {score}</p>
+      <p class="mb-4 font-semibold">
+        正解: {correctCount} | 不正解: {wrongCount}
+      </p>
 
       {/* Pertanyaan */}
       <div class="mb-4">
@@ -217,7 +298,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         )}
       </div>
 
-      {/* Pilihan jawaban */}
+      {/* Select "Answer" */}
       <div class="grid grid-cols-1 gap-4">
         {options.map((option, index) => (
           <button
