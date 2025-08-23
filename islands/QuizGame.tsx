@@ -4,10 +4,10 @@ import { useEffect, useState } from "preact/hooks";
 import dbModels from "../models/dbModels.ts";
 
 interface Word {
-  id: string;       // arti bahasa Indonesia
-  kanji: string;    // kanji/kotoba
-  furigana: string; // furigana
-  bab: string;      // bab
+  id: string; // インドネシア語
+  kanji: string; // 漢字/言葉
+  furigana: string; // ふりがな
+  bab: string; // だい
 }
 
 interface QuizGameProps {
@@ -81,8 +81,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   function handleBabChange(e: Event) {
     const bab = (e.target as HTMLSelectElement).value;
     setSelectedBab(bab);
-    const filtered =
-      bab === "all" ? allWords : allWords.filter((w) => w.bab === bab);
+    const filtered = bab === "all"
+      ? allWords
+      : allWords.filter((w) => w.bab === bab);
     resetQuiz(filtered);
   }
 
@@ -90,10 +91,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     const mode = (e.target as HTMLSelectElement).value as "jpToId" | "idToJp";
     setQuizMode(mode);
 
-    const filtered =
-      selectedBab === "all"
-        ? allWords
-        : allWords.filter((w) => w.bab === selectedBab);
+    const filtered = selectedBab === "all"
+      ? allWords
+      : allWords.filter((w) => w.bab === selectedBab);
     resetQuiz(filtered);
   }
 
@@ -130,22 +130,24 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         ...prev,
         {
           question: correctWord,
-          yourAnswer:
-            quizMode === "jpToId"
-              ? selected.id
-              : `${selected.kanji}${selected.furigana ? "「" + selected.furigana + "」" : ""}`,
-          correctAnswer:
-            quizMode === "jpToId"
-              ? correctWord.id
-              : `${correctWord.kanji}${correctWord.furigana ? "「" + correctWord.furigana + "」" : ""}`,
+          yourAnswer: quizMode === "jpToId"
+            ? selected.id
+            : `${selected.kanji}${
+              selected.furigana ? "「" + selected.furigana + "」" : ""
+            }`,
+          correctAnswer: quizMode === "jpToId"
+            ? correctWord.id
+            : `${correctWord.kanji}${
+              correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
+            }`,
         },
       ]);
       setFeedback(
         quizMode === "jpToId"
           ? `不正解！ 正しい答え: ${correctWord.id}`
           : `不正解！ 正しい答え: ${correctWord.kanji}${
-              correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
-            }`
+            correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
+          }`,
       );
     }
 
@@ -162,64 +164,76 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     }, 1200);
   }
 
-  if (loading)
-    return <div class="min-h-screen flex justify-center p-4">読み込み中...</div>;
-  if (words.length === 0)
-    return <div class="min-h-screen flex justify-center p-4">データがありません。</div>;
+  if (loading) {
+    return (
+      <div class="min-h-screen flex justify-center p-4">読み込み中...</div>
+    );
+  }
+  if (words.length === 0) {
+    return (
+      <div class="min-h-screen flex justify-center p-4">
+        データがありません。
+      </div>
+    );
+  }
 
   const currentWord = words[currentIndex];
 
   const bgColor = theme === "dark" ? "bg-gray-800" : "bg-white";
   const textColor = theme === "dark" ? "text-white" : "text-black";
-  const buttonBg =
-    theme === "dark"
-      ? "bg-blue-700 hover:bg-blue-600"
-      : "bg-blue-500 hover:bg-blue-600";
+  const buttonBg = theme === "dark"
+    ? "bg-blue-700 hover:bg-blue-600"
+    : "bg-blue-500 hover:bg-blue-600";
 
   // --- REVIEW PAGE ---
   if (isFinished) {
     return (
-      <div class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}>
+      <div
+        class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
+      >
         <h1 class="text-2xl font-bold mb-4">結果</h1>
         <p class="mb-2">正解数: {correctCount}</p>
         <p class="mb-4">不正解数: {wrongCount}</p>
 
-        {wrongAnswers.length > 0 ? (
-          <div class="mt-4">
-            <h2 class="text-xl font-semibold mb-2">復習しましょう ✍️</h2>
-            <ul class="space-y-3">
-              {wrongAnswers.map((wa, idx) => (
-                <li
-                  key={idx}
-                  class={`p-3 border rounded ${
-                    theme === "dark"
-                      ? "bg-gray-700 text-white border-gray-600"
-                      : "bg-red-50 text-black border-red-200"
-                  }`}
-                >
-                  <p>
-                    <strong>問題:</strong>{" "}
-                    {quizMode === "jpToId"
-                      ? `${wa.question.kanji} ${
+        {wrongAnswers.length > 0
+          ? (
+            <div class="mt-4">
+              <h2 class="text-xl font-semibold mb-2">復習しましょう ✍️</h2>
+              <ul class="space-y-3">
+                {wrongAnswers.map((wa, idx) => (
+                  <li
+                    key={idx}
+                    class={`p-3 border rounded ${
+                      theme === "dark"
+                        ? "bg-gray-700 text-white border-gray-600"
+                        : "bg-red-50 text-black border-red-200"
+                    }`}
+                  >
+                    <p>
+                      <strong>問題:</strong> {quizMode === "jpToId"
+                        ? `${wa.question.kanji} ${
                           wa.question.furigana
                             ? "「" + wa.question.furigana + "」"
                             : ""
                         }`
-                      : wa.question.id}
-                  </p>
-                  <p class="text-red-600">
-                    あなたの答え: {wa.yourAnswer}
-                  </p>
-                  <p class="text-green-600">
-                    正しい答え: {wa.correctAnswer}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <p class="mt-4 text-green-400 font-bold">全部正解！素晴らしい！ 🎉</p>
-        )}
+                        : wa.question.id}
+                    </p>
+                    <p class="text-red-600">
+                      あなたの答え: {wa.yourAnswer}
+                    </p>
+                    <p class="text-green-600">
+                      正しい答え: {wa.correctAnswer}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+          : (
+            <p class="mt-4 text-green-400 font-bold">
+              全部正解！素晴らしい！ 🎉
+            </p>
+          )}
 
         <button
           onClick={() => resetQuiz(words)}
@@ -238,7 +252,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     >
       <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
 
-      {/* Filter bab + mode switch */}
+      {/* Filter だい + mode switch */}
       <div class="flex flex-col sm:flex-row gap-2 w-full my-4">
         <select
           value={selectedBab}
@@ -279,10 +293,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         <p class="text-lg font-bold">
           {quizMode === "jpToId"
             ? `${currentWord.kanji} ${
-                currentWord.furigana
-                  ? "「" + currentWord.furigana + "」"
-                  : ""
-              }`
+              currentWord.furigana ? "「" + currentWord.furigana + "」" : ""
+            }`
             : currentWord.id}
         </p>
 
@@ -310,11 +322,23 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             {quizMode === "jpToId"
               ? option.id || "(kosong)"
               : `${option.kanji} ${
-                  option.furigana ? "「" + option.furigana + "」" : ""
-                }`}
+                option.furigana ? "「" + option.furigana + "」" : ""
+              }`}
           </button>
         ))}
       </div>
+
+      {/* Give Up Button */}
+      <button
+        onClick={() => setIsFinished(true)}
+        class={`mt-6 px-4 py-2 rounded ${
+          theme === "dark"
+            ? "bg-red-700 hover:bg-red-600"
+            : "bg-red-500 hover:bg-red-600"
+        } text-white`}
+      >
+        やめる
+      </button>
     </div>
   );
 }
