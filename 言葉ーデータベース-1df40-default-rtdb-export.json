@@ -4948,9 +4948,9 @@
   "第14課": {
     "001-tsukemasu": {
       "romaji": "tsukemasu",
-      "kanji": "",
-      "furigana": "つけます",
-      "id": "Menyalakan, memasang, menghidupkan"
+      "kanji": "点けます、付けます、着けます",
+      "furigana": "つけます、つけます、つけます、",
+      "id": "Menyalakan, menghidupkan (lampu, listrik, api, dll.), memasang, menempelkan (aksesori, parfum, dll.), mengenakan (pakaian, sabuk, dll)"
     },
     "002-keshimasu": {
       "romaji": "keshimasu",
@@ -5620,10 +5620,10 @@
       "furigana": "えんじにあ",
       "id": "Insinyur"
     },
-    "042-": {
-      "romaji": "",
+    "042-desainaa": {
+      "romaji": "desainaa",
       "kanji": "デザイナー",
-      "furigana": "",
+      "furigana": "でざいなー",
       "id": "Perancang busana"
     },
     "043-jaanarisuto": {
@@ -5644,8 +5644,8 @@
       "furigana": "はいゆう",
       "id": "Aktor / artis"
     },
-    "046-": {
-      "romaji": "",
+    "046-supootsu senshu": {
+      "romaji": "supootsu senshu",
       "kanji": "スポーツ選手",
       "furigana": "すぽーつせんしゅ",
       "id": "Olahragawan / atlit"
@@ -5822,8 +5822,8 @@
     },
     "029-onaka": {
       "romaji": "onaka",
-      "kanji": "おなか",
-      "furigana": "",
+      "kanji": "お腹、腹",
+      "furigana": "おなか、はら",
       "id": "Perut"
     },
     "030-ashi": {
@@ -6131,8 +6131,8 @@
     "023-shitagi": {
       "romaji": "shitagi",
       "kanji": "下着",
-      "furigana": "Pakaian dalam",
-      "id": ""
+      "furigana": "したぎ",
+      "id": "Pakaian dalam"
     },
     "024-madeni": {
       "romaji": "madeni",
@@ -6564,8 +6564,8 @@
     },
     "040-tataku": {
       "romaji": "tataku",
-      "kanji": "",
-      "furigana": "たたく",
+      "kanji": "たたく",
+      "furigana": "",
       "id": "Memukul"
     },
     "041-hiku": {
