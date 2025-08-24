@@ -85,6 +85,9 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [page, totalPages]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div class={`max-w-5xl mx-auto p-4 ${bgColor} min-h-screen`}>
@@ -147,7 +150,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page === 0}
-          onClick={() => setPage((p) => p - 1)}
+          onClick={() => {setPage((p) => p - 1); scrollToTop();}}
         >
           ◀ Back
         </button>
@@ -157,7 +160,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page >= totalPages - 1}
-          onClick={() => setPage((p) => p + 1)}
+          onClick={() => {setPage((p) => p + 1); scrollToTop();}}
         >
           Next ▶
         </button>
