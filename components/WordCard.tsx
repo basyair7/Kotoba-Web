@@ -4,7 +4,7 @@ interface WordProps {
   jp: string;
   furigana: string;
   romaji: string;
-  id: string;
+  indonesia: string;
   theme?: "light" | "dark"; // tambahkan prop theme
   className?: string;        // opsional, untuk custom styling dari parent
 }
@@ -13,7 +13,7 @@ export default function WordCard({
   jp,
   furigana,
   romaji,
-  id,
+  indonesia,
   theme = "light",
   className = "",
 }: WordProps): JSX.Element {
@@ -39,7 +39,7 @@ export default function WordCard({
       {romaji && <p class={`italic ${romajiColor}`}>{romaji}</p>}
 
       {/* Arti Indonesia */}
-      <p class={`${idColor}`}>{id}</p>
+      <p class={`${idColor}`}>{indonesia}</p>
     </div>
   );
 }

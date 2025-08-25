@@ -59,7 +59,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
       w.kanji?.toLowerCase().includes(q) ||
       w.furigana?.toLowerCase().includes(q) ||
       w.romaji?.toLowerCase().includes(q) ||
-      w.id?.toLowerCase().includes(q) // "id" = Indonesian meaning
+      w.indonesia?.toLowerCase().includes(q) // "indonesia" = Indonesian meaning
     );
   });
 
@@ -133,7 +133,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
               jp={w.kanji}
               furigana={w.furigana}
               romaji={w.romaji}
-              id={w.id}
+              indonesia={w.indonesia}
               theme={theme}
               className={`${cardBg} flex flex-col h-full justify-between`}
             />

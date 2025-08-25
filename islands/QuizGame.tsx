@@ -4,7 +4,7 @@ import { useEffect, useState } from "preact/hooks";
 import dbModels from "../models/dbModels.ts";
 
 interface Word {
-  id: string; // インドネシア語
+  indonesia: string; // インドネシア語
   kanji: string; // 漢字/言葉
   furigana: string; // ふりがな
   bab: string; // だい
@@ -47,11 +47,11 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
     Object.entries(allData).forEach(([bab, items]) => {
       babs.add(bab);
-      Object.entries(items as Record<string, any>).forEach(([id, value]) => {
+      Object.entries(items as Record<string, any>).forEach(([indonesia, value]) => {
         parsed.push({
           kanji: value?.kanji ?? "???",
           furigana: value?.furigana ?? "",
-          id: value?.id ?? "(belum ada terjemahan)",
+          indonesia: value?.indonesia ?? "(belum ada terjemahan)",
           bab,
         });
       });
@@ -116,7 +116,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     let isCorrect = false;
 
     if (quizMode === "jpToId") {
-      isCorrect = selected.id === correctWord.id;
+      isCorrect = selected.indonesia === correctWord.indonesia;
     } else {
       isCorrect = selected.kanji === correctWord.kanji;
     }
@@ -131,12 +131,12 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         {
           question: correctWord,
           yourAnswer: quizMode === "jpToId"
-            ? selected.id
+            ? selected.indonesia
             : `${selected.kanji}${
               selected.furigana ? "「" + selected.furigana + "」" : ""
             }`,
           correctAnswer: quizMode === "jpToId"
-            ? correctWord.id
+            ? correctWord.indonesia
             : `${correctWord.kanji}${
               correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
             }`,
@@ -144,7 +144,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       ]);
       setFeedback(
         quizMode === "jpToId"
-          ? `不正解！ 正しい答え: ${correctWord.id}`
+          ? `不正解！ 正しい答え: ${correctWord.indonesia}`
           : `不正解！ 正しい答え: ${correctWord.kanji}${
             correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
           }`,
@@ -216,7 +216,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                             ? "「" + wa.question.furigana + "」"
                             : ""
                         }`
-                        : wa.question.id}
+                        : wa.question.indonesia}
                     </p>
                     <p class="text-red-600">
                       あなたの答え: {wa.yourAnswer}
@@ -295,7 +295,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             ? `${currentWord.kanji} ${
               currentWord.furigana ? "「" + currentWord.furigana + "」" : ""
             }`
-            : currentWord.id}
+            : currentWord.indonesia}
         </p>
 
         {/* Feedback */}
@@ -314,13 +314,13 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <div class="grid grid-cols-1 gap-4">
         {options.map((option, index) => (
           <button
-            key={`${option.id}-${index}`}
+            key={`${option.indonesia}-${index}`}
             onClick={() => handleAnswer(option)}
             class={`p-4 rounded-lg ${buttonBg} text-white`}
             disabled={answered}
           >
             {quizMode === "jpToId"
-              ? option.id || "(kosong)"
+              ? option.indonesia || "(kosong)"
               : `${option.kanji} ${
                 option.furigana ? "「" + option.furigana + "」" : ""
               }`}
