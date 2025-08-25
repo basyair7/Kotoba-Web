@@ -35,6 +35,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("idToJp");
   const [isFinished, setIsFinished] = useState(false);
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
+  const [showFurigana, setShowFurigana] = useState(false); // 👈 toggle furigana
 
   useEffect(() => {
     fetchWords();
@@ -47,14 +48,16 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
     Object.entries(allData).forEach(([dai, items]) => {
       dais.add(dai);
-      Object.entries(items as Record<string, any>).forEach(([indonesia, value]) => {
-        parsed.push({
-          kanji: value?.kanji ?? "???",
-          furigana: value?.furigana ?? "",
-          indonesia: value?.indonesia ?? "(belum ada terjemahan)",
-          dai,
-        });
-      });
+      Object.entries(items as Record<string, any>).forEach(
+        ([indonesia, value]) => {
+          parsed.push({
+            kanji: value?.kanji ?? "???",
+            furigana: value?.furigana ?? "",
+            indonesia: value?.indonesia ?? "(belum ada terjemahan)",
+            dai,
+          });
+        },
+      );
     });
 
     const shuffled = parsed.sort(() => Math.random() - 0.5);
@@ -133,12 +136,16 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           yourAnswer: quizMode === "jpToId"
             ? selected.indonesia
             : `${selected.kanji}${
-              selected.furigana ? "「" + selected.furigana + "」" : ""
+              showFurigana && selected.furigana
+                ? "「" + selected.furigana + "」"
+                : ""
             }`,
           correctAnswer: quizMode === "jpToId"
             ? correctWord.indonesia
             : `${correctWord.kanji}${
-              correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
+              showFurigana && correctWord.furigana
+                ? "「" + correctWord.furigana + "」"
+                : ""
             }`,
         },
       ]);
@@ -146,7 +153,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         quizMode === "jpToId"
           ? `不正解！ 正しい答え: ${correctWord.indonesia}`
           : `不正解！ 正しい答え: ${correctWord.kanji}${
-            correctWord.furigana ? "「" + correctWord.furigana + "」" : ""
+            showFurigana && correctWord.furigana
+              ? "「" + correctWord.furigana + "」"
+              : ""
           }`,
       );
     }
@@ -212,7 +221,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                     <p>
                       <strong>問題:</strong> {quizMode === "jpToId"
                         ? `${wa.question.kanji} ${
-                          wa.question.furigana
+                          showFurigana && wa.question.furigana
                             ? "「" + wa.question.furigana + "」"
                             : ""
                         }`
@@ -252,7 +261,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     >
       <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
 
-      {/* Filter だい + mode switch */}
+      {/* Filter だい + mode switch + furigana toggle */}
       <div class="flex flex-col sm:flex-row gap-2 w-full my-4">
         <select
           value={selectedDai}
@@ -279,6 +288,16 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           <option value="jpToId">日本語 → インドネシア語</option>
           <option value="idToJp">インドネシア語 → 日本語</option>
         </select>
+
+        {/* Checkbox furigana */}
+        <label class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={showFurigana}
+            onChange={() => setShowFurigana((prev) => !prev)}
+          />
+          ふりがなを表示する
+        </label>
       </div>
 
       <p class="mb-2">
@@ -293,7 +312,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         <p class="text-lg font-bold">
           {quizMode === "jpToId"
             ? `${currentWord.kanji} ${
-              currentWord.furigana ? "「" + currentWord.furigana + "」" : ""
+              showFurigana && currentWord.furigana
+                ? "「" + currentWord.furigana + "」"
+                : ""
             }`
             : currentWord.indonesia}
         </p>
@@ -322,7 +343,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             {quizMode === "jpToId"
               ? option.indonesia || "(kosong)"
               : `${option.kanji} ${
-                option.furigana ? "「" + option.furigana + "」" : ""
+                showFurigana && option.furigana
+                  ? "「" + option.furigana + "」"
+                  : ""
               }`}
           </button>
         ))}
