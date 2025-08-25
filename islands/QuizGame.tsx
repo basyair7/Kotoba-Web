@@ -7,7 +7,7 @@ interface Word {
   indonesia: string; // インドネシア語
   kanji: string; // 漢字/言葉
   furigana: string; // ふりがな
-  bab: string; // だい
+  dai: string; // だい
 }
 
 interface QuizGameProps {
@@ -28,8 +28,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [wrongCount, setWrongCount] = useState(0);
   const [options, setOptions] = useState<Word[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedBab, setSelectedBab] = useState<string>("all");
-  const [babList, setBabList] = useState<string[]>([]);
+  const [selectedDai, setSelectedDai] = useState<string>("all");
+  const [daiList, setDaiList] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<string>("");
   const [answered, setAnswered] = useState(false);
   const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("idToJp");
@@ -43,23 +43,23 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   async function fetchWords() {
     const allData = await dbModels.getAll();
     const parsed: Word[] = [];
-    const babs: Set<string> = new Set();
+    const dais: Set<string> = new Set();
 
-    Object.entries(allData).forEach(([bab, items]) => {
-      babs.add(bab);
+    Object.entries(allData).forEach(([dai, items]) => {
+      dais.add(dai);
       Object.entries(items as Record<string, any>).forEach(([indonesia, value]) => {
         parsed.push({
           kanji: value?.kanji ?? "???",
           furigana: value?.furigana ?? "",
           indonesia: value?.indonesia ?? "(belum ada terjemahan)",
-          bab,
+          dai,
         });
       });
     });
 
     const shuffled = parsed.sort(() => Math.random() - 0.5);
     setAllWords(shuffled);
-    setBabList(Array.from(babs));
+    setDaiList(Array.from(dais));
     setWords(shuffled);
     setLoading(false);
     generateOptions(shuffled, 0);
@@ -78,12 +78,12 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     setWrongAnswers([]);
   }
 
-  function handleBabChange(e: Event) {
-    const bab = (e.target as HTMLSelectElement).value;
-    setSelectedBab(bab);
-    const filtered = bab === "all"
+  function handleDaiChange(e: Event) {
+    const dai = (e.target as HTMLSelectElement).value;
+    setSelectedDai(dai);
+    const filtered = dai === "all"
       ? allWords
-      : allWords.filter((w) => w.bab === bab);
+      : allWords.filter((w) => w.dai === dai);
     resetQuiz(filtered);
   }
 
@@ -91,9 +91,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     const mode = (e.target as HTMLSelectElement).value as "jpToId" | "idToJp";
     setQuizMode(mode);
 
-    const filtered = selectedBab === "all"
+    const filtered = selectedDai === "all"
       ? allWords
-      : allWords.filter((w) => w.bab === selectedBab);
+      : allWords.filter((w) => w.dai === selectedDai);
     resetQuiz(filtered);
   }
 
@@ -255,14 +255,14 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       {/* Filter だい + mode switch */}
       <div class="flex flex-col sm:flex-row gap-2 w-full my-4">
         <select
-          value={selectedBab}
-          onChange={handleBabChange}
+          value={selectedDai}
+          onChange={handleDaiChange}
           class={`p-2 border rounded ${
             theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""
           }`}
         >
           <option value="all">全部</option>
-          {babList.map((b) => (
+          {daiList.map((b) => (
             <option value={b} key={b}>
               {b}
             </option>
