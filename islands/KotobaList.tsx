@@ -85,8 +85,17 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [page, totalPages]);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
+
+  const scrollToTarget = () => {
+    const el = document.getElementById("display-kotoba");
+    if (el) {
+      const yOffset = -20; // Adjust this value as needed
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -126,7 +135,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
       </div>
 
       {/* Responsive grid */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="display-kotoba">
         {currentWords.map((w: any) => (
           <div class="flex flex-col h-full">
             <WordCard
@@ -150,7 +159,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page === 0}
-          onClick={() => {setPage((p) => p - 1); scrollToTop();}}
+          onClick={() => {setPage((p) => p - 1); scrollToTarget();}}
         >
           ◀ Back
         </button>
@@ -160,7 +169,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page >= totalPages - 1}
-          onClick={() => {setPage((p) => p + 1); scrollToTop();}}
+          onClick={() => {setPage((p) => p + 1); scrollToTarget();}}
         >
           Next ▶
         </button>
