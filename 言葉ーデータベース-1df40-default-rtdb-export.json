@@ -6605,8 +6605,1171 @@
       "indonesia": "Menengok ke belakang"
     }
   },
-
-
+  "第19課": {
+    "001-noborimasu": {
+      "romaji": "noborimasu",
+      "kanji": "登ります",
+      "furigana": "のぼります",
+      "indonesia": "naik, mendaki",
+      "id": "001"
+    },
+    "002-tomarimasu (ni)": {
+      "romaji": "tomarimasu (ni)",
+      "kanji": "泊まります",
+      "furigana": "とまります（に）",
+      "indonesia": "menginap",
+      "id": "002"
+    },
+    "003-soujishimasu": {
+      "romaji": "soujishimasu",
+      "kanji": "掃除します",
+      "furigana": "そうじします",
+      "indonesia": "membersihkan",
+      "id": "003"
+    },
+    "004-sentakushimasu": {
+      "romaji": "sentakushimasu",
+      "kanji": "洗濯します",
+      "furigana": "せんたくします",
+      "indonesia": "mencuci (baju)",
+      "id": "004"
+    },
+    "005-narimasu": {
+      "romaji": "narimasu",
+      "kanji": "なります",
+      "furigana": "",
+      "indonesia": "menjadi",
+      "id": "005"
+    },
+    "006-nemui": {
+      "romaji": "nemui",
+      "kanji": "眠い",
+      "furigana": "ねむい",
+      "indonesia": "mengantuk",
+      "id": "006"
+    },
+    "007-tsuyoi": {
+      "romaji": "tsuyoi",
+      "kanji": "強い",
+      "furigana": "つよい",
+      "indonesia": "kuat",
+      "id": "007"
+    },
+    "008-yowai": {
+      "romaji": "yowai",
+      "kanji": "弱い",
+      "furigana": "よわい",
+      "indonesia": "lemah",
+      "id": "008"
+    },
+    "009-renshuu": {
+      "romaji": "renshuu",
+      "kanji": "練習",
+      "furigana": "れんしゅう",
+      "indonesia": "latihan",
+      "id": "009"
+    },
+    "010-gorufu": {
+      "romaji": "gorufu",
+      "kanji": "ゴルフ",
+      "furigana": "ごるふ",
+      "indonesia": "golf",
+      "id": "010"
+    },
+    "011-sumou": {
+      "romaji": "sumou",
+      "kanji": "相撲",
+      "furigana": "すもう",
+      "indonesia": "seni gulat Jepang",
+      "id": "011"
+    },
+    "012-ochan": {
+      "romaji": "ocha",
+      "kanji": "お茶",
+      "furigana": "おちゃ",
+      "indonesia": "teh hijau",
+      "id": "012"
+    },
+    "013-hi": {
+      "romaji": "hi",
+      "kanji": "日",
+      "furigana": "ひ",
+      "indonesia": "hari, matahari",
+      "id": "013"
+    },
+    "014-choushi": {
+      "romaji": "choushi",
+      "kanji": "調子",
+      "furigana": "ちょうし",
+      "indonesia": "kondisi, keadaan",
+      "id": "014"
+    },
+    "015-ichido": {
+      "romaji": "ichido",
+      "kanji": "一度",
+      "furigana": "いちど",
+      "indonesia": "sekali",
+      "id": "015"
+    },
+    "016-ichidomo": {
+      "romaji": "ichidomo",
+      "kanji": "一度も",
+      "furigana": "いちども",
+      "indonesia": "tidak pernah (digunakan dengan kata negatif)",
+      "id": "016"
+    },
+    "017-dandan": {
+      "romaji": "dandan",
+      "kanji": "段々",
+      "furigana": "だんだん",
+      "indonesia": "perlahan-lahan, sedikit demi sedikit",
+      "id": "017"
+    },
+    "018-mousugu": {
+      "romaji": "mousugu",
+      "kanji": "もうすぐ",
+      "furigana": "",
+      "indonesia": "segera, tidak lama lagi",
+      "id": "018"
+    },
+    "019-okagesama (de)": {
+      "romaji": "okagesama (de)",
+      "kanji": "お陰様（で）",
+      "furigana": "おかげさま（で）",
+      "indonesia": "berkat (ungkapan terima kasih)",
+      "id": "019"
+    },
+    "020-demo": {
+      "romaji": "demo",
+      "kanji": "でも",
+      "furigana": "",
+      "indonesia": "tapi, namun",
+      "id": "020"
+    },
+    "021-kanbai": {
+      "romaji": "kanpai",
+      "kanji": "乾杯",
+      "furigana": "かんぱい",
+      "indonesia": "bersulang",
+      "id": "021"
+    },
+    "022-daietto": {
+      "romaji": "daietto",
+      "kanji": "ダイエット",
+      "furigana": "だいえっと",
+      "indonesia": "diet",
+      "id": "022"
+    },
+    "023-murina": {
+      "romaji": "murina",
+      "kanji": "無理な",
+      "furigana": "むりな",
+      "indonesia": "berlebihan, memaksakan diri",
+      "id": "023"
+    },
+    "024-karada ni ii": {
+      "romaji": "karada ni ii",
+      "kanji": "体にいい",
+      "furigana": "からだにいい",
+      "indonesia": "baik untuk kesehatan",
+      "id": "024"
+    },
+    "025-toukyou sukaitsurii": {
+      "romaji": "toukyou sukaitsurii",
+      "kanji": "東京スカイツリー",
+      "furigana": "とうきょうすかいつりー",
+      "indonesia": "Tokyo Skytree",
+      "id": "025"
+    },
+    "026-sadou": {
+      "romaji": "sadou",
+      "kanji": "茶道",
+      "furigana": "さどう",
+      "indonesia": "upacara minum teh",
+      "id": "026"
+    },
+    "027-kadou": {
+      "romaji": "kadou",
+      "kanji": "華道",
+      "furigana": "かどう",
+      "indonesia": "seni merangkai bunga",
+      "id": "027"
+    },
+    "028-shodou": {
+      "romaji": "shodou",
+      "kanji": "書道",
+      "furigana": "しょどう",
+      "indonesia": "kaligrafi Jepang",
+      "id": "028"
+    },
+    "029-kabuki": {
+      "romaji": "kabuki",
+      "kanji": "歌舞伎",
+      "furigana": "かぶき",
+      "indonesia": "teater tradisional Jepang",
+      "id": "029"
+    },
+    "030-nou": {
+      "romaji": "nou",
+      "kanji": "能",
+      "furigana": "のう",
+      "indonesia": "drama musikal tradisional Jepang",
+      "id": "030"
+    },
+    "031-bunraku": {
+      "romaji": "bunraku",
+      "kanji": "文楽",
+      "furigana": "ぶんらく",
+      "indonesia": "teater boneka tradisional Jepang",
+      "id": "031"
+    },
+    "032-juudou": {
+      "romaji": "juudou",
+      "kanji": "柔道",
+      "furigana": "じゅうどう",
+      "indonesia": "judo",
+      "id": "032"
+    },
+    "033-kendou": {
+      "romaji": "kendou",
+      "kanji": "剣道",
+      "furigana": "けんどう",
+      "indonesia": "kendo",
+      "id": "033"
+    },
+    "034-karate": {
+      "romaji": "karate",
+      "kanji": "空手",
+      "furigana": "からて",
+      "indonesia": "karate",
+      "id": "034"
+    },
+    "035-manzai_rakugo": {
+      "romaji": "manzai. rakugo",
+      "kanji": "漫才。落語",
+      "furigana": "まんざい。らくご",
+      "indonesia": "komedi tradisional Jepang",
+      "id": "035"
+    },
+    "036-igo_shougi": {
+      "romaji": "igo. shougi",
+      "kanji": "囲碁。将棋",
+      "furigana": "いご。しょうぎ",
+      "indonesia": "permainan papan Jepang/catur Jepang",
+      "id": "036"
+    },
+    "037-pachinko": {
+      "romaji": "pachinko",
+      "kanji": "パチンコ",
+      "furigana": "ぱちんこ",
+      "indonesia": "permainan mesin judi (mirip pinball)",
+      "id": "037"
+    },
+    "038-karaoke": {
+      "romaji": "karaoke",
+      "kanji": "カラオケ",
+      "furigana": "からおけ",
+      "indonesia": "karaoke",
+      "id": "038"
+    },
+    "039-bonodori": {
+      "romaji": "bonodori",
+      "kanji": "盆踊り",
+      "furigana": "ぼんおどり",
+      "indonesia": "tarian bon odori (tarian tradisional Jepang yang dilakukan pada festival Obon)",
+      "id": "039"
+    }
+  },
+  "第20課": {
+    "001-irimasu (ga)": {
+      "romaji": "irimasu (ga)",
+      "kanji": "要ります（が）",
+      "furigana": "いります（が）",
+      "indonesia": "perlu, memerlukan",
+      "id": "001"
+    },
+    "002-shirabemasu": {
+      "romaji": "shirabemasu",
+      "kanji": "調べます",
+      "furigana": "しらべます",
+      "indonesia": "memeriksa, menyelidiki",
+      "id": "002"
+    },
+    "003-shuurishimasu": {
+      "romaji": "shuuri shimasu",
+      "kanji": "修理します",
+      "furigana": "しゅうりします",
+      "indonesia": "memperbaiki, memperbaiki (mesin, mobil, dll)",
+      "id": "003"
+    },
+    "004-boku": {
+      "romaji": "boku",
+      "kanji": "僕",
+      "furigana": "ぼく",
+      "indonesia": "(saya) aku (kata ganti orang pertama yang digunakan oleh laki-laki)",
+      "id": "004"
+    },
+    "005-kimi": {
+      "romaji": "kimi",
+      "kanji": "君",
+      "furigana": "きみ",
+      "indonesia": "(kamu) kamu (kata ganti orang kedua yang digunakan oleh laki-laki)",
+      "id": "005"
+    },
+    "006-kun": {
+      "romaji": "kun",
+      "kanji": "～君",
+      "furigana": "～くん",
+      "indonesia": "-kun (akhiran yang digunakan untuk memanggil anak laki-laki yang lebih muda atau sebaya)",
+      "id": "006"
+    },
+    "007-un": {
+      "romaji": "un",
+      "kanji": "うん",
+      "furigana": "",
+      "indonesia": "iya (informal)",
+      "id": "007"
+    },
+    "008-uun": {
+      "romaji": "uun",
+      "kanji": "ううん",
+      "furigana": "",
+      "indonesia": "tidak (informal)",
+      "id": "008"
+    },
+    "009-kotoba": {
+      "romaji": "kotoba",
+      "kanji": "言葉",
+      "furigana": "ことば",
+      "indonesia": "kata, bahasa",
+      "id": "009"
+    },
+    "010-kimono": {
+      "romaji": "kimono",
+      "kanji": "着物",
+      "furigana": "きもの",
+      "indonesia": "kimono (pakaian tradisional Jepang)",
+      "id": "010"
+    },
+    "011-biza": {
+      "romaji": "biza",
+      "kanji": "ビザ",
+      "furigana": "びざ",
+      "indonesia": "visa",
+      "id": "011"
+    },
+    "012-hajime": {
+      "romaji": "hajime",
+      "kanji": "始め",
+      "furigana": "はじめ",
+      "indonesia": "awal, mula-mula",
+      "id": "012"
+    },
+    "013-owari": {
+      "romaji": "owari",
+      "kanji": "終わり",
+      "furigana": "おわり",
+      "indonesia": "akhir",
+      "id": "013"
+    },
+    "014-kocchi": {
+      "romaji": "kocchi",
+      "kanji": "こっち",
+      "furigana": "",
+      "indonesia": "sini, ke sini (informal dari こちら)",
+      "id": "014"
+    },
+    "015-socchi": {
+      "romaji": "socchi",
+      "kanji": "そっち",
+      "furigana": "",
+      "indonesia": "situ, ke situ (informal dari そちら)",
+      "id": "015"
+    },
+    "016-acchi": {
+      "romaji": "acchi",
+      "kanji": "あっち",
+      "furigana": "",
+      "indonesia": "sana, ke sana (informal dari あちら)",
+      "id": "016"
+    },
+    "017-docchi": {
+      "romaji": "docchi",
+      "kanji": "どっち",
+      "furigana": "",
+      "indonesia": "mana, yang mana (informal dari どちら)",
+      "id": "017"
+    },
+    "018-mina de": {
+      "romaji": "mina de",
+      "kanji": "皆で",
+      "furigana": "みんなで",
+      "indonesia": "bersama-sama (dengan semua orang)",
+      "id": "018"
+    },
+    "019-kedo": {
+      "romaji": "kedo",
+      "kanji": "～けど",
+      "furigana": "",
+      "indonesia": "tapi, namun (informal dari が)",
+      "id": "019"
+    },
+    "020-onaka ga ippai desu": {
+      "romaji": "onaka ga ippai desu",
+      "kanji": "お腹が一杯です",
+      "furigana": "おなかがいっぱいです",
+      "indonesia": "kenyang",
+      "id": "020"
+    },
+    "021-yokattara": {
+      "romaji": "yokattara",
+      "kanji": "良かったら",
+      "furigana": "よかったら",
+      "indonesia": "jika (kamu) mau",
+      "id": "021"
+    },
+    "022-iroiro (na)": {
+      "romaji": "iroiro (na)",
+      "kanji": "色々（な）",
+      "furigana": "いろいろ（な）",
+      "indonesia": "bermacam-macam",
+      "id": "022"
+    }
+  },
+  "第21課": {
+    "001-omoimmasu": {
+      "romaji": "omoimasu",
+      "kanji": "思います",
+      "furigana": "おもいます",
+      "indonesia": "berpikir, merasa",
+      "id": "001"
+    },
+    "002-iimasu": {
+      "romaji": "iimasu",
+      "kanji": "言います",
+      "furigana": "いいます",
+      "indonesia": "mengatakan, berkata",
+      "id": "002"
+    },
+    "003-kachimasu": {
+      "romaji": "kachimasu",
+      "kanji": "勝ちます",
+      "furigana": "かちます",
+      "indonesia": "menang",
+      "id": "003"
+    },
+    "004-makemasu": {
+      "romaji": "makemasu",
+      "kanji": "負けます",
+      "furigana": "まけます",
+      "indonesia": "kalah",
+      "id": "004"
+    },
+    "005-yakunitachimasu": {
+      "romaji": "yakunitachimasu",
+      "kanji": "役に立ちます",
+      "furigana": "やくにたちます",
+      "indonesia": "berguna, bermanfaat",
+      "id": "005"
+    },
+    "006-ugokimasu": {
+      "romaji": "ugokimasu",
+      "kanji": "動きます",
+      "furigana": "うごきます",
+      "indonesia": "bergerak, berpindah",
+      "id": "006"
+    },
+    "007-yamemasu (wo)": {
+      "romaji": "yamemasu (wo)",
+      "kanji": "辞めます（を）",
+      "furigana": "やめます（を）",
+      "indonesia": "berhenti (bekerja)",
+      "id": "007"
+    },
+    "008-ki wo tsukemasu": {
+      "romaji": "ki wo tsukemasu",
+      "kanji": "気をつけます",
+      "furigana": "きをつけます",
+      "indonesia": "berhati-hati, memperhatikan",
+      "id": "008"
+    },
+    "009-ryuugakushimasu": {
+      "romaji": "ryuugakushimasu",
+      "kanji": "留学します",
+      "furigana": "りゅうがくします",
+      "indonesia": "belajar di luar negeri",
+      "id": "009"
+    },
+    "010-mudana": {
+      "romaji": "mudana",
+      "kanji": "無駄な",
+      "furigana": "むだな",
+      "indonesia": "sia-sia, tidak berguna",
+      "id": "010"
+    },
+    "011-fubenna": {
+      "romaji": "fubenna",
+      "kanji": "不便な",
+      "furigana": "ふべんな",
+      "indonesia": "tidak praktis, tidak nyaman",
+      "id": "011"
+    },
+    "012-sugoi": {
+      "romaji": "sugoi",
+      "kanji": "凄い",
+      "furigana": "すごい",
+      "indonesia": "hebat, luar biasa",
+      "id": "012"
+    },
+    "013-hontou": {
+      "romaji": "hontou",
+      "kanji": "本当",
+      "furigana": "ほんとう",
+      "indonesia": "benar, sungguh",
+      "id": "013"
+    },
+    "014-uso": {
+      "romaji": "uso",
+      "kanji": "嘘",
+      "furigana": "うそ",
+      "indonesia": "bohong, dusta",
+      "id": "014"
+    },
+    "015-jidousha": {
+      "romaji": "jidousha",
+      "kanji": "自動車",
+      "furigana": "じどうしゃ",
+      "indonesia": "mobil, kendaraan",
+      "id": "015"
+    },
+    "016-koutsuu": {
+      "romaji": "koutsuu",
+      "kanji": "交通",
+      "furigana": "こうつう",
+      "indonesia": "lalu lintas, transportasi",
+      "id": "016"
+    },
+    "017-bukka": {
+      "romaji": "bukka",
+      "kanji": "物価",
+      "furigana": "ぶっか",
+      "indonesia": "harga barang",
+      "id": "017"
+    },
+    "018-nyuusu": {
+      "romaji": "nyuusu",
+      "kanji": "ニュース",
+      "furigana": "にゅうす",
+      "indonesia": "berita (news)",
+      "id": "018"
+    },
+    "019-anime": {
+      "romaji": "anime",
+      "kanji": "アニメ",
+      "furigana": "あにめ",
+      "indonesia": "animasi, kartun",
+      "id": "019"
+    },
+    "020-manga": {
+      "romaji": "manga",
+      "kanji": "漫画「マンガ」",
+      "furigana": "まんが",
+      "indonesia": "komik, manga",
+      "id": "020"
+    },
+    "021-dezain": {
+      "romaji": "dezain",
+      "kanji": "デザイン",
+      "furigana": "でざいん",
+      "indonesia": "desain",
+      "id": "021"
+    },
+    "022-yume": {
+      "romaji": "yume",
+      "kanji": "夢",
+      "furigana": "ゆめ",
+      "indonesia": "mimpi",
+      "id": "022"
+    },
+    "023-tensai": {
+      "romaji": "tensai",
+      "kanji": "天才",
+      "furigana": "てんさい",
+      "indonesia": "jenius, orang berbakat",
+      "id": "023"
+    },
+    "024-shiai": {
+      "romaji": "shiai",
+      "kanji": "試合",
+      "furigana": "しあい",
+      "indonesia": "pertandingan, pertandingan olahraga",
+      "id": "024"
+    },
+    "025-iken": {
+      "romaji": "iken",
+      "kanji": "意見",
+      "furigana": "いけん",
+      "indonesia": "pendapat, opini",
+      "id": "025"
+    },
+    "026-hanashi": {
+      "romaji": "hanashi",
+      "kanji": "話",
+      "furigana": "はなし",
+      "indonesia": "cerita, pembicaraan",
+      "id": "026"
+    },
+    "027-chikyuu": {
+      "romaji": "chikyuu",
+      "kanji": "地球",
+      "furigana": "ちきゅう",
+      "indonesia": "bumi, planet bumi",
+      "id": "027"
+    },
+    "028-tsuki": {
+      "romaji": "tsuki",
+      "kanji": "月",
+      "furigana": "つき",
+      "indonesia": "bulan (satellite bumi)",
+      "id": "028"
+    },
+    "029-saikin": {
+      "romaji": "saikin",
+      "kanji": "最近",
+      "furigana": "さいきん",
+      "indonesia": "akhir-akhir ini, belakangan ini",
+      "id": "029"
+    },
+    "030-tabun": {
+      "romaji": "tabun",
+      "kanji": "多分",
+      "furigana": "たぶん",
+      "indonesia": "mungkin",
+      "id": "030"
+    },
+    "031-kitto": {
+      "romaji": "kitto",
+      "kanji": "きっと",
+      "furigana": "",
+      "indonesia": "pasti, tentu",
+      "id": "031"
+    },
+    "032-hontouni": {
+      "romaji": "hontouni",
+      "kanji": "本当に",
+      "furigana": "ほんとうに",
+      "indonesia": "benar-benar",
+      "id": "032"
+    },
+    "033-sonnani": {
+      "romaji": "sonnani",
+      "kanji": "そんなに",
+      "furigana": "",
+      "indonesia": "Tidak begitu (diikuti kata negatif)",
+      "id": "033"
+    },
+    "034-nitsuite": {
+      "romaji": "nitsuite",
+      "kanji": "～について",
+      "furigana": "",
+      "indonesia": "tentang",
+      "id": "034"
+    },
+    "035-hisashiburi desune": {
+      "romaji": "hisashiburi desune",
+      "kanji": "久しぶりですね",
+      "furigana": "ひさしぶりですね",
+      "indonesia": "Lama tidak berjumpa, ya",
+      "id": "035"
+    },
+    "036-mochiron": {
+      "romaji": "mochiron",
+      "kanji": "もちろん",
+      "furigana": "",
+      "indonesia": "tentu saja, sudah tentu",
+      "id": "036"
+    },
+    "037-todoufuken": {
+      "romaji": "todoufuken",
+      "kanji": "都道府県",
+      "furigana": "とどうふけん",
+      "indonesia": "prefektur",
+      "id": "037"
+    },
+    "038-yakushokumei": {
+      "romaji": "yakushokumei",
+      "kanji": "役職名",
+      "furigana": "やくしょくめい",
+      "indonesia": "nama jabatan",
+      "id": "038"
+    },
+    "039-shi": {
+      "romaji": "shi",
+      "kanji": "市",
+      "furigana": "し",
+      "indonesia": "kota (setingkat kabupaten)",
+      "id": "039"
+    },
+    "040-machi": {
+      "romaji": "machi",
+      "kanji": "町",
+      "furigana": "まち",
+      "indonesia": "kota kecil, kota (setingkat kecamatan)",
+      "id": "040"
+    },
+    "041-mura": {
+      "romaji": "mura",
+      "kanji": "村",
+      "furigana": "むら",
+      "indonesia": "desa",
+      "id": "041"
+    },
+    "042-shushou (naikaku souridaijin)": {
+      "romaji": "shushou (naikaku souridaijin)",
+      "kanji": "首相（内閣総理大臣）",
+      "furigana": "しゅしょう （ないかくそうりだいじん）",
+      "indonesia": "perdana menteri",
+      "id": "042"
+    },
+    "043-chiji": {
+      "romaji": "chiji",
+      "kanji": "知事",
+      "furigana": "ちじ",
+      "indonesia": "gubernur",
+      "id": "043"
+    },
+    "044-shichou": {
+      "romaji": "shichou",
+      "kanji": "市長",
+      "furigana": "しちょう",
+      "indonesia": "walikota",
+      "id": "044"
+    },
+    "045-choucho": {
+      "romaji": "choucho",
+      "kanji": "町長",
+      "furigana": "ちょうちょう",
+      "indonesia": "kepala kota kecil",
+      "id": "045"
+    },
+    "046-sonchou": {
+      "romaji": "sonchou",
+      "kanji": "村長",
+      "furigana": "そんちょう",
+      "indonesia": "kepala desa",
+      "id": "046"
+    },
+    "047-gakuchou": {
+      "romaji": "gakuchou",
+      "kanji": "学長",
+      "furigana": "がくちょう",
+      "indonesia": "rektor",
+      "id": "047"
+    },
+    "048-kouchou": {
+      "romaji": "kouchou",
+      "kanji": "校長",
+      "furigana": "こうちょう",
+      "indonesia": "kepala sekolah",
+      "id": "048"
+    },
+    "049-enchou": {
+      "romaji": "enchou",
+      "kanji": "園長",
+      "furigana": "えんちょう",
+      "indonesia": "kepala taman kanak-kanak",
+      "id": "049"
+    },
+    "050-kaichou": {
+      "romaji": "kaichou",
+      "kanji": "会長",
+      "furigana": "かいちょう",
+      "indonesia": "ketua (organisasi)",
+      "id": "050"
+    },
+    "051-juuyaku": {
+      "romaji": "juuyaku",
+      "kanji": "重役",
+      "furigana": "じゅうやく",
+      "indonesia": "direktur (perusahaan)",
+      "id": "051"
+    },
+    "052-buchou": {
+      "romaji": "buchou",
+      "kanji": "部長",
+      "furigana": "ぶちょう",
+      "indonesia": "kepala bagian, kepala departemen",
+      "id": "052"
+    },
+    "053-kachou": {
+      "romaji": "kachou",
+      "kanji": "課長",
+      "furigana": "かちょう",
+      "indonesia": "kepala seksi, kepala sub-departemen",
+      "id": "053"
+    },
+    "054-toudori": {
+      "romaji": "toudori",
+      "kanji": "頭取",
+      "furigana": "とうどり",
+      "indonesia": "presiden direktur (bank)",
+      "id": "054"
+    },
+    "055-shitenchou": {
+      "romaji": "shitenchou",
+      "kanji": "支店長",
+      "furigana": "してんちょう",
+      "indonesia": "manajer cabang",
+      "id": "055"
+    },
+    "056-ekichou": {
+      "romaji": "ekichou",
+      "kanji": "駅長",
+      "furigana": "えきちょう",
+      "indonesia": "kepala stasiun",
+      "id": "056"
+    },
+    "057-inchou": {
+      "romaji": "inchou",
+      "kanji": "院長",
+      "furigana": "いんちょう",
+      "indonesia": "kepala rumah sakit, kepala klinik",
+      "id": "057"
+    },
+    "058-kangoshichou": {
+      "romaji": "kangoshichou",
+      "kanji": "看護師長",
+      "furigana": "かんごしちょう",
+      "indonesia": "kepala perawat",
+      "id": "058"
+    },
+    "059-keisatsu": {
+      "romaji": "keisatsu",
+      "kanji": "警察",
+      "furigana": "けいさつ",
+      "indonesia": "polisi",
+      "id": "059"
+    },
+    "060-shochou": {
+      "romaji": "shochou",
+      "kanji": "署長",
+      "furigana": "しょちょう",
+      "indonesia": "kepala kantor polisi",
+      "id": "060"
+    }
+  },
+  "第22課": {
+    "001-kimasu": {
+      "romaji": "kimasu",
+      "kanji": "着ます",
+      "furigana": "きます",
+      "indonesia": "memakai (baju bagian atas)",
+      "id": "001"
+    },
+    "002-hakimasu": {
+      "romaji": "hakimasu",
+      "kanji": "履きます",
+      "furigana": "はきます",
+      "indonesia": "memakai (baju bagian bawah, celana, sepatu)",
+      "id": "002"
+    },
+    "003-kaburimasu": {
+      "romaji": "kaburimasu",
+      "kanji": "被ります",
+      "furigana": "かぶります",
+      "indonesia": "memakai (topi, penutup kepala)",
+      "id": "003"
+    },
+    "004-kakemasu (wo)": {
+      "romaji": "kakemasu (wo)",
+      "kanji": "掛けます（を）",
+      "furigana": "かけます（を）",
+      "indonesia": "memakai (kacamata)",
+      "id": "004"
+    },
+    "005-shimasu (wo)": {
+      "romaji": "shimasu (wo)",
+      "kanji": "します（を）",
+      "furigana": "",
+      "indonesia": "memakai (dasi, aksesoris)",
+      "id": "005"
+    },
+    "006-umaremasu": {
+      "romaji": "umaremasu",
+      "kanji": "生まれます",
+      "furigana": "うまれます",
+      "indonesia": "lahir",
+      "id": "006"
+    },
+    "007-watashitachi": {
+      "romaji": "watashitachi",
+      "kanji": "私たち",
+      "furigana": "わたしたち",
+      "indonesia": "kami, kita",
+      "id": "007"
+    },
+    "008-kooto": {
+      "romaji": "kooto",
+      "kanji": "コート",
+      "furigana": "こーと",
+      "indonesia": "mantel, coat",
+      "id": "008"
+    },
+    "009-seetaa": {
+      "romaji": "seetaa",
+      "kanji": "セーター",
+      "furigana": "せーたー",
+      "indonesia": "sweter",
+      "id": "009"
+    },
+    "010-suutsu": {
+      "romaji": "suutsu",
+      "kanji": "スーツ",
+      "furigana": "すーつ",
+      "indonesia": "jas, setelan jas",
+      "id": "010"
+    },
+    "011-boushi": {
+      "romaji": "boushi",
+      "kanji": "帽子",
+      "furigana": "ぼうし",
+      "indonesia": "topi",
+      "id": "011"
+    },
+    "012-megane": {
+      "romaji": "megane",
+      "kanji": "眼鏡",
+      "furigana": "めがね",
+      "indonesia": "kacamata",
+      "id": "012"
+    },
+    "013-keeki": {
+      "romaji": "keeki",
+      "kanji": "ケーキ",
+      "furigana": "けーき",
+      "indonesia": "kue",
+      "id": "013"
+    },
+    "014-obentou": {
+      "romaji": "obentou",
+      "kanji": "お弁当",
+      "furigana": "おべんとう",
+      "indonesia": "bekal makan siang",
+      "id": "014"
+    },
+    "015-robotto": {
+      "romaji": "robotto",
+      "kanji": "ロボット",
+      "furigana": "ろぼっと",
+      "indonesia": "robot",
+      "id": "015"
+    },
+    "016-yuumoa": {
+      "romaji": "yuumoa",
+      "kanji": "ユーモア",
+      "furigana": "ゆーもあ",
+      "indonesia": "humor",
+      "id": "016"
+    },
+    "017-tsugou": {
+      "romaji": "tsugou",
+      "kanji": "都合",
+      "furigana": "つごう",
+      "indonesia": "keadaan, kondisi, situasi",
+      "id": "017"
+    },
+    "018-yoku": {
+      "romaji": "yoku",
+      "kanji": "よく",
+      "furigana": "",
+      "indonesia": "sering, dengan baik",
+      "id": "018"
+    },
+    "019-omedetougozaimasu": {
+      "romaji": "omedetougozaimasu",
+      "kanji": "おめでとうございます",
+      "furigana": "おめでとうございます",
+      "indonesia": "selamat (ucapan selamat)",
+      "id": "019"
+    },
+    "020-dewa": {
+      "romaji": "dewa",
+      "kanji": "では",
+      "furigana": "",
+      "indonesia": "kalau begitu, kalau begitu...",
+      "id": "020"
+    },
+    "021-yachin": {
+      "romaji": "yachin",
+      "kanji": "家賃",
+      "furigana": "やちん",
+      "indonesia": "sewa (rumah, apartemen)",
+      "id": "021"
+    },
+    "022-dainingukicchin": {
+      "romaji": "dainingukicchin",
+      "kanji": "ダイニングキッチン",
+      "furigana": "だいにんぐきっちん",
+      "indonesia": "ruang makan dan dapur",
+      "id": "022"
+    },
+    "023-washitsu": {
+      "romaji": "washitsu",
+      "kanji": "和室",
+      "furigana": "わしつ",
+      "indonesia": "ruang gaya Jepang (dengan tatami)",
+      "id": "023"
+    },
+    "024-oshiire": {
+      "romaji": "oshiire",
+      "kanji": "押入れ",
+      "furigana": "おしいれ",
+      "indonesia": "lemari (gaya Jepang)",
+      "id": "024"
+    },
+    "025-futon": {
+      "romaji": "futon",
+      "kanji": "布団",
+      "furigana": "ふとん",
+      "indonesia": "futon, tempat tidur gaya Jepang",
+      "id": "025"
+    },
+    "026-pari": {
+      "romaji": "pari",
+      "kanji": "パリ",
+      "furigana": "ぱり",
+      "indonesia": "Paris",
+      "id": "026"
+    },
+    "027-banri no choujou": {
+      "romaji": "banri no choujou",
+      "kanji": "万里の長城",
+      "furigana": "ばんりのちょうじょう",
+      "indonesia": "Tembok Besar Cina",
+      "id": "027"
+    },
+    "028-wanpiisu": {
+      "romaji": "wanpiisu",
+      "kanji": "ワンピース",
+      "furigana": "わんぴーす",
+      "indonesia": "gaun (one-piece dress)",
+      "id": "028"
+    },
+    "029-uwagi": {
+      "romaji": "uwagi",
+      "kanji": "上着",
+      "furigana": "うわぎ",
+      "indonesia": "jaket, baju luar",
+      "id": "029"
+    },
+    "030-pantsu": {
+      "romaji": "pantsu",
+      "kanji": "パンツ",
+      "furigana": "ぱんつ",
+      "indonesia": "celana, celana dalam",
+      "id": "030"
+    },
+    "031-jiinzu": {
+      "romaji": "jiinzu",
+      "kanji": "ジーンズ",
+      "furigana": "じーんず",
+      "indonesia": "jeans",
+      "id": "031"
+    },
+    "032-sukaato": {
+      "romaji": "sukaato",
+      "kanji": "スカート",
+      "furigana": "すかーと",
+      "indonesia": "rok",
+      "id": "032"
+    },
+    "033-burausu": {
+      "romaji": "burausu",
+      "kanji": "ブラウス",
+      "furigana": "ぶらうす",
+      "indonesia": "blus",
+      "id": "033"
+    },
+    "034-waishatsu": {
+      "romaji": "waishatsu",
+      "kanji": "ワイシャツ",
+      "furigana": "わいしゃつ",
+      "indonesia": "kemeja (white shirt)",
+      "id": "034"
+    },
+    "035-mafuraa": {
+      "romaji": "mafuraa",
+      "kanji": "マフラー",
+      "furigana": "まふらー",
+      "indonesia": "syal, selendang",
+      "id": "035"
+    },
+    "036-kutsushita": {
+      "romaji": "kutsushita",
+      "kanji": "靴下",
+      "furigana": "くつした",
+      "indonesia": "kaos kaki",
+      "id": "036"
+    },
+    "037-sutokkingu": {
+      "romaji": "sutokkingu",
+      "kanji": "ストッキング",
+      "furigana": "すとっきんぐ",
+      "indonesia": "stoking, kaos kaki tipis",
+      "id": "037"
+    },
+    "038-reinkooto": {
+      "romaji": "reinkooto",
+      "kanji": "レインコート",
+      "furigana": "れいんこーと",
+      "indonesia": "jas hujan",
+      "id": "038"
+    },
+    "039-beruto": {
+      "romaji": "beruto",
+      "kanji": "ベルト",
+      "furigana": "べると",
+      "indonesia": "ikat pinggang, sabuk",
+      "id": "039"
+    },
+    "040-haihiiru": {
+      "romaji": "haihiiru",
+      "kanji": "ハイヒール",
+      "furigana": "はいひーる",
+      "indonesia": "sepatu hak tinggi",
+      "id": "040"
+    },
+    "041-buutsu": {
+      "romaji": "buutsu",
+      "kanji": "ブーツ",
+      "furigana": "ぶーつ",
+      "indonesia": "sepatu bot",
+      "id": "041"
+    },
+    "042-zouri": {
+      "romaji": "zouri",
+      "kanji": "草履",
+      "furigana": "ぞうり",
+      "indonesia": "sandal jepit (gaya Jepang)",
+      "id": "042"
+    },
+    "043-tabi": {
+      "romaji": "tabi",
+      "kanji": "足袋",
+      "furigana": "たび",
+      "indonesia": "kaos kaki (gaya Jepang)",
+      "id": "043"
+    },
+    "044-obi": {
+      "romaji": "obi",
+      "kanji": "帯",
+      "furigana": "おび",
+      "indonesia": "obi, sabuk kimono",
+      "id": "044"
+    }
+  },
+  
+  
   "表現": {
     "001-atama ga gan gan suru": {
       "romaji": "atama ga gan gan suru",
