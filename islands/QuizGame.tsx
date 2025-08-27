@@ -262,7 +262,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
 
       {/* Filter だい + mode switch + furigana toggle */}
-      <div class="flex flex-col sm:flex-row gap-2 w-full my-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <select
           value={selectedDai}
           onChange={handleDaiChange}
