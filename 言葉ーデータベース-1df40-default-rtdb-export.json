@@ -1,5 +1,5 @@
 {
-  "第01課": {
+  "001-第01課": {
     "001-watashi": {
       "furigana": "わたし",
       "indonesia": "Saya",
@@ -223,7 +223,7 @@
       "romaji": "furansu"
     }
   },
-  "第02課": {
+  "002-第02課": {
     "001-kore": {
       "furigana": "",
       "indonesia": "Ini",
@@ -501,7 +501,7 @@
       "romaji": "kochira koso yoroshiku onegaishimasu"
     }
   },
-  "第03課": {
+  "003-第03課": {
     "001-koko": {
       "furigana": "",
       "indonesia": "Di sini",
@@ -905,7 +905,7 @@
       "romaji": "shokuhin"
     }
   },
-  "第04課": {
+  "004-第04課": {
     "001-okimasu": {
       "furigana": "おきます",
       "indonesia": "Bangun",
@@ -1273,7 +1273,7 @@
       "romaji": "denwa bangou annai"
     }
   },
-  "第05課": {
+  "005-第05課": {
     "001-ikimasu": {
       "furigana": "いきます",
       "indonesia": "Pergi",
@@ -1725,7 +1725,7 @@
       "romaji": "tennou tanjoubi"
     }
   },
-  "第06課": {
+  "006-第06課": {
     "001-tabemasu": {
       "furigana": "たべます",
       "indonesia": "Makan",
@@ -2131,7 +2131,7 @@
     "069-naki": {
       "furigana": "なき",
       "indonesia": "Kesemek",
-      "kanji": "ナシ",
+      "kanji": "柿",
       "romaji": "naki"
     },
     "070-mikan": {
@@ -2261,7 +2261,7 @@
       "romaji": "kome"
     }
   },
-  "第07課": {
+  "007-第07課": {
     "001-kirimasu": {
       "furigana": "きります",
       "indonesia": "Memotong, Mengiris",
@@ -2707,7 +2707,7 @@
       "indonesia": "Anak (Orang lain)"
     }
   },
-  "第08課": {
+  "008-第08課": {
     "001-hansamu (na)": {
       "kanji": "ハンサム（な）",
       "furigana": "はんさむ（な）",
@@ -3111,7 +3111,7 @@
       "indonesia": "Musim dingin"
     }
   },
-  "第09課": {
+  "009-第09課": {
     "001-wakarimasu": {
       "kanji": "分かります",
       "furigana": "わかります",
@@ -3587,7 +3587,7 @@
       "indonesia": "Olahraga renang"
     }
   },
-  "第10課": {
+  "010-第10課": {
     "001-arimasu": {
       "kanji": "あります",
       "furigana": "",
@@ -3919,7 +3919,7 @@
       "indonesia": "Teras"
     }
   },
-  "第11課": {
+  "011-第11課": {
     "001-imasu": {
       "kanji": "います",
       "furigana": "",
@@ -4395,7 +4395,7 @@
       "indonesia": "Coca cola"
     }
   },
-  "第12課": {
+  "012-第12課": {
     "001-kantan": {
       "kanji": "簡単",
       "furigana": "かんたん",
@@ -4637,7 +4637,7 @@
       "indonesia": "Tempat terkenal"
     }
   },
-  "第13課": {
+  "013-第13課": {
     "001-asobimasu": {
       "kanji": "遊びます",
       "furigana": "あそびます",
@@ -4777,8 +4777,8 @@
       "indonesia": "Haus"
     },
     "024-onakagasukimasu": {
-      "kanji": "おなかがすきます",
-      "furigana": "お腹がすきます",
+      "kanji": "お腹がすきます",
+      "furigana": "おなかがすきます",
       "romaji": "onakagasukimasu",
       "indonesia": "Lapar"
     },
@@ -4945,7 +4945,7 @@
       "indonesia": "Toko sayuran"
     }
   },
-  "第14課": {
+  "014-第14課": {
     "001-tsukemasu": {
       "romaji": "tsukemasu",
       "kanji": "点けます、付けます、着けます",
@@ -5268,7 +5268,7 @@
       "romaji": "kitaguchi",
       "kanji": "北口",
       "furigana": "きたぐち",
-      "indonesia": "Pintu selatan"
+      "indonesia": "Pintu utara"
     },
     "055-chuuouguchi": {
       "romaji": "chuuouguchi",
@@ -5373,7 +5373,7 @@
       "indonesia": "Pulang pergi"
     }
   },
-  "第15課": {
+  "015-第15課": {
     "001-okimasu": {
       "romaji": "okimasu",
       "kanji": "置きます",
@@ -5566,11 +5566,11 @@
       "furigana": "かんごし",
       "indonesia": "Perawat"
     },
-    "033-untensha": {
-      "romaji": "untensha",
+    "033-untenshu": {
+      "romaji": "untenshu",
       "kanji": "運転手",
       "furigana": "うんてんしゅ",
-      "indonesia": "Sopir"
+      "indonesia": "Sopir/Pengemudi"
     },
     "034-keisatsukan": {
       "romaji": "keisatsukan",
@@ -5651,7 +5651,7 @@
       "indonesia": "Olahragawan / atlit"
     }
   },
-  "第16課": {
+  "016-第16課": {
     "001-norimasu (ni)": {
       "romaji": "norimasu (ni)",
       "kanji": "乗ります（に）",
@@ -5995,7 +5995,7 @@
       "indonesia": "Cek saldo"
     }
   },
-  "第17課": {
+  "017-第17課": {
     "001-oboemasu": {
       "romaji": "oboemasu",
       "kanji": "覚えます",
@@ -6327,7 +6327,7 @@
       "indonesia": "Mabuk setelah minum/Efek sesudah minum"
     }
   },
-  "第18課": {
+  "018-第18課": {
     "001-mairimasu": {
       "romaji": "dekimasu",
       "kanji": "できます",
@@ -6605,7 +6605,7 @@
       "indonesia": "Menengok ke belakang"
     }
   },
-  "第19課": {
+  "019-第19課": {
     "001-noborimasu": {
       "romaji": "noborimasu",
       "kanji": "登ります",
@@ -6880,7 +6880,7 @@
       "id": "039"
     }
   },
-  "第20課": {
+  "020-第20課": {
     "001-irimasu (ga)": {
       "romaji": "irimasu (ga)",
       "kanji": "要ります（が）",
@@ -7036,7 +7036,7 @@
       "id": "022"
     }
   },
-  "第21課": {
+  "021-第21課": {
     "001-omoimmasu": {
       "romaji": "omoimasu",
       "kanji": "思います",
@@ -7458,7 +7458,7 @@
       "id": "060"
     }
   },
-  "第22課": {
+  "022-第22課": {
     "001-kimasu": {
       "romaji": "kimasu",
       "kanji": "着ます",
@@ -7768,9 +7768,7 @@
       "id": "044"
     }
   },
-  
-  
-  "表現": {
+  "060-表現": {
     "001-atama ga gan gan suru": {
       "romaji": "atama ga gan gan suru",
       "kanji": "頭がガンガンする",
@@ -7836,6 +7834,436 @@
       "kanji": "クタクタ",
       "furigana": "くたくた",
       "indonesia": "Sangat lelah, capek banget"
+    }
+  },
+  "070-NHKニュースの言葉-第1課": {
+    "001-tokyotoshin": {
+      "romaji": "tokyotoshin",
+      "kanji": "東京都心",
+      "furigana": "とうきょうとしん",
+      "indonesia": "Pusat kota Tokyo",
+      "id": "001",
+      "link": "https://www3.nhk.or.jp/news/html/20250827/k10014904411000.html"
+    },
+    "002-kansokushijou": {
+      "romaji": "kansokushijou",
+      "kanji": "観測史上",
+      "furigana": "かんそくしじょう",
+      "indonesia": "sepanjang sejarah pengamatan",
+      "id": "002"
+    },
+    "003-saichou": {
+      "romaji": "saichou",
+      "kanji": "最長",
+      "furigana": "さいちょう",
+      "indonesia": "terpanjang",
+      "id": "003"
+    },
+    "004-renzoku": {
+      "romaji": "renzoku",
+      "kanji": "連続",
+      "furigana": "れんぞく",
+      "indonesia": "berturut-turut",
+      "id": "004"
+    },
+    "005-moushobi": {
+      "romaji": "moushobi",
+      "kanji": "猛暑日",
+      "furigana": "もうしょび",
+      "indonesia": "hari dengan suhu sangat panas",
+      "id": "005"
+    },
+    "006-kakuchi": {
+      "romaji": "kakuchi",
+      "kanji": "各地",
+      "furigana": "かくち",
+      "indonesia": "setiap daerah",
+      "id": "006"
+    },
+    "007-mouretsu": {
+      "romaji": "mouretsu",
+      "kanji": "猛烈",
+      "furigana": "もうれつ",
+      "indonesia": "sangat kuat",
+      "id": "007"
+    },
+    "008-atsusa": {
+      "romaji": "atsusa",
+      "kanji": "暑さ",
+      "furigana": "あつさ",
+      "indonesia": "panas",
+      "id": "008"
+    },
+    "009-kantou": {
+      "romaji": "kantou",
+      "kanji": "関東",
+      "furigana": "かんとう",
+      "indonesia": "Kanto (wilayah di sekitar Tokyo)",
+      "id": "009"
+    },
+    "010-nairikubu": {
+      "romaji": "nairikubu",
+      "kanji": "内陸部",
+      "furigana": "ないりくぶ",
+      "indonesia": "daerah pedalaman",
+      "id": "010"
+    },
+    "011-kion": {
+      "romaji": "kion",
+      "kanji": "気温",
+      "furigana": "きおん",
+      "indonesia": "suhu udara",
+      "id": "011"
+    },
+    "012-koeru": {
+      "romaji": "koeru",
+      "kanji": "超える",
+      "furigana": "こえる",
+      "indonesia": "melewati",
+      "id": "012"
+    },
+    "013-kiroku": {
+      "romaji": "kiroku",
+      "kanji": "記録",
+      "furigana": "きろく",
+      "indonesia": "catatan",
+      "id": "013"
+    },
+    "014-toukai": {
+      "romaji": "toukai",
+      "kanji": "東海",
+      "furigana": "とうかい",
+      "indonesia": "Tokai (wilayah di sekitar Nagoya)",
+      "id": "014"
+    },
+    "015-kyuushuu": {
+      "romaji": "kyuushuu",
+      "kanji": "九州",
+      "furigana": "きゅうしゅう",
+      "indonesia": "Kyushu (pulau paling selatan dari empat pulau utama Jepang)",
+      "id": "015"
+    },
+    "016-mikomi": {
+      "romaji": "mikomi",
+      "kanji": "見込み",
+      "furigana": "みこみ",
+      "indonesia": "perkiraan",
+      "id": "016"
+    },
+    "017-hikitsuzuki": {
+      "romaji": "hikitsuzuki",
+      "kanji": "引き続き",
+      "furigana": "ひきつづき",
+      "indonesia": "terus-menerus",
+      "id": "017"
+    },
+    "018-necchuusouhou": {
+      "romaji": "necchuusouhou",
+      "kanji": "熱中症法",
+      "furigana": "ねっちゅうしょうほう",
+      "indonesia": "sindrom heatstroke",
+      "id": "018"
+    },
+    "019-taisaku": {
+      "romaji": "taisaku",
+      "kanji": "対策",
+      "furigana": "たいさく",
+      "indonesia": "tindakan pencegahan",
+      "id": "019"
+    },
+    "020-tettei": {
+      "romaji": "tettei",
+      "kanji": "徹底",
+      "furigana": "てってい",
+      "indonesia": "secara menyeluruh",
+      "id": "020"
+    },
+    "021-jouhou": {
+      "romaji": "jouhou",
+      "kanji": "情報",
+      "furigana": "じょうほう",
+      "indonesia": "informasi",
+      "id": "021"
+    },
+    "022-bousai": {
+      "romaji": "bousai",
+      "kanji": "防災",
+      "furigana": "ぼうさい",
+      "indonesia": "pencegahan bencana",
+      "id": "022"
+    },
+    "023-kazoku": {
+      "romaji": "kazoku",
+      "kanji": "家族",
+      "furigana": "かぞく",
+      "indonesia": "keluarga",
+      "id": "023"
+    },
+    "024-taisetsunahito": {
+      "romaji": "taisetsunahito",
+      "kanji": "大切な人",
+      "furigana": "たいせつなひと",
+      "indonesia": "orang yang penting",
+      "id": "024"
+    },
+    "025-kishouchou": {
+      "romaji": "kishouchou",
+      "kanji": "気象庁",
+      "furigana": "きしょうちょう",
+      "indonesia": "Badan Meteorologi Jepang",
+      "id": "025"
+    },
+    "026-koukiatsu": {
+      "romaji": "koukiatsu",
+      "kanji": "高気圧",
+      "furigana": "こうきあつ",
+      "indonesia": "tekanan udara tinggi",
+      "id": "026"
+    },
+    "027-oou": {
+      "romaji": "oou",
+      "kanji": "覆う",
+      "furigana": "おおう",
+      "indonesia": "menutupi",
+      "id": "027"
+    },
+    "028-hareru": {
+      "romaji": "hareru",
+      "kanji": "晴れる",
+      "furigana": "はれる",
+      "indonesia": "cerah",
+      "id": "028"
+    },
+    "029-saikoukion": {
+      "romaji": "saikoukion",
+      "kanji": "最高気温",
+      "furigana": "さいこうきおん",
+      "indonesia": "suhu tertinggi",
+      "id": "029"
+    },
+    "030-kiken": {
+      "romaji": "kiken",
+      "kanji": "危険",
+      "furigana": "きけん",
+      "indonesia": "bahaya",
+      "id": "030"
+    },
+    "031-nissuu": {
+      "romaji": "nissuu",
+      "kanji": "日数",
+      "furigana": "にっすう",
+      "indonesia": "jumlah hari",
+      "id": "031"
+    },
+    "032-shimettakuuki": {
+      "romaji": "shimettakuuki",
+      "kanji": "湿った空気",
+      "furigana": "しめったくうき",
+      "indonesia": "udara lembap",
+      "id": "032"
+    },
+    "033-eikyou": {
+      "romaji": "eikyou",
+      "kanji": "影響",
+      "furigana": "えいきょう",
+      "indonesia": "pengaruh",
+      "id": "033"
+    },
+    "034-hirogaru": {
+      "romaji": "hirogaru",
+      "kanji": "広がる",
+      "furigana": "ひろがる",
+      "indonesia": "menyebar/meluas",
+      "id": "034"
+    },
+    "035-yosou": {
+      "romaji": "yosou",
+      "kanji": "予想",
+      "furigana": "よそう",
+      "indonesia": "perkiraan",
+      "id": "035"
+    },
+    "036-keikai": {
+      "romaji": "keikai",
+      "kanji": "警戒",
+      "furigana": "けいかい",
+      "indonesia": "peringatan/kewaspadaan",
+      "id": "036"
+    },
+    "037-araato": {
+      "romaji": "aratto",
+      "kanji": "アラート",
+      "furigana": "あらーと",
+      "indonesia": "peringatan (alert)",
+      "id": "037"
+    },
+    "038-happyou": {
+      "romaji": "happyou",
+      "kanji": "発表",
+      "furigana": "はっぴょう",
+      "indonesia": "pengumuman",
+      "id": "038"
+    },
+    "039-tekisetsu": {
+      "romaji": "tekisetsu",
+      "kanji": "適切",
+      "furigana": "てきせつ",
+      "indonesia": "tepat",
+      "id": "039"
+    },
+    "040-shiyou": {
+      "romaji": "shiyou",
+      "kanji": "使用",
+      "furigana": "しよう",
+      "indonesia": "penggunaan",
+      "id": "040"
+    },
+    "041-suibun": {
+      "romaji": "suibun",
+      "kanji": "水分",
+      "furigana": "すいぶん",
+      "indonesia": "cairan",
+      "id": "041"
+    },
+    "042-enbun": {
+      "romaji": "enbun",
+      "kanji": "塩分",
+      "furigana": "えんぶん",
+      "indonesia": "kadar garam",
+      "id": "042"
+    },
+    "043-hokyuu": {
+      "romaji": "hokyuu",
+      "kanji": "補給",
+      "furigana": "ほきゅう",
+      "indonesia": "pengisian ulang",
+      "id": "043"
+    },
+    "044-tonai": {
+      "romaji": "tonai",
+      "kanji": "都内",
+      "furigana": "とない",
+      "indonesia": "di dalam wilayah Tokyo",
+      "id": "044"
+    },
+    "045-utagai": {
+      "romaji": "utagai",
+      "kanji": "疑い",
+      "furigana": "うたがい",
+      "indonesia": "kecurigaan",
+      "id": "045"
+    },
+    "046-kyuukyuushoubouchou": {
+      "romaji": "kyuukyuushoubouchou",
+      "kanji": "救急消防庁",
+      "furigana": "きゅうきゅうしょうぼうちょう",
+      "indonesia": "Badan Pemadam Kebakaran dan Penyelamatan Darurat",
+      "id": "046"
+    },
+    "047-juushou": {
+      "romaji": "juushou",
+      "kanji": "重症",
+      "furigana": "じゅうしょう",
+      "indonesia": "kondisi serius",
+      "id": "047"
+    },
+    "048-chuutoushou": {
+      "romaji": "chuutoushou",
+      "kanji": "中等症",
+      "furigana": "ちゅうとうしょう",
+      "indonesia": "kondisi sedang",
+      "id": "048"
+    },
+    "049-keishou": {
+      "romaji": "keishou",
+      "kanji": "軽症",
+      "furigana": "けいしょう",
+      "indonesia": "kondisi ringan",
+      "id": "049"
+    },
+    "050-nodogakawaku": {
+      "romaji": "nodogakawaku",
+      "kanji": "喉が渇く",
+      "furigana": "のどがかわく",
+      "indonesia": "haus",
+      "id": "050"
+    },
+    "051-hokyuu": {
+      "romaji": "hokyuu",
+      "kanji": "補給",
+      "furigana": "ほきゅう",
+      "indonesia": "mengisi ulang",
+      "id": "051"
+    },
+    "052-shitsunai": {
+      "romaji": "shitsunai",
+      "kanji": "室内",
+      "furigana": "しつない",
+      "indonesia": "di dalam ruangan",
+      "id": "052"
+    },
+    "053-reibou": {
+      "romaji": "reibou",
+      "kanji": "冷房",
+      "furigana": "れいぼう",
+      "indonesia": "pendingin ruangan",
+      "id": "053"
+    },
+    "054-senpuuki": {
+      "romaji": "senpuuki",
+      "kanji": "扇風機",
+      "furigana": "せんぷうき",
+      "indonesia": "kipas angin",
+      "id": "054"
+    },
+    "055-tekisetsu": {
+      "romaji": "tekisetsu",
+      "kanji": "適切",
+      "furigana": "てきせつ",
+      "indonesia": "tepat",
+      "id": "055"
+    },
+    "056-taisaku": {
+      "romaji": "taisaku",
+      "kanji": "対策",
+      "furigana": "たいさく",
+      "indonesia": "tindakan pencegahan",
+      "id": "056"
+    },
+    "057-tettei": {
+      "romaji": "tettei",
+      "kanji": "徹底",
+      "furigana": "てってい",
+      "indonesia": "secara menyeluruh",
+      "id": "057"
+    },
+    "058-yobikakeru": {
+      "romaji": "yobikakeru",
+      "kanji": "呼びかける",
+      "furigana": "よびかける",
+      "indonesia": "mengimbau",
+      "id": "058"
+    },
+    "059-doukyoutokansatsuimuin": {
+      "romaji": "doukyoutokansatsuimuin",
+      "kanji": "同居と観察医務員",
+      "furigana": "どうきょとかんさついむいん",
+      "indonesia": "petugas medis yang tinggal bersama dan mengamati (pasien)",
+      "id": "059"
+    },
+    "060-nakunaru": {
+      "romaji": "nakunaru",
+      "kanji": "亡くなる",
+      "furigana": "なくなる",
+      "indonesia": "meninggal dunia",
+      "id": "060"
+    },
+    "061-wakaru": {
+      "romaji": "wakaru",
+      "kanji": "分かる",
+      "furigana": "わかる",
+      "indonesia": "diketahui, diketahui fakta",
+      "id": "061"
     }
   }
 }
