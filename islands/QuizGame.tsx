@@ -35,18 +35,20 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [quizMode, setQuizMode] = useState<"jpToId" | "idToJp">("idToJp");
   const [isFinished, setIsFinished] = useState(false);
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
-  const [showFurigana, setShowFurigana] = useState(false); // 👈 toggle furigana
+  const [showFurigana, setShowFurigana] = useState(false);
+  const [restored, setRestored] = useState(false);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("quizMode") as "jpToId" | "idToJp" | null;
     const savedDai = localStorage.getItem("selectedDai");
     const savedFurigana = localStorage.getItem("showFurigana");
+    const savedProgress = localStorage.getItem("quizProgress");
 
     if (savedMode) setQuizMode(savedMode);
     if (savedDai) setSelectedDai(savedDai);
     if (savedFurigana !== null) setShowFurigana(JSON.parse(savedFurigana));
 
-    fetchWords();
+    fetchWords(savedProgress);
   }, []);
 
   // Persist settings
@@ -63,7 +65,19 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }, [showFurigana]);
 
   useEffect(() => {
+  const progress = {
+    currentIndex,
+    correctCount,
+    wrongCount,
+    wrongAnswers,
+    words,
+  };
+  localStorage.setItem("quizProgress", JSON.stringify(progress));
+}, [currentIndex, correctCount, wrongCount, wrongAnswers, words]);
+
+  useEffect(() => {
     if (allWords.length === 0) return;
+    if (restored) return; // Skip if restored from progress
 
     const filtered =
       selectedDai === "all"
@@ -73,7 +87,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     resetQuiz(filtered);
   }, [selectedDai, allWords]);
 
-  async function fetchWords() {
+  async function fetchWords(savedProgress?: string | null) {
     const allData = await dbModels.getAll();
     const parsed: Word[] = [];
     const dais: Set<string> = new Set();
@@ -95,6 +109,25 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     const shuffled = parsed.sort(() => Math.random() - 0.5);
     setAllWords(shuffled);
     setDaiList(Array.from(dais));
+
+    if (savedProgress) {
+      try {
+        const prog = JSON.parse(savedProgress);
+        if (prog.words && prog.words.length > 0) {
+          setWords(prog.words);
+          setCurrentIndex(prog.currentIndex || 0);
+          setCorrectCount(prog.correctCount || 0);
+          setWrongCount(prog.wrongCount || 0);
+          setWrongAnswers(prog.wrongAnswers || []);
+          generateOptions(prog.words, prog.currentIndex || 0);
+          setLoading(false);
+          setRestored(true);
+          return;
+        }
+      } catch {
+        console.log("Failed to load progress");
+      }
+    }
     setWords(shuffled);
     setLoading(false);
     generateOptions(shuffled, 0);
