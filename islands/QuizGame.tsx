@@ -38,8 +38,29 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [showFurigana, setShowFurigana] = useState(false); // 👈 toggle furigana
 
   useEffect(() => {
+    const savedMode = localStorage.getItem("quizMode") as "jpToId" | "idToJp" | null;
+    const savedDai = localStorage.getItem("selectedDai");
+    const savedFurigana = localStorage.getItem("showFurigana");
+
+    if (savedMode) setQuizMode(savedMode);
+    if (savedDai) setSelectedDai(savedDai);
+    if (savedFurigana !== null) setShowFurigana(JSON.parse(savedFurigana));
+
     fetchWords();
   }, []);
+
+  // Persist settings
+  useEffect(() => {
+    localStorage.setItem("quizMode", quizMode);
+  }, [quizMode]);
+
+  useEffect(() => {
+    localStorage.setItem("selectedDai", selectedDai);
+  }, [selectedDai]);
+
+  useEffect(() => {
+    localStorage.setItem("showFurigana", JSON.stringify(showFurigana));
+  }, [showFurigana]);
 
   async function fetchWords() {
     const allData = await dbModels.getAll();
