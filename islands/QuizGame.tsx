@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
 // routes/QuizGame.tsx
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState, useRef } from "preact/hooks";
 import dbModels from "../models/dbModels.ts";
 
 interface Word {
@@ -37,6 +37,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
   const [showFurigana, setShowFurigana] = useState(false);
   const [restored, setRestored] = useState(false);
+  const answeringRef = useRef(false);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("quizMode") as "jpToId" | "idToJp" | null;
@@ -177,7 +178,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
 
   function handleAnswer(selected: Word) {
-    if (answered) return;
+    // if (answered) return;
+    if (isFinished || answeringRef.current || answered) return;
+    answeringRef.current = true; 
     setAnswered(true);
 
     const correctWord = words[currentIndex];
@@ -232,8 +235,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         generateOptions(words, nextIndex);
         setFeedback("");
         setAnswered(false);
+        answeringRef.current = false;
       } else {
         setIsFinished(true);
+        answeringRef.current = false;
       }
     }, 1200);
   }
@@ -261,11 +266,20 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
   // --- REVIEW PAGE ---
   if (isFinished) {
+    const percent = words.length > 0
+      ? Math.round((correctCount / words.length) * 100)
+      : 0;
+
     return (
       <div
         class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
       >
         <h1 class="text-2xl font-bold mb-4">結果</h1>
+        <h2 class="text-xl font-semibold mb-4">お疲れ様でした！</h2>
+        <h2 class="mb-2 text-lg">あなたのスコア:</h2>
+        <p class="text-4xl font-extrabold mb-4">{percent}%</p>
+        <p class="mb-4">選択しただい: {selectedDai}</p>
+        <p class="mb-4">全{words.length}問中</p>
         <p class="mb-2">正解数: {correctCount}</p>
         <p class="mb-4">不正解数: {wrongCount}</p>
 
@@ -285,11 +299,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                   >
                     <p>
                       <strong>問題:</strong> {quizMode === "jpToId"
-                        ? `${wa.question.kanji} ${
-                          showFurigana && wa.question.furigana
-                            ? "「" + wa.question.furigana + "」"
-                            : ""
-                        }`
+                        ? `${wa.question.kanji} ${"「" + wa.question.furigana + "」"}`
                         : wa.question.indonesia}
                     </p>
                     <p class="text-red-600">
