@@ -62,6 +62,17 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     localStorage.setItem("showFurigana", JSON.stringify(showFurigana));
   }, [showFurigana]);
 
+  useEffect(() => {
+    if (allWords.length === 0) return;
+
+    const filtered =
+      selectedDai === "all"
+        ? allWords
+        : allWords.filter((w) => w.dai === selectedDai);
+
+    resetQuiz(filtered);
+  }, [selectedDai, allWords]);
+
   async function fetchWords() {
     const allData = await dbModels.getAll();
     const parsed: Word[] = [];
