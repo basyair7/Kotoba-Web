@@ -394,18 +394,18 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             : currentWord.indonesia}
         </h1>
         
-        <p className="text-lg">{quizMode === "jpToId" ? "Artinya?" : "意味は？"}</p>
-
-        {/* Feedback */}
-        {feedback && (
-          <p
-            class={`mt-2 font-semibold ${
-              feedback.startsWith("正解") ? "text-green-400" : "text-red-400"
-            }`}
-          >
-            {feedback}
-          </p>
-        )}
+        <p className="text-lg flex items-center gap-2">
+          {quizMode === "jpToId" ? "Artinya?" : "意味は？"}
+          {feedback && (
+            <span
+              class={`font-semibold ${
+                feedback.startsWith("正解") ? "text-green-400" : "text-red-400"
+              }`}
+            >
+              {feedback}
+            </span>
+          )}
+        </p>
       </div>
 
       {/* Select "Answer" */}
