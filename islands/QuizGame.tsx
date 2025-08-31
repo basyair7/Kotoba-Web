@@ -326,8 +326,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                       <p>
                         <strong>問題:</strong> {questionDisplay}
                       </p>
-                      <p class="text-red-600">あなたの答え: {yourAnswerDisplay}</p>
-                      <p class="text-green-600">正しい答え: {correctAnswerDisplay}</p>
+                      <p class="text-red-400">あなたの答え: {yourAnswerDisplay}</p>
+                      <p class="text-green-400">正しい答え: {correctAnswerDisplay}</p>
                     </li>
                   );
                 })}
