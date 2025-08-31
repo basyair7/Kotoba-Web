@@ -1,4 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
+// database/firebase.ts
 import { initializeApp } from "npm:firebase/app";
 import { getDatabase, ref, get, set } from "npm:firebase/database";
 import firebaseConfig from "./firebaseKeys/serviceAccount.ts";
