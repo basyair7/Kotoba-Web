@@ -14,10 +14,18 @@ interface QuizGameProps {
   theme?: "light" | "dark";
 }
 
+// NOTE: WrongAnswer now supports two shapes for backward compatibility:
+// - new (structured): { question: Word, selected: Word, quizMode: 'jpToId'|'idToJp' }
+// - old (string): { question: Word, yourAnswer: string, correctAnswer: string }
 interface WrongAnswer {
   question: Word;
-  yourAnswer: string;
-  correctAnswer: string;
+  // new structured fields (preferred)
+  selected?: Word;
+  quizMode?: "jpToId" | "idToJp";
+
+  // legacy fields (kept optional so older persisted progress still works)
+  yourAnswer?: string;
+  correctAnswer?: string;
 }
 
 export default function QuizGame({ theme = "light" }: QuizGameProps) {
@@ -40,7 +48,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const answeringRef = useRef(false);
 
   useEffect(() => {
-    const savedMode = localStorage.getItem("quizMode") as "jpToId" | "idToJp" | null;
+    const savedMode = localStorage.getItem("quizMode") as
+      | "jpToId"
+      | "idToJp"
+      | null;
     const savedDai = localStorage.getItem("selectedDai");
     const savedFurigana = localStorage.getItem("showFurigana");
     const savedProgress = localStorage.getItem("quizProgress");
@@ -66,15 +77,15 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }, [showFurigana]);
 
   useEffect(() => {
-  const progress = {
-    currentIndex,
-    correctCount,
-    wrongCount,
-    wrongAnswers,
-    words,
-  };
-  localStorage.setItem("quizProgress", JSON.stringify(progress));
-}, [currentIndex, correctCount, wrongCount, wrongAnswers, words]);
+    const progress = {
+      currentIndex,
+      correctCount,
+      wrongCount,
+      wrongAnswers,
+      words,
+    };
+    localStorage.setItem("quizProgress", JSON.stringify(progress));
+  }, [currentIndex, correctCount, wrongCount, wrongAnswers, words]);
 
   useEffect(() => {
     if (allWords.length === 0) return;
@@ -157,7 +168,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
 
   function handleModeChange(e: Event) {
-    const mode = (e.target as HTMLSelectElement).value as "jpToId" | "idToJp";
+    const mode = (e.target as HTMLSelectElement).value as
+      | "jpToId"
+      | "idToJp";
     setQuizMode(mode);
 
     const filtered = selectedDai === "all"
@@ -178,9 +191,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
 
   function handleAnswer(selected: Word) {
-    // if (answered) return;
     if (isFinished || answeringRef.current || answered) return;
-    answeringRef.current = true; 
+    answeringRef.current = true;
     setAnswered(true);
 
     const correctWord = words[currentIndex];
@@ -197,26 +209,17 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       setFeedback("正解! 🎉");
     } else {
       setWrongCount((prev) => prev + 1);
+
+      // Push structured wrong answer so we can re-render dynamically depending on showFurigana
       setWrongAnswers((prev) => [
         ...prev,
         {
           question: correctWord,
-          yourAnswer: quizMode === "jpToId"
-            ? selected.indonesia
-            : `${selected.kanji}${
-              showFurigana && selected.furigana
-                ? "「" + selected.furigana + "」"
-                : ""
-            }`,
-          correctAnswer: quizMode === "jpToId"
-            ? correctWord.indonesia
-            : `${correctWord.kanji}${
-              showFurigana && correctWord.furigana
-                ? "「" + correctWord.furigana + "」"
-                : ""
-            }`,
+          selected: selected,
+          quizMode: quizMode,
         },
       ]);
+
       setFeedback(
         quizMode === "jpToId"
           ? `不正解！ 正しい答え: ${correctWord.indonesia}`
@@ -250,9 +253,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
   if (words.length === 0) {
     return (
-      <div class="min-h-screen flex justify-center p-4">
-        データがありません。
-      </div>
+      <div class="min-h-screen flex justify-center p-4">データがありません。</div>
     );
   }
 
@@ -263,6 +264,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   const buttonBg = theme === "dark"
     ? "bg-blue-700 hover:bg-blue-600"
     : "bg-blue-500 hover:bg-blue-600";
+
+  // small helper to render kanji + (optionally) furigana
+  const renderKanjiWithFuri = (w: Word) =>
+    `${w.kanji}${showFurigana && w.furigana ? `「${w.furigana}」` : ""}`;
 
   // --- REVIEW PAGE ---
   if (isFinished) {
@@ -288,43 +293,73 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             <div class="mt-4">
               <h2 class="text-xl font-semibold mb-2">復習しましょう ✍️</h2>
               <ul class="space-y-3">
-                {wrongAnswers.map((wa, idx) => (
-                  <li
-                    key={idx}
-                    class={`p-3 border rounded ${
-                      theme === "dark"
-                        ? "bg-gray-700 text-white border-gray-600"
-                        : "bg-red-50 text-black border-red-200"
-                    }`}
-                  >
-                    <p>
-                      <strong>問題:</strong> {quizMode === "jpToId"
-                        ? `${wa.question.kanji} ${"「" + wa.question.furigana + "」"}`
-                        : wa.question.indonesia}
-                    </p>
-                    <p class="text-red-600">
-                      あなたの答え: {wa.yourAnswer}
-                    </p>
-                    <p class="text-green-600">
-                      正しい答え: {wa.correctAnswer}
-                    </p>
-                  </li>
-                ))}
+                {wrongAnswers.map((wa, idx) => {
+                  // support both structured (new) and legacy (string) shapes
+                  const isStructured = (wa as any).selected !== undefined;
+                  const waMode = wa.quizMode ?? quizMode; // fallback to current mode if missing
+
+                  const questionDisplay = waMode === "jpToId"
+                    ? renderKanjiWithFuri(wa.question)
+                    : wa.question.indonesia;
+
+                  const yourAnswerDisplay = isStructured
+                    ? (waMode === "jpToId"
+                      ? wa.selected!.indonesia
+                      : renderKanjiWithFuri(wa.selected!))
+                    : wa.yourAnswer || "(no answer)";
+
+                  const correctAnswerDisplay = isStructured
+                    ? (waMode === "jpToId"
+                      ? wa.question.indonesia
+                      : renderKanjiWithFuri(wa.question))
+                    : wa.correctAnswer || "(no correct answer)";
+
+                  return (
+                    <li
+                      key={idx}
+                      class={`p-3 border rounded ${
+                        theme === "dark"
+                          ? "bg-gray-700 text-white border-gray-600"
+                          : "bg-red-50 text-black border-red-200"
+                      }`}
+                    >
+                      <p>
+                        <strong>問題:</strong> {questionDisplay}
+                      </p>
+                      <p class="text-red-600">あなたの答え: {yourAnswerDisplay}</p>
+                      <p class="text-green-600">正しい答え: {correctAnswerDisplay}</p>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )
           : (
-            <p class="mt-4 text-green-400 font-bold">
-              全部正解！素晴らしい！ 🎉
-            </p>
+            <p class="mt-4 text-green-400 font-bold">全部正解！素晴らしい！ 🎉</p>
           )}
 
-        <button
-          onClick={() => resetQuiz(words)}
-          class={`mt-6 px-4 py-2 rounded ${buttonBg} text-white`}
-        >
-          もう一度プレイ
-        </button>
+        {/* Action Buttons */}
+        <div class="mt-6 flex gap-3">
+          {/* もう一度プレイ Button */}
+          <button
+            onClick={() => resetQuiz(words)}
+            class={`px-4 py-2 rounded ${buttonBg} text-white`}
+          >
+            もう一度プレイ
+          </button>
+
+          {/* Furigana Toggle Button */}
+          <button
+            className={`px-4 py-2 rounded-md border transition ${
+              showFurigana
+                ? "bg-blue-500 text-white hover:bg-blue-600"
+                : "bg-gray-200 text-black hover:bg-gray-300"
+            }`}
+            onClick={() => setShowFurigana((prev) => !prev)}
+          >
+            {showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"}
+          </button>
+        </div>
       </div>
     );
   }
@@ -364,23 +399,11 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           <option value="idToJp">インドネシア語 → 日本語</option>
         </select>
 
-        {/* Checkbox furigana */}
-        <label class="flex items-center gap-2">
-          <input
-            type="checkbox"
-            checked={showFurigana}
-            onChange={() => setShowFurigana((prev) => !prev)}
-          />
-          ふりがなを表示する
-        </label>
+        {/* Checkbox furigana (removed) */}
       </div>
 
-      <p class="mb-2">
-        問題 {currentIndex + 1} / 全{words.length}問
-      </p>
-      <p class="mb-4 font-semibold">
-        正解: {correctCount} | 不正解: {wrongCount}
-      </p>
+      <p class="mb-2">問題 {currentIndex + 1} / 全{words.length}問</p>
+      <p class="mb-4 font-semibold">正解: {correctCount} | 不正解: {wrongCount}</p>
 
       {/* 質問 */}
       <div class="mb-4">
@@ -393,7 +416,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             }`
             : currentWord.indonesia}
         </h3>
-        
+
         <p className="flex items-center gap-2">
           {quizMode === "jpToId" ? "Artinya?" : "意味は？"}
           {feedback && (
@@ -428,17 +451,30 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         ))}
       </div>
 
-      {/* Give Up Button */}
-      <button
-        onClick={() => setIsFinished(true)}
-        class={`mt-6 px-4 py-2 rounded ${
-          theme === "dark"
-            ? "bg-red-700 hover:bg-red-600"
-            : "bg-red-500 hover:bg-red-600"
-        } text-white`}
-      >
-        やめる
-      </button>
+      {/* Action Buttons */}
+      <div class="mt-6 flex gap-3">
+        {/* Give Up Button */}
+        <button
+          onClick={() => setIsFinished(true)}
+          class={`px-4 py-2 rounded ${
+            theme === "dark"
+              ? "bg-red-700 hover:bg-red-600"
+              : "bg-red-500 hover:bg-red-600"
+          } text-white`}
+        >
+          やめる
+        </button>
+
+        {/* Furigana Toggle Button */}
+        <button
+          className={`px-4 py-2 rounded-md border ${
+            showFurigana ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+          }`}
+          onClick={() => setShowFurigana((prev) => !prev)}
+        >
+          {showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"}
+        </button>
+      </div>
     </div>
   );
 }
