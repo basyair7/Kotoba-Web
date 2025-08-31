@@ -384,7 +384,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
       {/* 質問 */}
       <div class="mb-4">
-        <h1 class="text-3xl font-bold md-4">
+        <h3 class="text-2xl font-bold mb-2">
           {quizMode === "jpToId"
             ? `${currentWord.kanji} ${
               showFurigana && currentWord.furigana
@@ -392,9 +392,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                 : ""
             }`
             : currentWord.indonesia}
-        </h1>
+        </h3>
         
-        <p className="text-lg flex items-center gap-2">
+        <p className="flex items-center gap-2">
           {quizMode === "jpToId" ? "Artinya?" : "意味は？"}
           {feedback && (
             <span
