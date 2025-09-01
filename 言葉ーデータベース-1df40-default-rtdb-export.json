@@ -223,7 +223,7 @@
       "romaji": "furansu"
     }
   },
-  "002-第02課": {
+  "001-第02課": {
     "001-kore": {
       "furigana": "",
       "indonesia": "Ini",
@@ -501,7 +501,7 @@
       "romaji": "kochira koso yoroshiku onegaishimasu"
     }
   },
-  "003-第03課": {
+  "001-第03課": {
     "001-koko": {
       "furigana": "",
       "indonesia": "Di sini",
@@ -905,7 +905,7 @@
       "romaji": "shokuhin"
     }
   },
-  "004-第04課": {
+  "001-第04課": {
     "001-okimasu": {
       "furigana": "おきます",
       "indonesia": "Bangun",
@@ -1273,7 +1273,7 @@
       "romaji": "denwa bangou annai"
     }
   },
-  "005-第05課": {
+  "001-第05課": {
     "001-ikimasu": {
       "furigana": "いきます",
       "indonesia": "Pergi",
@@ -1725,7 +1725,7 @@
       "romaji": "tennou tanjoubi"
     }
   },
-  "006-第06課": {
+  "001-第06課": {
     "001-tabemasu": {
       "furigana": "たべます",
       "indonesia": "Makan",
@@ -2261,7 +2261,7 @@
       "romaji": "kome"
     }
   },
-  "007-第07課": {
+  "001-第07課": {
     "001-kirimasu": {
       "furigana": "きります",
       "indonesia": "Memotong, Mengiris",
@@ -2707,7 +2707,7 @@
       "indonesia": "Anak (Orang lain)"
     }
   },
-  "008-第08課": {
+  "001-第08課": {
     "001-hansamu (na)": {
       "kanji": "ハンサム（な）",
       "furigana": "はんさむ（な）",
@@ -3111,7 +3111,7 @@
       "indonesia": "Musim dingin"
     }
   },
-  "009-第09課": {
+  "001-第09課": {
     "001-wakarimasu": {
       "kanji": "分かります",
       "furigana": "わかります",
@@ -3587,7 +3587,7 @@
       "indonesia": "Olahraga renang"
     }
   },
-  "010-第10課": {
+  "001-第10課": {
     "001-arimasu": {
       "kanji": "あります",
       "furigana": "",
@@ -3919,7 +3919,7 @@
       "indonesia": "Teras"
     }
   },
-  "011-第11課": {
+  "001-第11課": {
     "001-imasu": {
       "kanji": "います",
       "furigana": "",
@@ -4395,7 +4395,7 @@
       "indonesia": "Coca cola"
     }
   },
-  "012-第12課": {
+  "001-第12課": {
     "001-kantan": {
       "kanji": "簡単",
       "furigana": "かんたん",
@@ -4637,7 +4637,7 @@
       "indonesia": "Tempat terkenal"
     }
   },
-  "013-第13課": {
+  "001-第13課": {
     "001-asobimasu": {
       "kanji": "遊びます",
       "furigana": "あそびます",
@@ -4945,7 +4945,7 @@
       "indonesia": "Toko sayuran"
     }
   },
-  "014-第14課": {
+  "001-第14課": {
     "001-tsukemasu": {
       "romaji": "tsukemasu",
       "kanji": "点けます、付けます、着けます",
@@ -5373,7 +5373,7 @@
       "indonesia": "Pulang pergi"
     }
   },
-  "015-第15課": {
+  "001-第15課": {
     "001-okimasu": {
       "romaji": "okimasu",
       "kanji": "置きます",
@@ -5651,7 +5651,7 @@
       "indonesia": "Olahragawan / atlit"
     }
   },
-  "016-第16課": {
+  "001-第16課": {
     "001-norimasu (ni)": {
       "romaji": "norimasu (ni)",
       "kanji": "乗ります（に）",
@@ -5995,7 +5995,7 @@
       "indonesia": "Cek saldo"
     }
   },
-  "017-第17課": {
+  "001-第17課": {
     "001-oboemasu": {
       "romaji": "oboemasu",
       "kanji": "覚えます",
@@ -6327,7 +6327,7 @@
       "indonesia": "Mabuk setelah minum/Efek sesudah minum"
     }
   },
-  "018-第18課": {
+  "001-第18課": {
     "001-mairimasu": {
       "romaji": "dekimasu",
       "kanji": "できます",
@@ -6605,7 +6605,7 @@
       "indonesia": "Menengok ke belakang"
     }
   },
-  "019-第19課": {
+  "001-第19課": {
     "001-noborimasu": {
       "romaji": "noborimasu",
       "kanji": "登ります",
@@ -6880,7 +6880,7 @@
       "id": "039"
     }
   },
-  "020-第20課": {
+  "001-第20課": {
     "001-irimasu (ga)": {
       "romaji": "irimasu (ga)",
       "kanji": "要ります（が）",
@@ -7036,7 +7036,7 @@
       "id": "022"
     }
   },
-  "021-第21課": {
+  "001-第21課": {
     "001-omoimmasu": {
       "romaji": "omoimasu",
       "kanji": "思います",
@@ -7458,7 +7458,7 @@
       "id": "060"
     }
   },
-  "022-第22課": {
+  "001-第22課": {
     "001-kimasu": {
       "romaji": "kimasu",
       "kanji": "着ます",
@@ -7768,7 +7768,231 @@
       "id": "044"
     }
   },
-  "060-表現": {
+  "001-第23課": {
+    "001-kikimasu (ni)": {
+      "romaji": "kikimasu (ni)",
+      "kanji": "聞きます（に）",
+      "furigana": "ききます（に）",
+      "id": "Bertanya"
+    },
+    "002-mawarishimasu": {
+      "romaji": "mawarishimasu",
+      "kanji": "回りします",
+      "furigana": "まわりします",
+      "id": "Memutar"
+    },
+    "003-hikimasu": {
+      "romaji": "hikimasu",
+      "kanji": "引きます",
+      "furigana": "ひきます",
+      "id": "Menarik, tarik"
+    },
+    "004-kaemasu": {
+      "romaji": "kaemasu",
+      "kanji": "変えます",
+      "furigana": "かえます",
+      "id": "Mengubah"
+    },
+    "005-sawarimasu (ni)": {
+      "romaji": "sawarimasu (ni)",
+      "kanji": "触ります（に）",
+      "furigana": "さわります（に）",
+      "id": "Menyentuh"
+    },
+    "006-demasu (ga)": {
+      "romaji": "demasu (ga)",
+      "kanji": "出ます（が）",
+      "furigana": "でます（が）",
+      "id": "Keluar"
+    },
+    "007-arukimasu": {
+      "romaji": "arukimasu",
+      "kanji": "歩きます",
+      "furigana": "あるきます",
+      "id": "Berjalan kaki"
+    },
+    "008-watarimasu (wo)": {
+      "romaji": "watarimasu (wo)",
+      "kanji": "渡ります（を）",
+      "furigana": "わたります（を）",
+      "id": "Menyeberang"
+    },
+    "009-magarimasu (e)": {
+      "romaji": "magarimasu (e)",
+      "kanji": "曲がります（へ）",
+      "furigana": "まがります（へ）",
+      "id": "Belok"
+    },
+    "010-sabishii": {
+      "romaji": "sabishii",
+      "kanji": "寂しい",
+      "furigana": "さびしい",
+      "id": "Sepi"
+    },
+    "011-oyu": {
+      "romaji": "oyu",
+      "kanji": "お湯",
+      "furigana": "おゆ",
+      "id": "Air panas"
+    },
+    "012-oto": {
+      "romaji": "oto",
+      "kanji": "音",
+      "furigana": "おと",
+      "id": "Suara, bunyi"
+    },
+    "013-saizu": {
+      "romaji": "saizu",
+      "kanji": "サイズ",
+      "furigana": "さいず",
+      "id": "Size, ukuran"
+    },
+    "014-koshou": {
+      "romaji": "koshou",
+      "kanji": "故障",
+      "furigana": "こしょう",
+      "id": "Kerusakan"
+    },
+    "015-michi": {
+      "romaji": "michi",
+      "kanji": "道",
+      "furigana": "みち",
+      "id": "Jalan"
+    },
+    "016-kousaten": {
+      "romaji": "kousaten",
+      "kanji": "交差点",
+      "furigana": "こうさてん",
+      "id": "Perempatan"
+    },
+    "017-shingou": {
+      "romaji": "shingou",
+      "kanji": "信号",
+      "furigana": "しんごう",
+      "id": "Lampu lalu lintas"
+    },
+    "018-kado": {
+      "romaji": "kado",
+      "kanji": "角",
+      "furigana": "かど",
+      "id": "Sudut"
+    },
+    "019-hashi": {
+      "romaji": "hashi",
+      "kanji": "橋",
+      "furigana": "はし",
+      "id": "Jembatan"
+    },
+    "020-chuushajou": {
+      "romaji": "chuushajou",
+      "kanji": "駐車場",
+      "furigana": "ちゅうしゃじょう",
+      "id": "Tempat parkir"
+    },
+    "021-tatemono": {
+      "romaji": "tatemono",
+      "kanji": "建物",
+      "furigana": "たてもの",
+      "id": "Bangunan, gedung"
+    },
+    "022-nankaimo": {
+      "romaji": "nankaimo",
+      "kanji": "何回も",
+      "furigana": "なんかいも",
+      "id": "Berkali-kali"
+    },
+    "024-douro": {
+      "romaji": "douro",
+      "kanji": "道路",
+      "furigana": "どうろ",
+      "id": "Jalan"
+    },
+    "025-hodou": {
+      "romaji": "hodou",
+      "kanji": "歩道",
+      "furigana": "ほどう",
+      "id": "Trotoar"
+    },
+    "026-shadou": {
+      "romaji": "shadou",
+      "kanji": "車道",
+      "furigana": "しゃどう",
+      "id": "Jalan mobil"
+    },
+    "027-kousokudouro": {
+      "romaji": "kousokudouro",
+      "kanji": "高速道路",
+      "furigana": "こうそくどうろ",
+      "id": "Jalan tol"
+    },
+    "028-toori": {
+      "romaji": "toori",
+      "kanji": "通り",
+      "furigana": "とおり",
+      "id": "Jalan"
+    },
+    "029-oudanhodou": {
+      "romaji": "oudanhodou",
+      "kanji": "横断歩道",
+      "furigana": "おうだんほどう",
+      "id": "Tempat menyeberangan, zebra cross"
+    },
+    "030-hodoukyou": {
+      "romaji": "hodoukyou",
+      "kanji": "歩道橋",
+      "furigana": "ほどうきょう",
+      "id": "Jembatan penyeberangan"
+    },
+    "031-saka": {
+      "romaji": "saka",
+      "kanji": "坂",
+      "furigana": "さか",
+      "id": "Lereng"
+    },
+    "032-fumikiri": {
+      "romaji": "fumikiri",
+      "kanji": "踏切",
+      "furigana": "ふみきり",
+      "id": "Lintas kereta api"
+    },
+    "033-gasorinsutando": {
+      "romaji": "gasorinsutando",
+      "kanji": "ガソリンスタンド",
+      "furigana": "がそりんすたんど",
+      "id": "Pompa bensin, pom bensin"
+    },
+    "034-tomare": {
+      "romaji": "tomare",
+      "kanji": "止まれ",
+      "furigana": "とまれ",
+      "id": "Berhenti"
+    },
+    "035-shin nyuu kinshi": {
+      "romaji": "shin nyuu kinshi",
+      "kanji": "進入禁止",
+      "furigana": "しんにゅうきんし",
+      "id": "Dilarang masuk"
+    },
+    "036-ippoutsuukou": {
+      "romaji": "ippou tsuukou",
+      "kanji": "一方通行",
+      "furigana": "いっぽうつうこう",
+      "id": "Satu arah"
+    },
+    "037-chuu shakinshi": {
+      "romaji": "chuu shakinshi",
+      "kanji": "駐車禁止",
+      "furigana": "ちゅうしゃきんし",
+      "id": "Dilarang parkir"
+    },
+    "038-usetsu kinshi": {
+      "romaji": "usetsu kinshi",
+      "kanji": "右折禁止",
+      "furigana": "うせつきんし",
+      "id": "Dilarang belok kanan"
+    }
+  },
+  "004-表現": {
     "001-atama ga gan gan suru": {
       "romaji": "atama ga gan gan suru",
       "kanji": "頭がガンガンする",
@@ -7836,7 +8060,7 @@
       "indonesia": "Sangat lelah, capek banget"
     }
   },
-  "070-NHKニュースの言葉-第1課": {
+  "005-NHKニュースの言葉-第1課": {
     "001-tokyotoshin": {
       "romaji": "tokyotoshin",
       "kanji": "東京都心",
