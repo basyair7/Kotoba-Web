@@ -32,7 +32,7 @@
     },
     "006-chan": {
       "furigana": "",
-      "indonesia": "Panggilan untuk anak perempuan/laki-laki",
+      "indonesia": "Panggilan untuk anak perempuan/laki-laki/keluarga dekatnya",
       "kanji": "～ちゃん",
       "romaji": "chan"
     },
@@ -7990,6 +7990,170 @@
       "kanji": "右折禁止",
       "furigana": "うせつきんし",
       "id": "Dilarang belok kanan"
+    }
+  },
+  "001-第24課": {
+    "001-kuremasu": {
+      "romaji": "kuremasu",
+      "kanji": "くれます",
+      "furigana": "",
+      "id": "Diberikan"
+    },
+    "002-naoshimasu": {
+      "romaji": "naoshimasu",
+      "kanji": "直します",
+      "furigana": "なおします",
+      "id": "Mengoreksi, memperbaiki"
+    },
+    "003-tsurete ikimasu": {
+      "romaji": "tsurete ikimasu",
+      "kanji": "連れて行きます",
+      "furigana": "つれていきます",
+      "id": "Mengajak pergi, membawa, mengantarkan"
+    },
+    "004-tsurete kimasu": {
+      "romaji": "tsurete kimasu",
+      "kanji": "連れて来ます",
+      "furigana": "つれてきます",
+      "id": "Membawa datang"
+    },
+    "005-okurimasu (wo)": {
+      "romaji": "okurimasu (wo)",
+      "kanji": "送ります（を）",
+      "furigana": "おくります（を）",
+      "id": "Mengantar (orang)"
+    },
+    "006-shoukaishimasu": {
+      "romaji": "shoukaishimasu",
+      "kanji": "紹介します",
+      "furigana": "しょうかいします",
+      "id": "Memperkenalkan"
+    },
+    "007-annaishimasu": {
+      "romaji": "annaishimasu",
+      "kanji": "案内します",
+      "furigana": "あんないします",
+      "id": "Memandu, mengantarkan"
+    },
+    "008-ojiisan-ojiichan": {
+      "romaji": "ojiisan/ojiichan",
+      "kanji": "お爺さん/お爺ちゃん",
+      "furigana": "おじいさん/おじいちゃん",
+      "id": "Kakek"
+    },
+    "009-obaasan-obaachan": {
+      "romaji": "obaasan/obaachan",
+      "kanji": "お婆さんは/お婆ちゃん",
+      "furigana": "おばあさん/おばあちゃん",
+      "id": "Nenek"
+    },
+    "010-junbi": {
+      "romaji": "junbi",
+      "kanji": "準備",
+      "furigana": "じゅんび",
+      "id": "Persiapan"
+    },
+    "012-hikkoshi": {
+      "romaji": "hikkoshi",
+      "kanji": "引っ越し",
+      "furigana": "ひっこし",
+      "id": "Pindah rumah"
+    },
+    "013-okashi": {
+      "romaji": "okashi",
+      "kanji": "お菓子",
+      "furigana": "おかし",
+      "id": "Kue, snack, makanan ringan"
+    },
+    "014-hoomusutei": {
+      "romaji": "hoomusutei",
+      "kanji": "ホームステイ",
+      "furigana": "ほーむすてい",
+      "id": "Homestay"
+    },
+    "015-zenbu": {
+      "romaji": "zenbu",
+      "kanji": "全部",
+      "furigana": "ぜんぶ",
+      "id": "Semua"
+    },
+    "016-jibunde": {
+      "romaji": "jibunde",
+      "kanji": "自分で",
+      "furigana": "じぶんで",
+      "id": "Dengan sendiri"
+    },
+    "017-hokani": {
+      "romaji": "hokani",
+      "kanji": "ほかに",
+      "furigana": "",
+      "id": "Selain, yang lain"
+    },
+    "018-hahanohi": {
+      "romaji": "haha no hi",
+      "kanji": "母の日",
+      "furigana": "ははのひ",
+      "id": "Hari ibu"
+    },
+    "019-zoutou no shuukan": {
+      "romaji": "zoutou no shuukan",
+      "kanji": "贈答の習慣",
+      "furigana": "ぞうとうのしゅうかん",
+      "id": "Tukar menukar hadiah"
+    },
+    "020-otoshidama": {
+      "romaji": "otoshidama",
+      "kanji": "お年玉",
+      "furigana": "おとしだま",
+      "id": "Hadiah kecil yang diberikan orang tua dan keluarga kepada anak-anak pada tahun baru"
+    },
+    "021-nyuugakuiwai": {
+      "romaji": "nyuugakuiwai",
+      "kanji": "入学祝い",
+      "furigana": "にゅうがくいわい",
+      "id": "Hadiah yang diberikan kepada anak yang masuk sekolah"
+    },
+    "022-sotsugyouiwai": {
+      "romaji": "sotsugyouiwai",
+      "kanji": "卒業祝い",
+      "furigana": "そつぎょういわい",
+      "id": "Hadiah yang diberikan kepada anak yang tamat sekolah"
+    },
+    "023-kekkoniwai": {
+      "romaji": "kekkoniwai",
+      "kanji": "結婚祝い",
+      "furigana": "けっこんいわい",
+      "id": "Hadiah perkawinan"
+    },
+    "024-shussaniwai": {
+      "romaji": "shussaniwai",
+      "kanji": "出産祝い",
+      "furigana": "しゅっさんいわい",
+      "id": "Hadiah yang diberikan kepada orang yang telah melahirkan"
+    },
+    "025-ochuugen-oseibo": {
+      "romaji": "ochuugen/oseibo",
+      "kanji": "お中元/お歳暮",
+      "furigana": "おちゅうげん/おせいぼ",
+      "id": "Hadiah yang diberikan kepada orang yang telah memberi bantuan"
+    },
+    "026-okouden": {
+      "romaji": "okouden",
+      "kanji": "お香典",
+      "furigana": "おこうでん",
+      "id": "Uang yang diberikan kepada keluarga yang berduka/ uang duka"
+    },
+    "027-omimai": {
+      "romaji": "omimai",
+      "kanji": "お見舞い",
+      "furigana": "おみまい",
+      "id": "Hadiah yang diberikan kepada orang yang sedang sakit"
+    },
+    "028-noshibukuro": {
+      "romaji": "noshibukuro",
+      "kanji": "熨斗袋",
+      "furigana": "のしぶくろ",
+      "id": "Amplop khusus untuk hadiah uang"
     }
   },
   "004-表現": {
