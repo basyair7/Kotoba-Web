@@ -402,8 +402,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         {/* Checkbox furigana (removed) */}
       </div>
 
-      <p class="mb-2">問題 {currentIndex + 1} / 全{words.length}問</p>
-      <p class="mb-4 font-semibold">正解: {correctCount} | 不正解: {wrongCount}</p>
+      <p class="mb-4">問題 {currentIndex + 1} / 全{words.length}問</p>
+      <p class="mb-2 font-semibold">正解: {correctCount} | 不正解: {wrongCount}</p>
 
       {/* 質問 */}
       <div class="mb-4">
