@@ -6484,17 +6484,11 @@
       "furigana": "",
       "indonesia": "Jarang, tidak mudah (diikuti bentuk negatif)"
     },
-    "027-tobu": {
+    "027-028-tobu": {
       "romaji": "tobu",
-      "kanji": "飛ぶ",
-      "furigana": "とぶ",
-      "indonesia": "Terbang"
-    },
-    "028-tobu": {
-      "romaji": "tobu",
-      "kanji": "跳ぶ",
-      "furigana": "とぶ",
-      "indonesia": "Meloncat"
+      "kanji": "飛ぶ/跳ぶ",
+      "furigana": "とぶ/とぶ",
+      "indonesia": "Terbang/Meloncat"
     },
     "029-noboru": {
       "romaji": "noboru",
