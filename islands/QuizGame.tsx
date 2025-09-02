@@ -1,6 +1,7 @@
 // deno-lint-ignore-file
 // routes/QuizGame.tsx
-import { useEffect, useState, useRef } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
+import Swal from "https://esm.sh/sweetalert2@11";
 import dbModels from "../models/dbModels.ts";
 
 interface Word {
@@ -91,10 +92,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     if (allWords.length === 0) return;
     if (restored) return; // Skip if restored from progress
 
-    const filtered =
-      selectedDai === "all"
-        ? allWords
-        : allWords.filter((w) => w.dai === selectedDai);
+    const filtered = selectedDai === "all"
+      ? allWords
+      : allWords.filter((w) => w.dai === selectedDai);
 
     resetQuiz(filtered);
   }, [selectedDai, allWords]);
@@ -206,7 +206,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      setFeedback("正解! 🎉");
+      setFeedback(
+        quizMode === "jpToId"
+          ? "Benar! 🎉" : "正解! 🎉"
+      );
     } else {
       setWrongCount((prev) => prev + 1);
 
@@ -222,7 +225,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
       setFeedback(
         quizMode === "jpToId"
-          ? `不正解！ 正しい答え: ${correctWord.indonesia}`
+          ? `Salah! Jawaban yang benar: ${correctWord.indonesia}`
           : `不正解！ 正しい答え: ${correctWord.kanji}${
             showFurigana && correctWord.furigana
               ? "「" + correctWord.furigana + "」"
@@ -253,7 +256,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }
   if (words.length === 0) {
     return (
-      <div class="min-h-screen flex justify-center p-4">データがありません。</div>
+      <div class="min-h-screen flex justify-center p-4">
+        データがありません。
+      </div>
     );
   }
 
@@ -279,19 +284,19 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <div
         class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
       >
-        <h1 class="text-2xl font-bold mb-4">結果</h1>
-        <h2 class="text-xl font-semibold mb-4">お疲れ様でした！</h2>
-        <h2 class="mb-2 text-lg">あなたのスコア:</h2>
+        <h1 class="text-2xl font-bold mb-4">{quizMode === "jpToId" ? "Hasil" : "結果"}</h1>
+        <h2 class="text-xl font-semibold mb-4">{quizMode === "jpToId" ? "Terima kasih atas usahanya!" : "お疲れ様でした！"}</h2>
+        <h2 class="mb-2 text-lg">{quizMode === "jpToId" ? "Skormu" : "あなたのスコア"}:</h2>
         <p class="text-3xl font-extrabold mb-4">{percent}%</p>
-        <p class="mb-2">選択しただい: {selectedDai}</p>
-        <p class="mb-2">全{words.length}問中</p>
-        <p class="mb-2">正解数: {correctCount}</p>
-        <p class="mb-4">不正解数: {wrongCount}</p>
+        <p class="mb-2">{quizMode === "jpToId" ? "Bab yang dipilih" : "選択しただい"}: {selectedDai}</p>
+        <p class="mb-2">{quizMode === "jpToId" ? `Dari total ${words.length} soal` : `全${words.length}問中`}</p>
+        <p class="mb-2">{quizMode === "jpToId" ? "Jumlah benar" : "正解数"}: {correctCount}</p>
+        <p class="mb-4">{quizMode === "jpToId" ? "Jumlah salah" : "不正解数"}: {wrongCount}</p>
 
         {wrongAnswers.length > 0
           ? (
             <div class="mt-4">
-              <h2 class="text-xl font-semibold mb-2">復習しましょう ✍️</h2>
+              <h2 class="text-xl font-semibold mb-2">{quizMode === "jpToId" ? "Mari review ✍️" : "復習しましょう ✍️"}</h2>
               <ul class="space-y-3">
                 {wrongAnswers.map((wa, idx) => {
                   // support both structured (new) and legacy (string) shapes
@@ -324,10 +329,17 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                       }`}
                     >
                       <p>
-                        <strong class="text-2xl">問題:</strong> <span className="text-white text-2xl">{questionDisplay}</span>
+                        <strong class="text-2xl">{quizMode === "jpToId" ? "Soal" : "問題"}:</strong>{" "}
+                        <span className="text-white text-2xl">
+                          {questionDisplay}
+                        </span>
                       </p>
-                      <p class="text-red-400 text-2xl">あなたの答え: {yourAnswerDisplay}</p>
-                      <p class="text-green-400 text-2xl">正しい答え: {correctAnswerDisplay}</p>
+                      <p class="text-red-400 text-2xl">
+                        {quizMode === "jpToId" ? "Jawabanmu" : "あなたの答え"}: {yourAnswerDisplay}
+                      </p>
+                      <p class="text-green-400 text-2xl">
+                        {quizMode === "jpToId" ? "Jawaban yang benar" : "正しい答え"}: {correctAnswerDisplay}
+                      </p>
                     </li>
                   );
                 })}
@@ -335,7 +347,9 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             </div>
           )
           : (
-            <p class="mt-4 text-green-400 font-bold">全部正解！素晴らしい！ 🎉</p>
+            <p class="mt-4 text-green-400 font-bold">
+              {quizMode === "jpToId" ? "Semua benar! Luar biasa! 🎉" : "全部正解！素晴らしい！ 🎉"}
+            </p>
           )}
 
         {/* Action Buttons */}
@@ -345,20 +359,28 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             onClick={() => resetQuiz(words)}
             class={`px-4 py-2 rounded ${buttonBg} text-white`}
           >
-            もう一度プレイ
+            {quizMode === "jpToId" ? "Main lagi" : "もう一度プレイ"}
           </button>
 
           {/* Furigana Toggle Button */}
-          <button
-            className={`px-4 py-2 rounded-md border transition ${
-              showFurigana
-                ? "bg-blue-500 text-white hover:bg-blue-600"
-                : "bg-gray-200 text-black hover:bg-gray-300"
-            }`}
-            onClick={() => setShowFurigana((prev) => !prev)}
-          >
-            {showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"}
-          </button>
+          {wrongAnswers.length > 0 && (
+            <button
+              className={`px-4 py-2 rounded-md border transition ${
+                showFurigana
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "bg-gray-200 text-black hover:bg-gray-300"
+              }`}
+              onClick={() => setShowFurigana((prev) => !prev)}
+            >
+              {quizMode === "jpToId" ? 
+                showFurigana 
+                  ? "Sembunyikan furigana" 
+                  : "Tampilkan furigana" :
+                showFurigana 
+                  ? "ふりがなを隠す" 
+                  : "ふりがなを表示する"}
+            </button>
+          )}
         </div>
       </div>
     );
@@ -369,10 +391,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     <div
       class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
     >
-      <h1 class="text-2xl font-bold mb-4">言葉を当てる</h1>
+      <h1 class="text-2xl font-bold mb-4">{quizMode === "jpToId" ? "Tebak Kotoba" : "言葉を当てる"}</h1>
 
       {/* Filter だい + mode switch + furigana toggle */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
         <select
           value={selectedDai}
           onChange={handleDaiChange}
@@ -402,8 +424,18 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         {/* Checkbox furigana (removed) */}
       </div>
 
-      <p class="mb-4">問題 {currentIndex + 1} / 全{words.length}問</p>
-      <p class="mb-2 font-semibold">正解: {correctCount} | 不正解: {wrongCount}</p>
+      <p class="mb-2">
+        {/* 問題 {currentIndex + 1} / 全{words.length}問 */}
+        {quizMode === "jpToId" ? 
+        `Soal ${currentIndex + 1} / dari ${words.length} soal` : `問題 ${currentIndex + 1} / 全${words.length}問`}
+      
+      </p>
+      <p class="mb-2 font-semibold">
+        {/* 正解: {correctCount} | 不正解: {wrongCount} */}
+        {quizMode === "jpToId" ? 
+          `Benar ${correctCount} | Salah ${wrongCount}` : `正解: ${correctCount} | 不正解: ${wrongCount}`
+        }
+      </p>
 
       {/* 質問 */}
       <div class="mb-4">
@@ -422,7 +454,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           {feedback && (
             <span
               class={`font-semibold ${
-                feedback.startsWith("正解") ? "text-green-400" : "text-red-400"
+                feedback.startsWith(quizMode === "jpToId" ? "Benar" : "正解") ? "text-green-400" : "text-red-400"
               }`}
             >
               {feedback}
@@ -455,14 +487,40 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <div class="mt-6 flex gap-3">
         {/* Give Up Button */}
         <button
-          onClick={() => setIsFinished(true)}
+          onClick={() => {
+            Swal.fire({
+              icon: "warning",
+              title: quizMode === "jpToId"
+                ? "Yakin mau berhenti?"
+                : "本当にやめますか？",
+              text: quizMode === "jpToId"
+                ? "Kuis yang sedang berlangsung akan berakhir."
+                : "進行中のクイズが終了します。",
+              showCancelButton: true,
+              confirmButtonText: quizMode === "jpToId"
+                ? "Ya, berhenti"
+                : "はい、やめる",
+              cancelButtonText: quizMode === "jpToId" ? "Batal" : "キャンセル",
+              customClass: {
+                confirmButton:
+                  "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded",
+                cancelButton:
+                  "bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded ml-2",
+              },
+              buttonsStyling: false, // supaya customClass jalan
+            }).then((result: { isConfirmed: any; }) => {
+              if (result.isConfirmed) {
+                setIsFinished(true);
+              }
+            });
+          }}
           class={`px-4 py-2 rounded ${
             theme === "dark"
               ? "bg-red-700 hover:bg-red-600"
               : "bg-red-500 hover:bg-red-600"
           } text-white`}
         >
-          やめる
+          {quizMode === "jpToId" ? "Berhenti" : "やめる"}
         </button>
 
         {/* Furigana Toggle Button */}
@@ -472,7 +530,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           }`}
           onClick={() => setShowFurigana((prev) => !prev)}
         >
-          {showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"}
+          {quizMode === "jpToId" ? 
+            showFurigana ? "Sembunyikan furigana" : "Tampilkan furigana" :
+            showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"
+          }
         </button>
       </div>
     </div>

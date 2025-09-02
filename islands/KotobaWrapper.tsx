@@ -11,7 +11,7 @@ export default function KotobaWrapper() {
 
   return (
     <div class={`p-4 transition-colors duration-300 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-      <h1 class="text-3xl font-bold mb-4">📚 Kotoba みんなの日本語 List</h1>
+      <h1 class="text-3xl font-bold mb-4">📚 Kotoba List</h1>
       
       <div class="flex gap-4 mb-6">
         <button
