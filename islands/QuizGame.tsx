@@ -324,10 +324,10 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                       }`}
                     >
                       <p>
-                        <strong>問題:</strong> {questionDisplay}
+                        <strong class="text-2xl">問題:</strong> <span className="text-white text-2xl">{questionDisplay}</span>
                       </p>
-                      <p class="text-red-400">あなたの答え: {yourAnswerDisplay}</p>
-                      <p class="text-green-400">正しい答え: {correctAnswerDisplay}</p>
+                      <p class="text-red-400 text-2xl">あなたの答え: {yourAnswerDisplay}</p>
+                      <p class="text-green-400 text-2xl">正しい答え: {correctAnswerDisplay}</p>
                     </li>
                   );
                 })}
@@ -437,7 +437,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           <button
             key={`${option.indonesia}-${index}`}
             onClick={() => handleAnswer(option)}
-            class={`p-4 rounded-lg ${buttonBg} text-white`}
+            class={`p-4 rounded-lg ${buttonBg} text-white text-2xl`}
             disabled={answered}
           >
             {quizMode === "jpToId"
