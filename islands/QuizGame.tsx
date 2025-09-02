@@ -288,7 +288,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         <h2 class="text-xl font-semibold mb-4">{quizMode === "jpToId" ? "Terima kasih atas usahanya!" : "お疲れ様でした！"}</h2>
         <h2 class="mb-2 text-lg">{quizMode === "jpToId" ? "Skormu" : "あなたのスコア"}:</h2>
         <p class="text-3xl font-extrabold mb-4">{percent}%</p>
-        <p class="mb-2">{quizMode === "jpToId" ? "Bab yang dipilih" : "選択しただい"}: {selectedDai}</p>
+        <p class="mb-2">{quizMode === "jpToId" ? "Bab yang dipilih" : "選択しただい"}: {selectedDai === "all" ? "全部" : selectedDai}</p>
         <p class="mb-2">{quizMode === "jpToId" ? `Dari total ${words.length} soal` : `全${words.length}問中`}</p>
         <p class="mb-2">{quizMode === "jpToId" ? "Jumlah benar" : "正解数"}: {correctCount}</p>
         <p class="mb-4">{quizMode === "jpToId" ? "Jumlah salah" : "不正解数"}: {wrongCount}</p>
@@ -430,6 +430,13 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         `Soal ${currentIndex + 1} / dari ${words.length} soal` : `問題 ${currentIndex + 1} / 全${words.length}問`}
       
       </p>
+      {selectedDai === "all" && (
+        <p class="mb-2">
+          {quizMode === "jpToId"
+            ? `Bab: ${currentWord.dai}`
+            : `課: ${currentWord.dai}`}
+        </p>
+      )}
       <p class="mb-2 font-semibold">
         {/* 正解: {correctCount} | 不正解: {wrongCount} */}
         {quizMode === "jpToId" ? 
