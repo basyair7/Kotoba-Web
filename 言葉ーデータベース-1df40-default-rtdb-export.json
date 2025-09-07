@@ -627,11 +627,11 @@
       "romaji": "sochira",
       "id": "001-03-006"
     },
-    "007-atchira": {
+    "007-achira": {
       "furigana": "",
       "indonesia": "Di sana (jauh dari pembicara dan pendengar, formal)",
       "kanji": "あちら",
-      "romaji": "atchira",
+      "romaji": "achira",
       "id": "001-03-007"
     },
     "008-douchira": {
@@ -3291,10 +3291,10 @@
       "id": "001-08-020"
     },
     "021-yasashii": {
-      "kanji": "優しい",
-      "furigana": "やさしい",
+      "kanji": "優しい、易しい",
+      "furigana": "やさしい、やさしい",
       "romaji": "yasashii",
-      "indonesia": "Mudah/gampang",
+      "indonesia": "Baik hati, Mudah",
       "id": "001-08-021"
     },
     "022-takai": {
