@@ -347,7 +347,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             </div>
           )
           : (
-            percent > 0 && (
+            percent === 100 && (
               <p class="mt-4 text-green-400 font-bold">
                 {quizMode === "jpToId"
                   ? "Semua benar! Luar biasa! 🎉"
