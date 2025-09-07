@@ -347,10 +347,15 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             </div>
           )
           : (
-            <p class="mt-4 text-green-400 font-bold">
-              {quizMode === "jpToId" ? "Semua benar! Luar biasa! 🎉" : "全部正解！素晴らしい！ 🎉"}
-            </p>
-          )}
+            percent > 0 && (
+              <p class="mt-4 text-green-400 font-bold">
+                {quizMode === "jpToId"
+                  ? "Semua benar! Luar biasa! 🎉"
+                  : "全部正解！素晴らしい！ 🎉"}
+              </p>
+            )
+          )
+        }
 
         {/* Action Buttons */}
         <div class="mt-6 flex gap-3">
