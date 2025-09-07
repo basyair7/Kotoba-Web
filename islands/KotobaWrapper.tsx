@@ -27,13 +27,13 @@ export default function KotobaWrapper() {
           🎮 Kotoba Quiz
         </a>
 
-        <a
+        {/* <a
           href={`https://wa.me/${firebaseConfig.number}`}
           className="px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white transition-colors duration-200"
           target="-blank"
         >
           電話：バシャイル
-        </a>
+        </a> */}
       </div>
 
       <KotobaList theme={theme} />
