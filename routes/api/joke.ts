@@ -1,17 +1,17 @@
 import { FreshContext } from "$fresh/server.ts";
 
-// Jokes courtesy of https://punsandoneliners.com/randomness/programmer-jokes/
+// プログラマージョーク (日本語版)
 const JOKES = [
-  "Why do Java developers often wear glasses? They can't C#.",
-  "A SQL query walks into a bar, goes up to two tables and says “can I join you?”",
-  "Wasn't hard to crack Forrest Gump's password. 1forrest1.",
-  "I love pressing the F5 key. It's refreshing.",
-  "Called IT support and a chap from Australia came to fix my network connection.  I asked “Do you come from a LAN down under?”",
-  "There are 10 types of people in the world. Those who understand binary and those who don't.",
-  "Why are assembly programmers often wet? They work below C level.",
-  "My favourite computer based band is the Black IPs.",
-  "What programme do you use to predict the music tastes of former US presidential candidates? An Al Gore Rhythm.",
-  "An SEO expert walked into a bar, pub, inn, tavern, hostelry, public house.",
+  "なぜJava開発者はよくメガネをかけているの？ C#（シーシャープ）が見えないから。",
+  "SQLクエリがバーに入って、二つのテーブルに近づいて言った：「JOINしてもいい？」",
+  "フォレスト・ガンプのパスワードを解読するのは簡単だった。「1forrest1」だった。",
+  "F5キーを押すのが大好き。リフレッシュするからね。",
+  "ITサポートに電話したら、オーストラリアの人がネット接続を直しに来た。だから聞いたんだ：「LANダウンアンダーから来たんですか？」",
+  "この世には10種類の人間がいる。2進数を理解している人と、理解していない人。",
+  "なぜアセンブリ言語のプログラマーはよく濡れているの？ Cレベルより下で働いているから。",
+  "僕のお気に入りのコンピュータ系バンドは「ブラック IPs」だ。",
+  "元アメリカ大統領候補の音楽の好みを予測するプログラムは？ 「アル・ゴリズム（Al Gore Rhythm）」だよ。",
+  "SEOの専門家がバーに入った。いや、パブ、宿屋、酒場、飲み屋…検索用に全部。",
 ];
 
 export const handler = (_req: Request, _ctx: FreshContext): Response => {
