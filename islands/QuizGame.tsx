@@ -351,7 +351,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
               <p class="mt-4 text-green-400 font-bold">
                 {quizMode === "jpToId"
                   ? "Semua benar! Luar biasa! 🎉"
-                  : "全部正解！素晴らしい！ 🎉"}
+                  : "全部正解！素晴らしい！ 🎉"
+                }
               </p>
             )
           )
@@ -383,7 +384,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                   : "Tampilkan furigana" :
                 showFurigana 
                   ? "ふりがなを隠す" 
-                  : "ふりがなを表示する"}
+                  : "ふりがなを表示する"
+              }
             </button>
           )}
         </div>
@@ -431,21 +433,25 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
       <p class="mb-2">
         {/* 問題 {currentIndex + 1} / 全{words.length}問 */}
-        {quizMode === "jpToId" ? 
-        `Soal ${currentIndex + 1} / dari ${words.length} soal` : `問題 ${currentIndex + 1} / 全${words.length}問`}
+        {quizMode === "jpToId" 
+          ? `Soal ${currentIndex + 1} / dari ${words.length} soal`
+          : `問題 ${currentIndex + 1} / 全${words.length}問`
+        }
       
       </p>
       {selectedDai === "all" && (
         <p class="mb-2">
           {quizMode === "jpToId"
             ? `Bab: ${currentWord.dai}`
-            : `課: ${currentWord.dai}`}
+            : `課: ${currentWord.dai}`
+          }
         </p>
       )}
       <p class="mb-2 font-semibold">
         {/* 正解: {correctCount} | 不正解: {wrongCount} */}
-        {quizMode === "jpToId" ? 
-          `Benar ${correctCount} | Salah ${wrongCount}` : `正解: ${correctCount} | 不正解: ${wrongCount}`
+        {quizMode === "jpToId" 
+          ? `Benar ${correctCount} | Salah ${wrongCount}` 
+          : `正解: ${correctCount} | 不正解: ${wrongCount}`
         }
       </p>
 
@@ -458,7 +464,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                 ? "「" + currentWord.furigana + "」"
                 : ""
             }`
-            : currentWord.indonesia}
+            : currentWord.indonesia
+          }
         </h3>
 
         <p className="flex items-center gap-2">
@@ -474,79 +481,82 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           )}
         </p>
       </div>
+      
+      <div className="space-y-8">
+        {/* Select "Answer" */}
+        <div class="grid grid-cols-1 gap-4">
+          {options.map((option, index) => (
+            <button
+              key={`${option.indonesia}-${index}`}
+              onClick={() => handleAnswer(option)}
+              class={`p-4 rounded-lg ${buttonBg} text-white text-2xl`}
+              disabled={answered}
+            >
+              {quizMode === "jpToId"
+                ? option.indonesia || "(kosong)"
+                : `${option.kanji} ${
+                  showFurigana && option.furigana
+                    ? "「" + option.furigana + "」"
+                    : ""
+                }`}
+            </button>
+          ))}
+        </div>
 
-      {/* Select "Answer" */}
-      <div class="grid grid-cols-1 gap-4">
-        {options.map((option, index) => (
+        {/* Action Buttons */}
+        <div class="flex gap-3">
+          {/* Give Up Button */}
           <button
-            key={`${option.indonesia}-${index}`}
-            onClick={() => handleAnswer(option)}
-            class={`p-4 rounded-lg ${buttonBg} text-white text-2xl`}
-            disabled={answered}
+            onClick={() => {
+              Swal.fire({
+                icon: "warning",
+                title: quizMode === "jpToId"
+                  ? "Yakin mau berhenti?"
+                  : "本当にやめますか？",
+                text: quizMode === "jpToId"
+                  ? "Kuis yang sedang berlangsung akan berakhir."
+                  : "進行中のクイズが終了します。",
+                showCancelButton: true,
+                confirmButtonText: quizMode === "jpToId"
+                  ? "Ya, berhenti"
+                  : "はい、やめる",
+                cancelButtonText: quizMode === "jpToId" ? "Batal" : "キャンセル",
+                customClass: {
+                  confirmButton:
+                    "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded",
+                  cancelButton:
+                    "bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded ml-2",
+                },
+                buttonsStyling: false, // supaya customClass jalan
+              }).then((result: { isConfirmed: any; }) => {
+                if (result.isConfirmed) {
+                  setIsFinished(true);
+                }
+              });
+            }}
+            class={`px-4 py-2 rounded ${
+              theme === "dark"
+                ? "bg-red-700 hover:bg-red-600"
+                : "bg-red-500 hover:bg-red-600"
+            } text-white`}
           >
-            {quizMode === "jpToId"
-              ? option.indonesia || "(kosong)"
-              : `${option.kanji} ${
-                showFurigana && option.furigana
-                  ? "「" + option.furigana + "」"
-                  : ""
-              }`}
+            {quizMode === "jpToId" ? "Berhenti" : "やめる"}
           </button>
-        ))}
-      </div>
 
-      {/* Action Buttons */}
-      <div class="mt-6 flex gap-3">
-        {/* Give Up Button */}
-        <button
-          onClick={() => {
-            Swal.fire({
-              icon: "warning",
-              title: quizMode === "jpToId"
-                ? "Yakin mau berhenti?"
-                : "本当にやめますか？",
-              text: quizMode === "jpToId"
-                ? "Kuis yang sedang berlangsung akan berakhir."
-                : "進行中のクイズが終了します。",
-              showCancelButton: true,
-              confirmButtonText: quizMode === "jpToId"
-                ? "Ya, berhenti"
-                : "はい、やめる",
-              cancelButtonText: quizMode === "jpToId" ? "Batal" : "キャンセル",
-              customClass: {
-                confirmButton:
-                  "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded",
-                cancelButton:
-                  "bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded ml-2",
-              },
-              buttonsStyling: false, // supaya customClass jalan
-            }).then((result: { isConfirmed: any; }) => {
-              if (result.isConfirmed) {
-                setIsFinished(true);
-              }
-            });
-          }}
-          class={`px-4 py-2 rounded ${
-            theme === "dark"
-              ? "bg-red-700 hover:bg-red-600"
-              : "bg-red-500 hover:bg-red-600"
-          } text-white`}
-        >
-          {quizMode === "jpToId" ? "Berhenti" : "やめる"}
-        </button>
-
-        {/* Furigana Toggle Button */}
-        <button
-          className={`px-4 py-2 rounded-md border ${
-            showFurigana ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
-          }`}
-          onClick={() => setShowFurigana((prev) => !prev)}
-        >
-          {quizMode === "jpToId" ? 
-            showFurigana ? "Sembunyikan furigana" : "Tampilkan furigana" :
-            showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"
-          }
-        </button>
+          {/* Furigana Toggle Button */}
+          <button
+            className={`px-4 py-2 rounded-md border ${
+              showFurigana ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+            }`}
+            onClick={() => setShowFurigana((prev) => !prev)}
+          >
+            {quizMode === "jpToId" ? 
+              showFurigana ? "Sembunyikan furigana" : "Tampilkan furigana" :
+              showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"
+            }
+          </button>
+        </div>
+        
       </div>
     </div>
   );
