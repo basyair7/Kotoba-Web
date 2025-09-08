@@ -5,7 +5,7 @@ dotenv.config({ export: true });
 const PROJECT_ID = Deno.env.get("PROJECT_ID");
 const API_KEY = Deno.env.get("API_KEY");
 
-const text = await Deno.readTextFile("./言葉ーデータベース-1df40-default-rtdb-export.json");
+const text = await Deno.readTextFile("./言葉ーデータベース.json");
 const data = JSON.parse(text);
 
 const lessons = data["kotoba-web"];
