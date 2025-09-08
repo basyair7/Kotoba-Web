@@ -1,3 +1,3 @@
 export const path_db = {
-    root: "/",
+    kotoba_root: "/kotoba-web",
 };

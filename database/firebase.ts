@@ -2,17 +2,16 @@
 // database/firebase.ts
 import { initializeApp } from "npm:firebase/app";
 import { getDatabase, ref, get, set } from "npm:firebase/database";
-import firebaseConfig from "./firebaseKeys/serviceAccount.ts";
 
 export class Firebase {
     private _db: any;
     private _app: any;
 
-    constructor() {
-        this.initialize_app();
+    constructor(config: any) {
+        this.initialize_app(config);
     }
 
-    private initialize_app(): void {
+    private initialize_app(firebaseConfig: any): void {
         this._app = initializeApp({
             apiKey: firebaseConfig.apiKey,
             authDomain: firebaseConfig.authDomain,
