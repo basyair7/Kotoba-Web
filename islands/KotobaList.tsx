@@ -1,7 +1,7 @@
 // deno-lint-ignore-file
 import { useEffect, useState } from "preact/hooks";
 import WordCard from "../components/WordCard.tsx";
-import dbModels from "../models/dbModels.ts";
+import { dbModelsFirestore, dbModelsRealtime } from "../models/dbModels.ts";
 
 interface KotobaListProps {
   theme?: "light" | "dark";
@@ -20,7 +20,8 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
 
   useEffect(() => {
     async function fetchData() {
-      const allData = await dbModels.getAll();
+      // const allData = await dbModelsRealtime.getAll();
+      const allData = await dbModelsFirestore.getAll();
       if (allData) {
         setData(allData);
         const keys = Object.keys(allData);

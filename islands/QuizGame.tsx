@@ -2,7 +2,7 @@
 // routes/QuizGame.tsx
 import { useEffect, useRef, useState } from "preact/hooks";
 import Swal from "https://esm.sh/sweetalert2@11";
-import dbModels from "../models/dbModels.ts";
+import { dbModelsFirestore, dbModelsRealtime } from "../models/dbModels.ts";
 
 interface Word {
   indonesia: string; // インドネシア語
@@ -100,7 +100,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }, [selectedDai, allWords]);
 
   async function fetchWords(savedProgress?: string | null) {
-    const allData = await dbModels.getAll();
+    // const allData = await dbModelsRealtime.getAll();
+    const allData = await dbModelsFirestore.getAll();
     const parsed: Word[] = [];
     const dais: Set<string> = new Set();
 
