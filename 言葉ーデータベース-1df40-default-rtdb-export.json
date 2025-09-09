@@ -9487,217 +9487,448 @@
       }
     },
     "001-第26課": {
-			"001-mimasu": {
-				"romaji": "mimasu",
-				"kanji": "見ます、診ます",
-				"furigana": "みます、みます",
-				"indonesia": "Melihat, memeriksa",
-				"id": "001-26-001"
-			},
-			"002-sagashimasu": {
-				"romaji": "sagashimasu",
-				"kanji": "探します",
-				"furigana": "さがします",
-				"indonesia": "Mencari",
-				"id": "001-26-002"
-			},
-			"003-okuremasu (jikan ni)": {
-				"romaji": "okuremasu (jikan ni)",
-				"kanji": "遅れます（時間に）",
-				"furigana": "おくれます（じかんに）",
-				"indonesia": "Terlambat",
-				"id": "001-26-003"
-			},
-			"004-maniaimasu (jikan ni)": {
-				"romaji": "maniaimasu (jikan ni)",
-				"kanji": "間に合います（時間に）",
-				"furigana": "まにあいます（じかんに）",
-				"indonesia": "Tepat waktu",
-				"id": "001-26-004"
-			},
-			"005-yarimasu": {
-				"romaji": "yarimasu",
-				"kanji": "やります",
-				"furigana": "",
-				"indonesia": "Melakukan, mengerjakan",
-				"id": "001-26-005"
-			},
-			"006-sankashimasu (paatii ni)": {
-				"romaji": "sankashimasu (paatii ni)",
-				"kanji": "参加します（パーティーに）",
-				"furigana": "さんかします（ぱーてぃーに）",
-				"indonesia": "Turut serta, ikut, berpartisipasi",
-				"id": "001-26-006"
-			},
-			"007-moushikomimasu": {
-				"romaji": "moushikomimasu",
-				"kanji": "申し込みます",
-				"furigana": "もうしこみます",
-				"indonesia": "Mendaftar",
-				"id": "001-26-007"
-			},
-			"008-tsugou ga ii": {
-				"romaji": "tsugou ga ii",
-				"kanji": "都合がいい",
-				"furigana": "つごうがいい",
-				"indonesia": "Tidak ada halangan",
-				"id": "001-26-008"
-			},
-			"009-tsugou ga warui": {
-				"romaji": "tsugou ga warui",
-				"kanji": "都合が悪い",
-				"furigana": "つごうがわるい",
-				"indonesia": "Ada halangan",
-				"id": "001-26-009"
-			},
-			"010-kibun ga ii": {
-				"romaji": "kibun ga ii",
-				"kanji": "気分がいい",
-				"furigana": "きぶんがいい",
-				"indonesia": "Kondisi badan/ perasaan baik",
-				"id": "001-26-010"
-			},
-			"011-kibun ga warui": {
-				"romaji": "kibun ga warui",
-				"kanji": "気分が悪い",
-				"furigana": "きぶんがわるい",
-				"indonesia": "Tidak enak badan",
-				"id": "001-26-011"
-			},
-			"012-shinbunsha": {
-				"romaji": "shinbunsha",
-				"kanji": "新聞社",
-				"furigana": "しんぶんしゃ",
-				"indonesia": "Perusahaan surat kabar",
-				"id": "001-26-012"
-			},
-			"013-juudou": {
-				"romaji": "juudou",
-				"kanji": "柔道",
-				"furigana": "じゅうどう",
-				"indonesia": "Judo (olahraga tradisional jepang)",
-				"id": "001-26-013"
-			},
-			"014-undoukai": {
-				"romaji": "undoukai",
-				"kanji": "運動会",
-				"furigana": "うんどうかい",
-				"indonesia": "Pesta olahraga, pertandingan olahraga",
-				"id": "001-26-014"
-			},
-			"015-basho": {
-				"romaji": "basho",
-				"kanji": "場所",
-				"furigana": "ばしょ",
-				"indonesia": "Tempat",
-				"id": "001-26-015"
-			},
-			"016-borantia": {
-				"romaji": "borantia",
-				"kanji": "ボランティア",
-				"furigana": "ぼらんてぃあ",
-				"indonesia": "Volunteer, sukarelawan",
-				"id": "001-26-016"
-			},
-			"017-ben": {
-				"romaji": "ben",
-				"kanji": "～弁",
-				"furigana": "～べん",
-				"indonesia": "Dialek~, logat~",
-				"id": "001-26-017"
-			},
-			"018-kondo": {
-				"romaji": "kondo",
-				"kanji": "今度",
-				"furigana": "こんど",
-				"indonesia": "Berikutnya, lain kali",
-				"id": "001-26-018"
-			},
-			"019-zuibun": {
-				"romaji": "zuibun",
-				"kanji": "随分",
-				"furigana": "ずいぶん",
-				"indonesia": "Cukup (lebih dari perkiraan)",
-				"id": "001-26-019"
-			},
-			"020-chokusetsu": {
-				"romaji": "chokusetsu",
-				"kanji": "直接",
-				"furigana": "ちょくせつ",
-				"indonesia": "Langsung",
-				"id": "001-26-020"
-			},
-			"021-itsudemo": {
-				"romaji": "itsudemo",
-				"kanji": "いつでも",
-				"furigana": "",
-				"indonesia": "Kapanpun",
-				"id": "001-26-021"
-			},
-			"022-dokodemo": {
-				"romaji": "dokodemo",
-				"kanji": "どこでも",
-				"furigana": "",
-				"indonesia": "Dimanapun",
-				"id": "001-26-022"
-			},
-			"023-daredemo": {
-				"romaji": "daredemo",
-				"kanji": "誰でも",
-				"furigana": "だれでも",
-				"indonesia": "Siapapun",
-				"id": "001-26-023"
-			},
-			"024-nandemo": {
-				"romaji": "nandemo",
-				"kanji": "何でも",
-				"furigana": "なんでも",
-				"indonesia": "Apapun",
-				"id": "001-26-024"
-			},
-			"025-konna": {
-				"romaji": "konna",
-				"kanji": "こんな～",
-				"furigana": "",
-				"indonesia": "~seperti ini",
-				"id": "001-26-025"
-			},
-			"026-sonna": {
-				"romaji": "sonna",
-				"kanji": "そんな～",
-				"furigana": "",
-				"indonesia": "~seperti itu",
-				"id": "001-26-026"
-			},
-			"027-anna": {
-				"romaji": "anna",
-				"kanji": "あんな～",
-				"furigana": "",
-				"indonesia": "~seperti yang disana",
-				"id": "001-26-027"
-			},
-			"028-katadukimasu (nimotsuga)": {
-				"romaji": "katadukimasu (nimotsuga)",
-				"kanji": "片付きます（にもつが）",
-				"furigana": "かたづきます（にもつが）",
-				"indonesia": "Dibereskan, dirapikan",
-				"id": "001-26-028"
-			},
-			"029-gomi": {
-				"romaji": "gomi",
-				"kanji": "ゴミ",
-				"furigana": "ごみ",
-				"indonesia": "Sampah",
-				"id": "001-26-029"
-			},
-			"030-dashimasu": {
-				"romaji": "dashimasu",
-				"kanji": "出します",
-				"furigana": "だします",
-				"indonesia": "Membuang",
-				"id": "001-26-030"
-			}
-		},
+      "001-mimasu": {
+        "romaji": "mimasu",
+        "kanji": "見ます、診ます",
+        "furigana": "みます、みます",
+        "indonesia": "Melihat, memeriksa",
+        "id": "001-26-001"
+      },
+      "002-sagashimasu": {
+        "romaji": "sagashimasu",
+        "kanji": "探します",
+        "furigana": "さがします",
+        "indonesia": "Mencari",
+        "id": "001-26-002"
+      },
+      "003-okuremasu (jikan ni)": {
+        "romaji": "okuremasu (jikan ni)",
+        "kanji": "遅れます（時間に）",
+        "furigana": "おくれます（じかんに）",
+        "indonesia": "Terlambat",
+        "id": "001-26-003"
+      },
+      "004-maniaimasu (jikan ni)": {
+        "romaji": "maniaimasu (jikan ni)",
+        "kanji": "間に合います（時間に）",
+        "furigana": "まにあいます（じかんに）",
+        "indonesia": "Tepat waktu",
+        "id": "001-26-004"
+      },
+      "005-yarimasu": {
+        "romaji": "yarimasu",
+        "kanji": "やります",
+        "furigana": "",
+        "indonesia": "Melakukan, mengerjakan",
+        "id": "001-26-005"
+      },
+      "006-sankashimasu (paatii ni)": {
+        "romaji": "sankashimasu (paatii ni)",
+        "kanji": "参加します（パーティーに）",
+        "furigana": "さんかします（ぱーてぃーに）",
+        "indonesia": "Turut serta, ikut, berpartisipasi",
+        "id": "001-26-006"
+      },
+      "007-moushikomimasu": {
+        "romaji": "moushikomimasu",
+        "kanji": "申し込みます",
+        "furigana": "もうしこみます",
+        "indonesia": "Mendaftar",
+        "id": "001-26-007"
+      },
+      "008-tsugou ga ii": {
+        "romaji": "tsugou ga ii",
+        "kanji": "都合がいい",
+        "furigana": "つごうがいい",
+        "indonesia": "Tidak ada halangan",
+        "id": "001-26-008"
+      },
+      "009-tsugou ga warui": {
+        "romaji": "tsugou ga warui",
+        "kanji": "都合が悪い",
+        "furigana": "つごうがわるい",
+        "indonesia": "Ada halangan",
+        "id": "001-26-009"
+      },
+      "010-kibun ga ii": {
+        "romaji": "kibun ga ii",
+        "kanji": "気分がいい",
+        "furigana": "きぶんがいい",
+        "indonesia": "Kondisi badan/ perasaan baik",
+        "id": "001-26-010"
+      },
+      "011-kibun ga warui": {
+        "romaji": "kibun ga warui",
+        "kanji": "気分が悪い",
+        "furigana": "きぶんがわるい",
+        "indonesia": "Tidak enak badan",
+        "id": "001-26-011"
+      },
+      "012-shinbunsha": {
+        "romaji": "shinbunsha",
+        "kanji": "新聞社",
+        "furigana": "しんぶんしゃ",
+        "indonesia": "Perusahaan surat kabar",
+        "id": "001-26-012"
+      },
+      "013-juudou": {
+        "romaji": "juudou",
+        "kanji": "柔道",
+        "furigana": "じゅうどう",
+        "indonesia": "Judo (olahraga tradisional jepang)",
+        "id": "001-26-013"
+      },
+      "014-undoukai": {
+        "romaji": "undoukai",
+        "kanji": "運動会",
+        "furigana": "うんどうかい",
+        "indonesia": "Pesta olahraga, pertandingan olahraga",
+        "id": "001-26-014"
+      },
+      "015-basho": {
+        "romaji": "basho",
+        "kanji": "場所",
+        "furigana": "ばしょ",
+        "indonesia": "Tempat",
+        "id": "001-26-015"
+      },
+      "016-borantia": {
+        "romaji": "borantia",
+        "kanji": "ボランティア",
+        "furigana": "ぼらんてぃあ",
+        "indonesia": "Volunteer, sukarelawan",
+        "id": "001-26-016"
+      },
+      "017-ben": {
+        "romaji": "ben",
+        "kanji": "～弁",
+        "furigana": "～べん",
+        "indonesia": "Dialek~, logat~",
+        "id": "001-26-017"
+      },
+      "018-kondo": {
+        "romaji": "kondo",
+        "kanji": "今度",
+        "furigana": "こんど",
+        "indonesia": "Berikutnya, lain kali",
+        "id": "001-26-018"
+      },
+      "019-zuibun": {
+        "romaji": "zuibun",
+        "kanji": "随分",
+        "furigana": "ずいぶん",
+        "indonesia": "Cukup (lebih dari perkiraan)",
+        "id": "001-26-019"
+      },
+      "020-chokusetsu": {
+        "romaji": "chokusetsu",
+        "kanji": "直接",
+        "furigana": "ちょくせつ",
+        "indonesia": "Langsung",
+        "id": "001-26-020"
+      },
+      "021-itsudemo": {
+        "romaji": "itsudemo",
+        "kanji": "いつでも",
+        "furigana": "",
+        "indonesia": "Kapanpun",
+        "id": "001-26-021"
+      },
+      "022-dokodemo": {
+        "romaji": "dokodemo",
+        "kanji": "どこでも",
+        "furigana": "",
+        "indonesia": "Dimanapun",
+        "id": "001-26-022"
+      },
+      "023-daredemo": {
+        "romaji": "daredemo",
+        "kanji": "誰でも",
+        "furigana": "だれでも",
+        "indonesia": "Siapapun",
+        "id": "001-26-023"
+      },
+      "024-nandemo": {
+        "romaji": "nandemo",
+        "kanji": "何でも",
+        "furigana": "なんでも",
+        "indonesia": "Apapun",
+        "id": "001-26-024"
+      },
+      "025-konna": {
+        "romaji": "konna",
+        "kanji": "こんな～",
+        "furigana": "",
+        "indonesia": "~seperti ini",
+        "id": "001-26-025"
+      },
+      "026-sonna": {
+        "romaji": "sonna",
+        "kanji": "そんな～",
+        "furigana": "",
+        "indonesia": "~seperti itu",
+        "id": "001-26-026"
+      },
+      "027-anna": {
+        "romaji": "anna",
+        "kanji": "あんな～",
+        "furigana": "",
+        "indonesia": "~seperti yang disana",
+        "id": "001-26-027"
+      },
+      "028-katadukimasu (nimotsuga)": {
+        "romaji": "katadukimasu (nimotsuga)",
+        "kanji": "片付きます（にもつが）",
+        "furigana": "かたづきます（にもつが）",
+        "indonesia": "Dibereskan, dirapikan",
+        "id": "001-26-028"
+      },
+      "029-gomi": {
+        "romaji": "gomi",
+        "kanji": "ゴミ",
+        "furigana": "ごみ",
+        "indonesia": "Sampah",
+        "id": "001-26-029"
+      },
+      "030-dashimasu": {
+        "romaji": "dashimasu",
+        "kanji": "出します",
+        "furigana": "だします",
+        "indonesia": "Membuang",
+        "id": "001-26-030"
+      },
+      "031-moemasu": {
+        "romaji": "moemasu",
+        "kanji": "燃えます",
+        "furigana": "もえます",
+        "indonesia": "Dapat dibakar",
+        "id": "001-26-031"
+      },
+      "032-okiba": {
+        "romaji": "okiba",
+        "kanji": "置き場",
+        "furigana": "おきば",
+        "indonesia": "Tempat pembuangan",
+        "id": "001-26-032"
+      },
+      "033-yoko": {
+        "romaji": "yoko",
+        "kanji": "横",
+        "furigana": "よこ",
+        "indonesia": "Sebelah",
+        "id": "001-26-033"
+      },
+      "034-bin": {
+        "romaji": "bin",
+        "kanji": "瓶",
+        "furigana": "びん",
+        "indonesia": "Botol",
+        "id": "001-26-034"
+      },
+      "035-kan": {
+        "romaji": "kan",
+        "kanji": "缶",
+        "furigana": "かん",
+        "indonesia": "Kaleng",
+        "id": "001-26-035"
+      },
+      "036-oyu": {
+        "romaji": "oyu",
+        "kanji": "お湯",
+        "furigana": "おゆ",
+        "indonesia": "Air panas",
+        "id": "001-26-036"
+      },
+      "037-gasu": {
+        "romaji": "gasu",
+        "kanji": "ガス",
+        "furigana": "がす",
+        "indonesia": "Gas",
+        "id": "001-26-037"
+      },
+      "038-renrakushimasu": {
+        "romaji": "renrakushimasu",
+        "kanji": "連絡します",
+        "furigana": "れんらくします",
+        "indonesia": "Menghubungi",
+        "id": "001-26-038"
+      },
+      "039-komattanaa": {
+        "romaji": "komattanaa",
+        "kanji": "困ったなあ",
+        "furigana": "こまったなあ",
+        "indonesia": "Payah ya. Gawat",
+        "id": "001-26-039"
+      },
+      "040-denshimeeru": {
+        "romaji": "denshimeeru",
+        "kanji": "でんしメール",
+        "furigana": "でんしめーる",
+        "indonesia": "Email",
+        "id": "001-26-040"
+      },
+      "041-uchuu": {
+        "romaji": "uchuu",
+        "kanji": "宇宙",
+        "furigana": "うちゅう",
+        "indonesia": "Luar angkasa",
+        "id": "001-26-041"
+      },
+      "042-kowai": {
+        "romaji": "kowai",
+        "kanji": "怖い",
+        "furigana": "こわい",
+        "indonesia": "Takut",
+        "id": "001-26-042"
+      },
+      "043-uchuusen": {
+        "romaji": "uchuusen",
+        "kanji": "宇宙船",
+        "furigana": "うちゅうせん",
+        "indonesia": "Pesawat ruang angkasa",
+        "id": "001-26-043"
+      },
+      "044-betsuno": {
+        "romaji": "betsuno",
+        "kanji": "別の",
+        "furigana": "べつの",
+        "indonesia": "Yang lain",
+        "id": "001-26-044"
+      },
+      "045-uchuuhikoushi": {
+        "romaji": "uchuuhikoushi",
+        "kanji": "宇宙飛行士",
+        "furigana": "うちゅうひこうし",
+        "indonesia": "Astronot",
+        "id": "001-26-045"
+      },
+      "046-gomi no dashikata": {
+        "romaji": "gomi no dashikata",
+        "kanji": "ゴミの出し方",
+        "furigana": "ごみのだしかた",
+        "indonesia": "Cara cara membuat sampah",
+        "id": "001-26-046"
+      },
+      "047-gomi shuushuubi no oshirase": {
+        "romaji": "gomi shuushuubi no oshirase",
+        "kanji": "ゴミ収集日のお知らせ",
+        "furigana": "ごみしゅうしゅうびのおしらせ",
+        "indonesia": "Pemberitahuan hari pembuangan",
+        "id": "001-26-047"
+      },
+      "048-kanen gomi - moeru gomi": {
+        "romaji": "kanen gomi, moeru gomi",
+        "kanji": "可燃ゴミ、燃えるゴミ",
+        "furigana": "かねんごみ、もえるごみ",
+        "indonesia": "Sampah yang dapat dibakar",
+        "id": "001-26-048"
+      },
+      "049-shuushuubi": {
+        "romaji": "shuushuubi",
+        "kanji": "収集日",
+        "furigana": "しゅうしゅうび",
+        "indonesia": "Hari pengumpulan sampah",
+        "id": "001-26-049"
+      },
+      "050-kamikuzu": {
+        "romaji": "kamikuzu",
+        "kanji": "紙ずく",
+        "furigana": "かみずく",
+        "indonesia": "Sampah kertas",
+        "id": "001-26-050"
+      },
+      "051-namagomi": {
+        "romaji": "namagomi",
+        "kanji": "生ゴミ",
+        "furigana": "なまごみ",
+        "indonesia": "Sampah dapur",
+        "id": "001-26-051"
+      },
+      "052-funen gomi-moenai gomi": {
+        "romaji": "funen gomi, moenai gomi",
+        "kanji": "不燃ゴミ、燃えないゴミ",
+        "furigana": "ふねんごみ/もえないごみ",
+        "indonesia": "Sampah yang tidak dapat dibakar",
+        "id": "001-26-052"
+      },
+      "053-garasuseihin": {
+        "romaji": "garasuseihin",
+        "kanji": "ガラス製品",
+        "furigana": "がらすせいひん",
+        "indonesia": "Barang-barang yang terbuat dari kaca",
+        "id": "001-26-053"
+      },
+      "054-kinzoku seidai dokoro youhin": {
+        "romaji": "kinzoku seidai dokoro youhin",
+        "kanji": "金属製台所用品",
+        "furigana": "きんぞくせいだいどころようひん",
+        "indonesia": "Barang yang dipakai di dapur dan terbuat dari logam",
+        "id": "001-26-054"
+      },
+      "055-sodai gomi": {
+        "romaji": "sodai gomi",
+        "kanji": "粗大ゴミ",
+        "furigana": "そだいごみ",
+        "indonesia": "Sampah besar",
+        "id": "001-26-055"
+      },
+      "056-kagu": {
+        "romaji": "kagu",
+        "kanji": "家具",
+        "furigana": "かぐ",
+        "indonesia": "Perabotan rumah tangga",
+        "id": "001-26-056"
+      },
+      "057-kateidenkaseihin": {
+        "romaji": "kateidenkaseihin",
+        "kanji": "家庭電化製品",
+        "furigana": "かていでんかせいひん",
+        "indonesia": "Barang-barang elektronik rumah tangga",
+        "id": "001-26-057"
+      },
+      "058-shigen gomi": {
+        "romaji": "shigen gomi",
+        "kanji": "資源ゴミ",
+        "furigana": "しげんごみ",
+        "indonesia": "Sampah yang bisa didaur ulang",
+        "id": "001-26-058"
+      },
+      "059-akikan": {
+        "romaji": "akikan",
+        "kanji": "空き缶",
+        "furigana": "あきかん",
+        "indonesia": "Kaleng bekas",
+        "id": "001-26-059"
+      },
+      "060-akibin": {
+        "romaji": "akibin",
+        "kanji": "空き瓶",
+        "furigana": "あきびん",
+        "indonesia": "Botol bekas/botol kosong",
+        "id": "001-26-060"
+      },
+      "061-furu shinbun": {
+        "romaji": "furu shinbun",
+        "kanji": "古新聞",
+        "furigana": "ふるしんぶん",
+        "indonesia": "Koran lama/koran bekas",
+        "id": "001-26-061"
+      },
+      "062-purasuchikku seihin": {
+        "romaji": "purasuchikku seihin",
+        "kanji": "プラスチック製品",
+        "furigana": "ぷらすちっくせいひん",
+        "indonesia": "Barang-barang yang terbuat dari plastik",
+        "id": "001-26-062"
+      },
+      "063-dai sanka youbi": {
+        "romaji": "dai sanka youbi",
+        "kanji": "第３火曜日",
+        "furigana": "だい３かようび",
+        "indonesia": "Hari selasa minggu ke 3",
+        "id": "001-26-063"
+      }
+    },
     "003-N3スピードマスター「第1課」": {
       "001-genzai": {
         "romaji": "genzai",
@@ -9873,6 +10104,225 @@
         "furigana": "ねんじゅうむきゅう",
         "indonesia": "Buka sepanjang tahun tanpa libur",
         "id": "00301025"
+      }
+    },
+    "003-N3スピードマスター「第2課」": {
+      "001-kazoku": {
+        "romaji": "kazoku",
+        "kanji": "家族",
+        "furigana": "かぞく",
+        "indonesia": "Keluarga",
+        "id": "00302001"
+      },
+      "002-oya": {
+        "romaji": "oya",
+        "kanji": "親",
+        "furigana": "おや",
+        "indonesia": "Orang tua",
+        "id": "00302002"
+      },
+      "003-chichioya-hahaoya": {
+        "romaji": "chichioya, hahaoya",
+        "kanji": "父親、母親",
+        "furigana": "ちちおや、ははおや",
+        "indonesia": "Bapak, ibu",
+        "id": "00302003"
+      },
+      "004-ryoushin": {
+        "romaji": "ryoushin",
+        "kanji": "両親",
+        "furigana": "りょうしん",
+        "indonesia": "Orang tua",
+        "id": "00302004"
+      },
+      "005-sofu": {
+        "romaji": "sofu",
+        "kanji": "祖父",
+        "furigana": "そふ",
+        "indonesia": "Kakek",
+        "id": "00302005"
+      },
+      "006-sobo": {
+        "romaji": "sobo",
+        "kanji": "祖母",
+        "furigana": "そぼ",
+        "indonesia": "Nenek",
+        "id": "00302006"
+      },
+      "007-oji": {
+        "romaji": "oji",
+        "kanji": "おじ",
+        "furigana": "",
+        "indonesia": "Paman",
+        "id": "00302007"
+      },
+      "008-oba": {
+        "romaji": "oba",
+        "kanji": "おば",
+        "furigana": "",
+        "indonesia": "Tante",
+        "id": "00302008"
+      },
+      "009-musuko": {
+        "romaji": "musuko",
+        "kanji": "息子",
+        "furigana": "むすこ",
+        "indonesia": "Anak laki-laki",
+        "id": "00302009"
+      },
+      "010-musume": {
+        "romaji": "musume",
+        "kanji": "娘",
+        "furigana": "むすめ",
+        "indonesia": "Anak perempuan",
+        "id": "00302010"
+      },
+      "011-oi": {
+        "romaji": "oi",
+        "kanji": "甥",
+        "furigana": "おい",
+        "indonesia": "Keponakan laki-laki",
+        "id": "00302011"
+      },
+      "012-mei": {
+        "romaji": "mei",
+        "kanji": "姪",
+        "furigana": "めい",
+        "indonesia": "Keponakan perempuan",
+        "id": "00302012"
+      },
+      "013-mago": {
+        "romaji": "mago",
+        "kanji": "孫",
+        "furigana": "まご",
+        "indonesia": "Cucu",
+        "id": "00302013"
+      },
+      "014-yome": {
+        "romaji": "yome",
+        "kanji": "嫁",
+        "furigana": "よめ",
+        "indonesia": "Istri",
+        "id": "00302014"
+      },
+      "015-chounan-jinan-sannan": {
+        "romaji": "chounan, jinan, sannan",
+        "kanji": "長男、次男、三男",
+        "furigana": "ちょうなん、じなん、さんなん",
+        "indonesia": "Putra pertama, putra kedua, putra ketiga",
+        "id": "00302015"
+      },
+      "016-choujo-jijo-sanjo": {
+        "romaji": "choujo, jijo, sanjo",
+        "kanji": "長女、次女、三女",
+        "furigana": "ちょうじょ、じじょ、さんじょ",
+        "indonesia": "Putri pertama, putri kedua, putri ketiga",
+        "id": "00302016"
+      },
+      "017-shinseki (shinrui)": {
+        "romaji": "shinseki (shinrui)",
+        "kanji": "親せき（親類）",
+        "furigana": "しんせき（しんるい）",
+        "indonesia": "Kerabat",
+        "id": "00302017"
+      },
+      "018-yuujin": {
+        "romaji": "yuujin",
+        "kanji": "友人",
+        "furigana": "ゆうじん",
+        "indonesia": "Teman",
+        "id": "00302018"
+      },
+      "019-chijin (shiriai)": {
+        "romaji": "chijin (shiriai)",
+        "kanji": "知人（知り合い）",
+        "furigana": "ちじん（しりあい）",
+        "indonesia": "Kenalan",
+        "id": "00302019"
+      },
+      "020-senpai": {
+        "romaji": "senpai",
+        "kanji": "先輩",
+        "furigana": "せんぱい",
+        "indonesia": "Senior",
+        "id": "00302020"
+      },
+      "021-kouhai": {
+        "romaji": "kouhai",
+        "kanji": "後輩",
+        "furigana": "こうはい",
+        "indonesia": "Junior",
+        "id": "00302021"
+      },
+      "022-joushi": {
+        "romaji": "joushi",
+        "kanji": "上司",
+        "furigana": "じょうし",
+        "indonesia": "Atasan",
+        "id": "00302022"
+      },
+      "023-buka": {
+        "romaji": "buka",
+        "kanji": "部下",
+        "furigana": "ぶか",
+        "indonesia": "Bawahan",
+        "id": "00302023"
+      },
+      "024-douryou": {
+        "romaji": "douryou",
+        "kanji": "同僚",
+        "furigana": "どうりょう",
+        "indonesia": "Rekan kerja",
+        "id": "00302024"
+      },
+      "025-nakama": {
+        "romaji": "nakama",
+        "kanji": "仲間",
+        "furigana": "なかま",
+        "indonesia": "Teman/kawan/rekan/sahabat perjuangan",
+        "id": "00302025"
+      },
+      "026-doukyuusei": {
+        "romaji": "doukyuusei",
+        "kanji": "同級生",
+        "furigana": "どうきゅうせい",
+        "indonesia": "Teman seangkatan",
+        "id": "00302026"
+      },
+      "027-katei": {
+        "romaji": "katei",
+        "kanji": "家庭",
+        "furigana": "かてい",
+        "indonesia": "Rumah tangga",
+        "id": "00302027"
+      },
+      "028-uchi": {
+        "romaji": "uchi",
+        "kanji": "家",
+        "furigana": "うち、いえ",
+        "indonesia": "Rumah",
+        "id": "00302028"
+      },
+      "029-jikka": {
+        "romaji": "jikka",
+        "kanji": "実家",
+        "furigana": "じっか",
+        "indonesia": "Rumah orang tua",
+        "id": "00302029"
+      },
+      "030-tanin": {
+        "romaji": "tanin",
+        "kanji": "他人",
+        "furigana": "たにん",
+        "indonesia": "Orang lain",
+        "id": "00302030"
+      },
+      "031-dokushin": {
+        "romaji": "dokushin",
+        "kanji": "独身",
+        "furigana": "どくしん",
+        "indonesia": "Lajang",
+        "id": "00302031"
       }
     },
     "004-表現": {
