@@ -30,7 +30,7 @@ export class dbModelsFirestore {
 
   static async getAll(): Promise<any> {
     try {
-      const words = await dbModelsFirestore.firestore.dbGetCollectionGroup("words");
+      const words = await dbModelsFirestore.firestore.dbGetCollectionGroup(path_Collection.kotoba_root);
       const result: any = {};
 
       for (const w of words) {
