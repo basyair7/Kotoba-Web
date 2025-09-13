@@ -20,7 +20,6 @@
 
 - [Deno](https://deno.land/)  
 - [Fresh](https://fresh.deno.dev/) (Deno 向けフルスタックフレームワーク)  
-- [Preact](https://preactjs.com/)  
 - [Firebase](https://console.firebase.google.com)
 - Tailwind CSS  
 
