@@ -26,9 +26,12 @@ const labels = {
 
 export default function QuizWrapper() {
   const { theme, toggleTheme } = useTheme();
-  const [lang, setLang] = useState<"id" | "en" | "jp">(
-    () => (localStorage.getItem("lang") as "id" | "en" | "jp") || "id"
-  );
+  const [lang, setLang] = useState<"id" | "en" | "jp">("id");
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang") as "id" | "en" | "jp" | null;
+    if (savedLang) setLang(savedLang);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("lang", lang);
@@ -40,7 +43,7 @@ export default function QuizWrapper() {
       <h1 class="text-3xl font-bold mb-4">{labels[lang].title}</h1>
       
       {/* toggle mode button */}
-      <div class="flex gap-4 mb-6">
+      <div class="flex flex-wrap gap-4 mb-6 items-center">
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
         <a
@@ -71,7 +74,6 @@ export default function QuizWrapper() {
             <option value="jp">🇯🇵 日本語</option>
           </select>
         </div>
-
       </div>
 
       <QuizGame theme={theme} lang={lang}/>

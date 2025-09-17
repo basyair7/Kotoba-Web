@@ -25,9 +25,12 @@ const labels = {
 
 export default function KotobaWrapper() {
   const { theme, toggleTheme } = useTheme();
-  const [lang, setLang] = useState<"id" | "en" | "jp">(
-    () => (localStorage.getItem("lang") as "id" | "en" | "jp") || "id",
-  );
+  const [lang, setLang] = useState<"id" | "en" | "jp">("id");
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang") as "id" | "en" | "jp" | null;
+    if (savedLang) setLang(savedLang);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("lang", lang);
