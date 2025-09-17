@@ -51,7 +51,7 @@ const labels = {
     yourScore: "Skormu",
     selectedDai: "Bab yang dipilih",
     select: "Semua",
-    total: "Dari total",
+    total: (n: number) => `Dari total ${n} soal`,
     correctCount: "Jumlah salah",
     wrongCount: "Jumlah salah",
     allCorrect: "Semua benar! Luar biasa! 🎉",
@@ -84,7 +84,7 @@ const labels = {
     yourScore: "Your Score",
     selectedDai: "Selected Chapter",
     select: "All",
-    total: "Out of total",
+    total: (n: number) => `Out of ${n} questions`,
     correctCount: "Correct Answers",
     wrongCount: "Wrong Answers",
     allCorrect: "All correct! Amazing! 🎉",
@@ -117,7 +117,7 @@ const labels = {
     yourScore: "あなたのスコア",
     selectedDai: "選択した課",
     select: "全部",
-    total: "全",
+    total: (n: number) => `全 ${n} 問から`,
     correctCount: "正解数",
     wrongCount: "不正解数",
     allCorrect: "全部正解！素晴らしい！ 🎉",
@@ -388,7 +388,7 @@ export default function QuizGame({ theme = "light", lang }: QuizGameProps) {
         <h2 class="mb-2 text-lg">{labels[lang].yourScore}:</h2>
         <p class="text-3xl font-extrabold mb-4">{percent}%</p>
         <p class="mb-2">{labels[lang].selectedDai}: {selectedDai === "all" ? labels[lang].select : selectedDai}</p>
-        <p class="mb-2">{labels[lang].total} {words.length}</p>
+        <p class="mb-2">{labels[lang].total(words.length)}</p>
         <p class="mb-2">{labels[lang].correctCount}: {correctCount}</p>
         <p class="mb-4">{labels[lang].wrongCount}: {wrongCount}</p>
 
@@ -560,7 +560,7 @@ export default function QuizGame({ theme = "light", lang }: QuizGameProps) {
           {feedback && (
             <span
               class={`font-semibold ${
-                feedback.startsWith(quizMode === "jpToId" ? "Benar" : "正解") ? "text-green-400" : "text-red-400"
+                feedback.startsWith(labels[lang].correct) ? "text-green-400" : "text-red-400"
               }`}
             >
               {feedback}
