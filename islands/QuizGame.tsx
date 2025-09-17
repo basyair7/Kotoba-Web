@@ -13,6 +13,7 @@ interface Word {
 
 interface QuizGameProps {
   theme?: "light" | "dark";
+  lang: "id" | "en" | "jp";
 }
 
 // NOTE: WrongAnswer now supports two shapes for backward compatibility:
@@ -29,7 +30,111 @@ interface WrongAnswer {
   correctAnswer?: string;
 }
 
-export default function QuizGame({ theme = "light" }: QuizGameProps) {
+const labels = {
+  id: {
+    title: "Tebak Kotoba",
+    dai: "Bab",
+    question: "Soal",
+    correct: "Benar",
+    wrong: "Salah",
+    answer: "Jawabanmu",
+    correctAnswer: "Jawaban yang benar",
+    review: "Mari review ✍️",
+    playAgain: "Main lagi",
+    quit: "Berhenti",
+    quitConfirm: "Yakin mau berhenti?",
+    quitText: "Kuis yang sedang berlangsung akan berakhir.",
+    yes: "Ya, berhenti",
+    cancel: "Batal",
+    result: "Hasil",
+    thanks: "Terima kasih atas usahanya!",
+    yourScore: "Skormu",
+    selectedDai: "Bab yang dipilih",
+    select: "Semua",
+    total: "Dari total",
+    correctCount: "Jumlah salah",
+    wrongCount: "Jumlah salah",
+    allCorrect: "Semua benar! Luar biasa! 🎉",
+    showFuri: "Tampilkan furigana",
+    hideFuri: "Sembunyikan furigana",
+    mode1: "Jepang → Indonesia",
+    mode2: "Indonesia → Jepang",
+    meaning: "Artinya?",
+    noData: "Tidak ada data.",
+    loading: "Membuat...",
+    translateError: "(belum ada terjemahan)",
+  },
+  en: {
+    title: "Guess the Kotoba",
+    dai: "Chapter",
+    question: "Question",
+    correct: "Correct",
+    wrong: "Wrong",
+    answer: "Your Answer",
+    correctAnswer: "Correct Answer",
+    review: "Let's review ✍️",
+    playAgain: "Play Again",
+    quit: "Quit",
+    quitConfirm: "Are you sure you want to quit?",
+    quitText: "The ongoing quiz will end.",
+    yes: "Yes, quit",
+    cancel: "Cancel",
+    result: "Result",
+    thanks: "Thanks for your effort!",
+    yourScore: "Your Score",
+    selectedDai: "Selected Chapter",
+    select: "All",
+    total: "Out of total",
+    correctCount: "Correct Answers",
+    wrongCount: "Wrong Answers",
+    allCorrect: "All correct! Amazing! 🎉",
+    showFuri: "Show Furigana",
+    hideFuri: "Hide Furigana",
+    mode1: "Japan → English",
+    mode2: "English → Japan",
+    meaning: "Meaning?",
+    noData: "No data.",
+    loading: "Loading...",
+    translateError: "(no translation)"
+  },
+  jp: {
+    title: "言葉を当てる",
+    dai: "課",
+    question: "問題",
+    correct: "正解",
+    wrong: "不正解",
+    answer: "あなたの答え",
+    correctAnswer: "正しい答え",
+    review: "復習しましょう ✍️",
+    playAgain: "もう一度プレイ",
+    quit: "やめる",
+    quitConfirm: "本当にやめますか？",
+    quitText: "進行中のクイズが終了します。",
+    yes: "はい、やめる",
+    cancel: "キャンセル",
+    result: "結果",
+    thanks: "お疲れ様でした！",
+    yourScore: "あなたのスコア",
+    selectedDai: "選択した課",
+    select: "全部",
+    total: "全",
+    correctCount: "正解数",
+    wrongCount: "不正解数",
+    allCorrect: "全部正解！素晴らしい！ 🎉",
+    showFuri: "ふりがなを表示する",
+    hideFuri: "ふりがなを隠す",
+    mode1: "日本語 → インドネシア語",
+    mode2: "インドネシア語 → 日本語",
+    meaning: "意味は？",
+    noData: "データがありません。",
+    loading: "読み込み中...",
+    translateError: "（まだ翻訳がありません）"
+  },
+};
+
+const ALL_KEY: string = "ALL";
+
+export default function QuizGame({ theme = "light", lang }: QuizGameProps) {
   const [allWords, setAllWords] = useState<Word[]>([]);
   const [words, setWords] = useState<Word[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -100,8 +205,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
   }, [selectedDai, allWords]);
 
   async function fetchWords(savedProgress?: string | null) {
-    // const allData = await dbModelsRealtime.getAll();
-    const allData = await dbModelsFirestore.getAll();
+    const allData = await dbModelsRealtime.getAll();
+    // const allData = await dbModelsFirestore.getAll();
     const parsed: Word[] = [];
     const dais: Set<string> = new Set();
 
@@ -112,7 +217,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           parsed.push({
             kanji: value?.kanji ?? "???",
             furigana: value?.furigana ?? "",
-            indonesia: value?.indonesia ?? "(belum ada terjemahan)",
+            indonesia: value?.indonesia ?? labels[lang].translateError,
             dai,
           });
         },
@@ -207,10 +312,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      setFeedback(
-        quizMode === "jpToId"
-          ? "Benar! 🎉" : "正解! 🎉"
-      );
+      setFeedback(labels[lang].correct + " 🎉");
     } else {
       setWrongCount((prev) => prev + 1);
 
@@ -224,15 +326,11 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         },
       ]);
 
-      setFeedback(
+      setFeedback(`${labels[lang].wrong}! ${labels[lang].correctAnswer}: ${labels[lang].correctAnswer}: ${
         quizMode === "jpToId"
-          ? `Salah! Jawaban yang benar: ${correctWord.indonesia}`
-          : `不正解！ 正しい答え: ${correctWord.kanji}${
-            showFurigana && correctWord.furigana
-              ? "「" + correctWord.furigana + "」"
-              : ""
-          }`,
-      );
+          ? correctWord.indonesia
+          : `${correctWord.kanji}${showFurigana && correctWord.furigana ? "「" + correctWord.furigana + "」" : ""}`
+      }`);
     }
 
     setTimeout(() => {
@@ -252,13 +350,13 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
   if (loading) {
     return (
-      <div class="min-h-screen flex justify-center p-4">読み込み中...</div>
+      <div class="min-h-screen flex justify-center p-4">{labels[lang].loading}</div>
     );
   }
   if (words.length === 0) {
     return (
       <div class="min-h-screen flex justify-center p-4">
-        データがありません。
+        {labels[lang].noData}
       </div>
     );
   }
@@ -285,19 +383,19 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
       <div
         class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
       >
-        <h1 class="text-2xl font-bold mb-4">{quizMode === "jpToId" ? "Hasil" : "結果"}</h1>
-        <h2 class="text-xl font-semibold mb-4">{quizMode === "jpToId" ? "Terima kasih atas usahanya!" : "お疲れ様でした！"}</h2>
-        <h2 class="mb-2 text-lg">{quizMode === "jpToId" ? "Skormu" : "あなたのスコア"}:</h2>
+        <h1 class="text-2xl font-bold mb-4">{labels[lang].result}</h1>
+        <h2 class="text-xl font-semibold mb-4">{labels[lang].thanks}</h2>
+        <h2 class="mb-2 text-lg">{labels[lang].yourScore}:</h2>
         <p class="text-3xl font-extrabold mb-4">{percent}%</p>
-        <p class="mb-2">{quizMode === "jpToId" ? "Bab yang dipilih" : "選択しただい"}: {selectedDai === "all" ? "全部" : selectedDai}</p>
-        <p class="mb-2">{quizMode === "jpToId" ? `Dari total ${words.length} soal` : `全${words.length}問中`}</p>
-        <p class="mb-2">{quizMode === "jpToId" ? "Jumlah benar" : "正解数"}: {correctCount}</p>
-        <p class="mb-4">{quizMode === "jpToId" ? "Jumlah salah" : "不正解数"}: {wrongCount}</p>
+        <p class="mb-2">{labels[lang].selectedDai}: {selectedDai === "all" ? labels[lang].select : selectedDai}</p>
+        <p class="mb-2">{labels[lang].total} {words.length}</p>
+        <p class="mb-2">{labels[lang].correctCount}: {correctCount}</p>
+        <p class="mb-4">{labels[lang].wrongCount}: {wrongCount}</p>
 
         {wrongAnswers.length > 0
           ? (
             <div class="mt-4">
-              <h2 class="text-xl font-semibold mb-2">{quizMode === "jpToId" ? "Mari review ✍️" : "復習しましょう ✍️"}</h2>
+              <h2 class="text-xl font-semibold mb-2">{labels[lang].review}</h2>
               <ul class="space-y-3">
                 {wrongAnswers.map((wa, idx) => {
                   // support both structured (new) and legacy (string) shapes
@@ -330,16 +428,16 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                       }`}
                     >
                       <p>
-                        <strong class="text-2xl">{quizMode === "jpToId" ? "Soal" : "問題"}:</strong>{" "}
+                        <strong class="text-2xl">{labels[lang].question}:</strong>{" "}
                         <span className="text-white text-2xl">
                           {questionDisplay}
                         </span>
                       </p>
                       <p class="text-red-400 text-2xl">
-                        {quizMode === "jpToId" ? "Jawabanmu" : "あなたの答え"}: {yourAnswerDisplay}
+                        {labels[lang].answer}: {yourAnswerDisplay}
                       </p>
                       <p class="text-green-400 text-2xl">
-                        {quizMode === "jpToId" ? "Jawaban yang benar" : "正しい答え"}: {correctAnswerDisplay}
+                        {labels[lang].correctAnswer}: {correctAnswerDisplay}
                       </p>
                     </li>
                   );
@@ -350,10 +448,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
           : (
             percent === 100 && (
               <p class="mt-4 text-green-400 font-bold">
-                {quizMode === "jpToId"
-                  ? "Semua benar! Luar biasa! 🎉"
-                  : "全部正解！素晴らしい！ 🎉"
-                }
+                {labels[lang].allCorrect}
               </p>
             )
           )
@@ -366,7 +461,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             onClick={() => resetQuiz(words)}
             class={`px-4 py-2 rounded ${buttonBg} text-white`}
           >
-            {quizMode === "jpToId" ? "Main lagi" : "もう一度プレイ"}
+            {labels[lang].playAgain}
           </button>
 
           {/* Furigana Toggle Button */}
@@ -379,14 +474,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
               }`}
               onClick={() => setShowFurigana((prev) => !prev)}
             >
-              {quizMode === "jpToId" ? 
-                showFurigana 
-                  ? "Sembunyikan furigana" 
-                  : "Tampilkan furigana" :
-                showFurigana 
-                  ? "ふりがなを隠す" 
-                  : "ふりがなを表示する"
-              }
+              {showFurigana ? labels[lang].hideFuri : labels[lang].showFuri}
             </button>
           )}
         </div>
@@ -399,7 +487,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
     <div
       class={`p-6 max-w-xl mx-auto ${bgColor} ${textColor} rounded-lg shadow-md`}
     >
-      <h1 class="text-2xl font-bold mb-4">{quizMode === "jpToId" ? "Tebak Kotoba" : "言葉を当てる"}</h1>
+      <h1 class="text-2xl font-bold mb-4">{labels[lang].title}</h1>
 
       {/* Filter だい + mode switch + furigana toggle */}
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
@@ -410,7 +498,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""
           }`}
         >
-          <option value="all">全部</option>
+          <option value="all">{labels[lang].select}</option>
           {daiList.map((b) => (
             <option value={b} key={b}>
               {b}
@@ -425,8 +513,8 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             theme === "dark" ? "bg-gray-700 text-white border-gray-600" : ""
           }`}
         >
-          <option value="jpToId">日本語 → インドネシア語</option>
-          <option value="idToJp">インドネシア語 → 日本語</option>
+          <option value="jpToId">{labels[lang].mode1}</option>
+          <option value="idToJp">{labels[lang].mode2}</option>
         </select>
 
         {/* Checkbox furigana (removed) */}
@@ -434,26 +522,24 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
 
       <p class="mb-2">
         {/* 問題 {currentIndex + 1} / 全{words.length}問 */}
-        {quizMode === "jpToId" 
+        {/* {quizMode === "jpToId" 
           ? `Soal ${currentIndex + 1} / dari ${words.length} soal`
           : `問題 ${currentIndex + 1} / 全${words.length}問`
-        }
-      
+        } */}
+        {labels[lang].question} {currentIndex + 1} / {words.length}
       </p>
       {selectedDai === "all" && (
         <p class="mb-2">
-          {quizMode === "jpToId"
+          {/* {quizMode === "jpToId"
             ? `Bab: ${currentWord.dai}`
             : `課: ${currentWord.dai}`
-          }
+          } */}
+          {labels[lang].dai}: {currentWord.dai}
         </p>
       )}
       <p class="mb-2 font-semibold">
         {/* 正解: {correctCount} | 不正解: {wrongCount} */}
-        {quizMode === "jpToId" 
-          ? `Benar ${correctCount} | Salah ${wrongCount}` 
-          : `正解: ${correctCount} | 不正解: ${wrongCount}`
-        }
+        {labels[lang].correct}: {correctCount} | {labels[lang].wrong}: {wrongCount}
       </p>
 
       {/* 質問 */}
@@ -470,7 +556,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
         </h3>
 
         <p className="flex items-center gap-2">
-          {quizMode === "jpToId" ? "Artinya?" : "意味は？"}
+          {labels[lang].meaning}
           {feedback && (
             <span
               class={`font-semibold ${
@@ -511,24 +597,18 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             onClick={() => {
               Swal.fire({
                 icon: "warning",
-                title: quizMode === "jpToId"
-                  ? "Yakin mau berhenti?"
-                  : "本当にやめますか？",
-                text: quizMode === "jpToId"
-                  ? "Kuis yang sedang berlangsung akan berakhir."
-                  : "進行中のクイズが終了します。",
+                title: labels[lang].quitConfirm,
+                text: labels[lang].quitText,
                 showCancelButton: true,
-                confirmButtonText: quizMode === "jpToId"
-                  ? "Ya, berhenti"
-                  : "はい、やめる",
-                cancelButtonText: quizMode === "jpToId" ? "Batal" : "キャンセル",
+                confirmButtonText: labels[lang].yes,
+                cancelButtonText: labels[lang].cancel,
                 customClass: {
                   confirmButton:
                     "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded",
                   cancelButton:
                     "bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded ml-2",
                 },
-                buttonsStyling: false, // supaya customClass jalan
+                buttonsStyling: false,
               }).then((result: { isConfirmed: any; }) => {
                 if (result.isConfirmed) {
                   setIsFinished(true);
@@ -541,7 +621,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
                 : "bg-red-500 hover:bg-red-600"
             } text-white`}
           >
-            {quizMode === "jpToId" ? "Berhenti" : "やめる"}
+            {labels[lang].quit}
           </button>
 
           {/* Furigana Toggle Button */}
@@ -551,10 +631,7 @@ export default function QuizGame({ theme = "light" }: QuizGameProps) {
             }`}
             onClick={() => setShowFurigana((prev) => !prev)}
           >
-            {quizMode === "jpToId" ? 
-              showFurigana ? "Sembunyikan furigana" : "Tampilkan furigana" :
-              showFurigana ? "ふりがなを隠す" : "ふりがなを表示する"
-            }
+            {showFurigana ? labels[lang].hideFuri : labels[lang].showFuri}
           </button>
         </div>
         

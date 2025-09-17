@@ -5,44 +5,87 @@ import { dbModelsFirestore, dbModelsRealtime } from "../models/dbModels.ts";
 
 interface KotobaListProps {
   theme?: "light" | "dark";
+  lang: "id" | "en" | "jp";
 }
 
-export default function KotobaList({ theme = "light" }: KotobaListProps) {
+const labels = {
+  id: {
+    selectKa: "Pilih Bab:",
+    loading: "📖 Sedang memuat...",
+    search: "Cari kotoba (kanji, hiragana, romaji, arti)...",
+    back: "◀ Sebelumnya",
+    next: "Selanjutnya ▶",
+    page: "Halaman",
+    of: "dari",
+    from: "Dari",
+    select: "Semua"
+  },
+  en: {
+    selectKa: "Select Lesson:",
+    loading: "📖 Loading...",
+    search: "Search kotoba (kanji, hiragana, romaji, meaning)...",
+    back: "◀ Back",
+    next: "Next ▶",
+    page: "Page",
+    of: "of",
+    from: "From",
+    select: "All"
+  },
+  jp: {
+    selectKa: "課を選択：",
+    loading: "📖 読み込み中...",
+    search: "言葉を検索（漢字、ひらがな、ローマ字、意味）...",
+    back: "◀ 戻る",
+    next: "次 ▶",
+    page: "ページ",
+    of: "/",
+    from: "課",
+    select: "全部"
+  },
+};
+
+const ALL_KEY: string = "ALL";
+
+export default function KotobaList({ theme = "light", lang }: KotobaListProps) {
   const [data, setData] = useState<any>({});
   const [KaList, setKaList] = useState<string[]>([]);
   const [selectedKa, setSelectedKa] = useState<string>("");
   const [page, setPage] = useState(0);
-  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchQuery, setSearchQuery] = useState("");
   const perPage = 8;
 
-  const bgColor = theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black";
+  const bgColor = theme === "dark"
+    ? "bg-gray-900 text-white"
+    : "bg-white text-black";
   const textColor = theme === "dark" ? "text-white" : "text-black";
 
   useEffect(() => {
     async function fetchData() {
-      // const allData = await dbModelsRealtime.getAll();
-      const allData = await dbModelsFirestore.getAll();
+      const allData = await dbModelsRealtime.getAll();
+      // const allData = await dbModelsFirestore.getAll();
       if (allData) {
         setData(allData);
         const keys = Object.keys(allData);
-        setKaList(["全部", ...keys]);
-        setSelectedKa("全部");
+        setKaList([ALL_KEY, ...keys]);
+        setSelectedKa(ALL_KEY);
       }
     }
     fetchData();
   }, []);
 
-  if (!selectedKa)
+  if (!selectedKa) {
     return (
-      <div class={`min-h-screen flex justify-center ${bgColor} ${textColor} pt-4`}>
-        読み込み中...
+      <div
+        class={`min-h-screen flex justify-center ${bgColor} ${textColor} pt-4`}
+      >
+        {labels[lang].loading}
       </div>
     );
-
+  }
 
   // Collect words and include Ka info
   let words: any[] = [];
-  if (selectedKa === "全部") {
+  if (selectedKa === ALL_KEY) {
     words = Object.entries(data).flatMap(([KaName, Ka]: any) =>
       Object.values(Ka).map((w: any) => ({ ...w, Ka: KaName }))
     );
@@ -68,10 +111,18 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
   const start = page * perPage;
   const currentWords = filteredWords.slice(start, start + perPage);
 
-  const cardBg = theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black";
-  const buttonBg = theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-200 text-black";
-  const selectBg = theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black";
-  const inputBg = theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-black";
+  const cardBg = theme === "dark"
+    ? "bg-gray-800 text-white"
+    : "bg-white text-black";
+  const buttonBg = theme === "dark"
+    ? "bg-gray-700 text-white"
+    : "bg-gray-200 text-black";
+  const selectBg = theme === "dark"
+    ? "bg-gray-700 text-white border-gray-600"
+    : "bg-white text-black";
+  const inputBg = theme === "dark"
+    ? "bg-gray-700 text-white border-gray-600"
+    : "bg-white text-black";
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -103,7 +154,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
     <div class={`max-w-5xl mx-auto p-4 ${bgColor} min-h-screen`}>
       {/* Dropdown for 課を選択 */}
       <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-2">
-        <label class="font-bold">課を選択：</label>
+        <label class="font-bold">{labels[lang].selectKa}</label>
         <select
           class={`border p-2 rounded w-full sm:w-auto ${selectBg}`}
           value={selectedKa}
@@ -113,7 +164,8 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
             setSearchQuery("");
           }}
         >
-          {KaList.map((Ka) => (
+          <option value={ALL_KEY}>{labels[lang].select}</option>
+          {KaList.filter((Ka) => Ka !== ALL_KEY).map((Ka) => (
             <option value={Ka} key={Ka}>
               {Ka}
             </option>
@@ -125,7 +177,7 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
       <div class="mb-4 relative">
         <input
           type="text"
-          placeholder="Search kotoba (kanji, hiragana, romaji, meaning)..."
+          placeholder={labels[lang].search}
           class={`border p-2 rounded w-full ${inputBg}`}
           value={searchQuery}
           onInput={(e) => {
@@ -133,30 +185,36 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
             setPage(0);
           }}
         />
-        {
-          searchQuery && (
-            <button 
-              onClick={() => setSearchQuery("")}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-              aria-label="Clear search">
-                {/* Icon SVG */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-          )
-        }
+        {searchQuery && (
+          <button
+            onClick={() => setSearchQuery("")}
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            aria-label="Clear search"
+          >
+            {/* Icon SVG */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        )}
       </div>
 
       {/* Responsive grid */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="display-kotoba">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        id="display-kotoba"
+      >
         {currentWords.map((w: any) => (
           <div class="flex flex-col h-full">
             <WordCard
@@ -168,8 +226,8 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
               className={`${cardBg} flex flex-col h-full justify-between`}
             />
             {/* Show Ka info below each card */}
-            {selectedKa === "全部" && (
-              <p class="text-xs text-gray-400 mt-1">From: {w.Ka}</p>
+            {selectedKa === ALL_KEY && (
+              <p class="text-xs text-gray-400 mt-1">{labels[lang].from}: {w.Ka}</p>
             )}
           </div>
         ))}
@@ -180,19 +238,25 @@ export default function KotobaList({ theme = "light" }: KotobaListProps) {
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page === 0}
-          onClick={() => {setPage((p) => p - 1); scrollToTarget();}}
+          onClick={() => {
+            setPage((p) => p - 1);
+            scrollToTarget();
+          }}
         >
-          ◀ Back
+          {labels[lang].back}
         </button>
         <span class="px-2">
-          Page {totalPages === 0 ? 0 : page + 1} of {totalPages}
+          {labels[lang].page} {totalPages === 0 ? 0 : page + 1} {labels[lang].of} {totalPages}
         </span>
         <button
           class={`px-4 py-2 rounded disabled:opacity-50 ${buttonBg}`}
           disabled={page >= totalPages - 1}
-          onClick={() => {setPage((p) => p + 1); scrollToTarget();}}
+          onClick={() => {
+            setPage((p) => p + 1);
+            scrollToTarget();
+          }}
         >
-          Next ▶
+          {labels[lang].next}
         </button>
       </div>
     </div>
