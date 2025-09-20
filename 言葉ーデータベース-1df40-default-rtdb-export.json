@@ -10722,7 +10722,7 @@
       "003-ringonokawawomuku": {
         "romaji": "ringo no kawa wo muku",
         "kanji": "リンゴの皮をむく",
-        "furigana": "りんごのかわむく",
+        "furigana": "りんごのかわをむく",
         "indonesia": "Mengupas apel",
         "id": "00304003"
       },
@@ -10808,7 +10808,7 @@
         "romaji": "hiyasu",
         "kanji": "冷やす",
         "furigana": "ひやす",
-        "indonesia": "Mendinginkan yang panas (biar hangat/dingin)"
+        "indonesia": "Mendinginkan (biar dingin)"
       },
       "016-hieru": {
         "id": "00304016",
@@ -10880,113 +10880,127 @@
         "furigana": "",
         "indonesia": "Asam"
       },
-      "026-ajigakoi": {
+      "026-nigai": {
         "id": "00304026",
+        "romaji": "nigai",
+        "kanji": "苦い",
+        "furigana": "にがい",
+        "indonesia": "Pahit"
+      },
+      "027-ajigakoi": {
+        "id": "00304027",
         "romaji": "ajigakoi",
         "kanji": "味が濃い",
         "furigana": "あじがこい",
         "indonesia": "Rasanya kuat"
       },
-      "027-ajigausui": {
-        "id": "00304027",
+      "028-ajigausui": {
+        "id": "00304028",
         "romaji": "ajigausui",
         "kanji": "味が薄い",
         "furigana": "あじがうすい",
         "indonesia": "Rasanya kurang bumbu"
       },
-      "028-choumiryou": {
-        "id": "00304028",
+      "029-choumiryou": {
+        "id": "00304029",
         "romaji": "choumiryou",
         "kanji": "調味料",
         "furigana": "ちょうみりょう",
         "indonesia": "Bumbu"
       },
-      "029-shio": {
-        "id": "00304029",
+      "030-shio": {
+        "id": "00304030",
         "romaji": "shio",
         "kanji": "塩",
         "furigana": "しお",
         "indonesia": "Garam"
       },
-      "030-satou": {
-        "id": "00304030",
+      "031-satou": {
+        "id": "00304031",
         "romaji": "satou",
         "kanji": "佐藤",
         "furigana": "さとう",
         "indonesia": "Gula"
       },
-      "031-miso": {
-        "id": "00304031",
+      "032-miso": {
+        "id": "00304032",
         "romaji": "miso",
         "kanji": "みそ",
         "furigana": "",
         "indonesia": "Miso"
       },
-      "032-shouyu": {
-        "id": "00304032",
+      "033-shouyu": {
+        "id": "00304033",
         "romaji": "shouyu",
         "kanji": "しょう油",
         "furigana": "しょうゆ",
         "indonesia": "Kecap asin"
       },
-      "033-su": {
-        "id": "00304033",
+      "034-su": {
+        "id": "00304034",
         "romaji": "su",
         "kanji": "酢",
         "furigana": "す",
         "indonesia": "Cuka"
       },
-      "034-koshou": {
-        "id": "00304034",
+      "035-abura": {
+        "id": "00304035",
+        "romaji": "abura",
+        "kanji": "油",
+        "furigana": "あぶら",
+        "indonesia": "Minyak"
+      },
+      "036-koshou": {
+        "id": "00304036",
         "romaji": "koshou",
         "kanji": "こしょう",
         "furigana": "",
         "indonesia": "Merica, lada"
       },
-      "035-mayoneezu": {
-        "id": "00304035",
+      "037-mayoneezu": {
+        "id": "00304037",
         "romaji": "mayoneezu",
         "kanji": "マヨネーズ",
         "furigana": "まよねーず",
         "indonesia": "Mayones"
       },
-      "036-kechappu": {
-        "id": "00304036",
+      "038-kechappu": {
+        "id": "00304038",
         "romaji": "kechappu",
         "kanji": "ケチャップ",
         "furigana": "けちゃっぷ",
         "indonesia": "Saus tomat"
       },
-      "037-katai": {
-        "id": "00304037",
+      "039-katai": {
+        "id": "00304039",
         "romaji": "takai",
         "kanji": "たかい",
         "furigana": "",
         "indonesia": "Keras"
       },
-      "038-yawarakai": {
-        "id": "00304038",
+      "040-yawarakai": {
+        "id": "00304040",
         "romaji": "yawarakai",
         "kanji": "やわらかい",
         "furigana": "",
         "indonesia": "Empuk, lunak"
       },
-      "039-shinsenna": {
-        "id": "00304039",
+      "041-shinsenna": {
+        "id": "00304041",
         "romaji": "shinsenna",
         "kanji": "新鮮な",
         "furigana": "しんせんな",
         "indonesia": "Segar"
       },
-      "040-nama": {
-        "id": "00304040",
+      "042-nama": {
+        "id": "00304042",
         "romaji": "nama",
         "kanji": "生",
         "furigana": "なま",
         "indonesia": "Mentah"
       },
-      "041-kusaru": {
-        "id": "00304041",
+      "043-kusaru": {
+        "id": "00304043",
         "romaji": "kusaru",
         "kanji": "腐る",
         "furigana": "くさる",
