@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 // database/firebase.ts
 import { FirebaseApp, initializeApp } from "npm:firebase/app";
-import { getDatabase, ref, get, set, goOffline } from "npm:firebase/database";
+import { getDatabase, ref, get, set, goOffline, Database } from "npm:firebase/database";
 import {
     getFirestore,
     doc,
@@ -21,6 +21,11 @@ class FirebaseBase {
         this._config = firebaseConfig;
         this._app = initializeApp(firebaseConfig);
     }
+
+    public closeDb(db: Database) {
+        goOffline(db);
+        console.log("Close database");
+    }
 }
 
 export class Firebase extends FirebaseBase {
@@ -36,18 +41,18 @@ export class Firebase extends FirebaseBase {
         try {
             const _dbRef = ref(this._db, _path);
             const _snapshot = await get(_dbRef);
+            this.closeDb(this._db);
+
             if (_snapshot.exists()) {
                 _return_val = _snapshot.val();
             } else {
                 // TODO (SKIP)   
             }
-
-            goOffline(this._db);
-            console.log("Close database");
-
             return _return_val;
         } catch (error) {
             console.error("Error : ", error);
+            this.closeDb(this._db);
+
             return _return_val;
         }
     }
@@ -55,9 +60,8 @@ export class Firebase extends FirebaseBase {
     public async dbSet(_path: string, _child: string, value: any): Promise<void> {
         const _dbRef = ref(this._db, `${_path}/${_child}`);
         await set(_dbRef, value);
-
-        goOffline(this._db);
-        console.log("Close database");
+        
+        this.closeDb(this._db);
     }
 }
 
@@ -73,6 +77,8 @@ export class FirestoreDB extends FirebaseBase {
         try {
             const _docRef = doc(this._db, collectionName, docId);
             const _docSnap = await getDoc(_docRef);
+            this.closeDb(this._db);
+            
             if (_docSnap.exists()) {
                 return _docSnap.data();
             } else return null;
@@ -87,6 +93,7 @@ export class FirestoreDB extends FirebaseBase {
             // console.log("Fetching collection:", collectionName); // debug
             const querySnapshot = await getDocs(collection(this._db, collectionName));
             console.log("Docs size:", querySnapshot.size);
+            this.closeDb(this._db);
 
             const data: any[] = [];
             querySnapshot.forEach((docSnap) => {
@@ -104,6 +111,8 @@ export class FirestoreDB extends FirebaseBase {
         try {
             // console.log("Fetching collectionGroup:", subColName);
             const querySnapshot = await getDocs(collectionGroup(this._db, subColName));
+            this.closeDb(this._db);
+            
             const data: any[] = [];
             querySnapshot.forEach((docSnap) => {
                 data.push({
@@ -126,8 +135,10 @@ export class FirestoreDB extends FirebaseBase {
     ): Promise<void> {
         try {
             await setDoc(doc(this._db, collectionName, docId), value);
+            this.closeDb(this._db);
         } catch (error) {
             console.error(`Error setDoc: ${error}`);
+            this.closeDb(this._db);
         }
     }
 }
