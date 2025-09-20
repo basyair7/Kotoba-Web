@@ -22,7 +22,7 @@ class FirebaseBase {
         this._app = initializeApp(firebaseConfig);
     }
 
-    public closeDb(db: Database) {
+    protected closeDb(db: Database) {
         goOffline(db);
         console.log("Close database");
     }
