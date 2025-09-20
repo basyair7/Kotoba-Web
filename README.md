@@ -29,7 +29,7 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/<your-username>/kotoba-web.git
+git clone https://github.com/basyair7/kotoba-web.git
 cd kotoba-web
 
 # サーバーを起動
