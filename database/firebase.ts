@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 // database/firebase.ts
 import { FirebaseApp, initializeApp } from "npm:firebase/app";
-import { getDatabase, ref, get, set } from "npm:firebase/database";
+import { getDatabase, ref, get, set, goOffline } from "npm:firebase/database";
 import {
     getFirestore,
     doc,
@@ -41,8 +41,11 @@ export class Firebase extends FirebaseBase {
             } else {
                 // TODO (SKIP)   
             }
-            return _return_val;
 
+            goOffline(this._db);
+            console.log("Close database");
+
+            return _return_val;
         } catch (error) {
             console.error("Error : ", error);
             return _return_val;
@@ -52,6 +55,9 @@ export class Firebase extends FirebaseBase {
     public async dbSet(_path: string, _child: string, value: any): Promise<void> {
         const _dbRef = ref(this._db, `${_path}/${_child}`);
         await set(_dbRef, value);
+
+        goOffline(this._db);
+        console.log("Close database");
     }
 }
 
