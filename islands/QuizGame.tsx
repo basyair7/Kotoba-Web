@@ -537,14 +537,22 @@ export default function QuizGame({ theme = "light", lang }: QuizGameProps) {
           {labels[lang].dai}: {currentWord.dai}
         </p>
       )}
+
       <p class="mb-2 font-semibold">
         {/* 正解: {correctCount} | 不正解: {wrongCount} */}
-        {labels[lang].correct}: {correctCount} | {labels[lang].wrong}: {wrongCount}
+        <span class={theme === "dark" ? "text-green-400" : "text-green-600"}>
+          {labels[lang].correct}: {correctCount}
+        </span>
+        {" "} | {" "}
+        <span class={theme === "dark" ? "text-red-400" : "text-red-600"}>
+          {labels[lang].wrong}: {wrongCount}
+        </span>
       </p>
+
 
       {/* 質問 */}
       <div class="mb-4">
-        <h3 class="text-2xl font-bold mb-2">
+        <h3 class="text-2xl font-bold mb-2" onClick={() => setShowFurigana((prev) => !prev)}>
           {quizMode === "jpToId"
             ? `${currentWord.kanji} ${
               showFurigana && currentWord.furigana
