@@ -2079,9 +2079,9 @@
         "furigana": "しゃどう",
         "indonesia": "Jalan raya"
       },
-      "022-houdu": {
+      "022-houdou": {
         "id": "00308022",
-        "romaji": "houdu",
+        "romaji": "houdou",
         "kanji": "歩道",
         "furigana": "ほどう",
         "indonesia": "Trotoar"
@@ -2672,6 +2672,479 @@
         "indonesia": "Lokal, Setempat"
       }
     },
+    "003-N3スピードマスター「第11課」": {
+      "001-okane": {
+        "id": "00311001",
+        "romaji": "okane",
+        "kanji": "お金ね",
+        "furigana": "おかね",
+        "indonesia": "Uang"
+      },
+      "002-osatsu_shihei": {
+        "id": "00311002",
+        "romaji": "osatsu (shihei)",
+        "kanji": "お札（紙幣）",
+        "furigana": "おさつ（しへい）",
+        "indonesia": "Uang kertas"
+      },
+      "003-kouka_koin": {
+        "id": "00311003",
+        "romaji": "kouka (koin)",
+        "kanji": "硬貨（コイン）",
+        "furigana": "こうか（こいん）",
+        "indonesia": "Uang logam, koin"
+      },
+      "004-kozeni": {
+        "id": "00311004",
+        "romaji": "kozeni",
+        "kanji": "小銭",
+        "furigana": "こぜに",
+        "indonesia": "Uang kecil"
+      },
+      "005-genkin_kyasshu": {
+        "id": "00311005",
+        "romaji": "genkin (kyasshu)",
+        "kanji": "現金（キャッシュ）",
+        "furigana": "げんきん（きゃっしゅ）",
+        "indonesia": "Uang tunai"
+      },
+      "006-kurejitto_kaado": {
+        "id": "00311006",
+        "romaji": "kurejitto kaado",
+        "kanji": "クレジットカード",
+        "furigana": "くれじっとかーど",
+        "indonesia": "Kartu kredit"
+      },
+      "007-ryougaesuru": {
+        "id": "00311007",
+        "romaji": "ryougae suru",
+        "kanji": "両替する",
+        "furigana": "りょうがえする",
+        "indonesia": "Menukar uang"
+      },
+      "008-okanewokuzusu": {
+        "id": "00311008",
+        "romaji": "okane wo kuzusu",
+        "kanji": "お金を崩す",
+        "furigana": "おかねをくずす",
+        "indonesia": "Memecah uang"
+      },
+      "009-okanewoorosu": {
+        "id": "00311009",
+        "romaji": "okane wo orosu",
+        "kanji": "お金をおろす",
+        "furigana": "おかねをおろす",
+        "indonesia": "Mengambil uang"
+      },
+      "010-furikomu": {
+        "id": "00311010",
+        "romaji": "furikomu",
+        "kanji": "振り込む",
+        "furigana": "ふりこむ",
+        "indonesia": "Transfer"
+      },
+      "011-okanewosetsuyakusuru": {
+        "id": "00311011",
+        "romaji": "okane wo setsuyaku suru",
+        "kanji": "お金を節約する",
+        "furigana": "おかねをせつやくする",
+        "indonesia": "Menghemat uang"
+      },
+      "012-okanewotameru_chokanesuru": {
+        "id": "00311012",
+        "romaji": "okane wo tameru (chokane suru)",
+        "kanji": "お金を貯める（貯金する）",
+        "furigana": "おかねをためる（ちょかねする）",
+        "indonesia": "Menabung uang"
+      },
+      "013-ureru": {
+        "id": "00311013",
+        "romaji": "ureru",
+        "kanji": "売れる",
+        "furigana": "うれる",
+        "indonesia": "Laris"
+      },
+      "014-urikireru": {
+        "id": "00311014",
+        "romaji": "urikireru",
+        "kanji": "売り切れる",
+        "furigana": "うりきれる",
+        "indonesia": "Habis terjual"
+      },
+      "015-uriage": {
+        "id": "00311015",
+        "romaji": "uriage",
+        "kanji": "売上",
+        "furigana": "うりあげ",
+        "indonesia": "Penjualan"
+      },
+      "016-shiharau": {
+        "id": "00311016",
+        "romaji": "shiharau",
+        "kanji": "支洗う",
+        "furigana": "しあらう",
+        "indonesia": "Bayar"
+      },
+      "017-reshiito": {
+        "id": "00311017",
+        "romaji": "reshiito",
+        "kanji": "レシート",
+        "furigana": "れしーと",
+        "indonesia": "Slip pembelian, kuitansi"
+      },
+      "018-ichiba": {
+        "id": "00311018",
+        "romaji": "ichiba",
+        "kanji": "市場",
+        "furigana": "いちば",
+        "indonesia": "Pasar"
+      },
+      "019-furiimaaketto": {
+        "id": "00311019",
+        "romaji": "furiimaaketto",
+        "kanji": "フリーマーケット",
+        "furigana": "ふりーまーけっと",
+        "indonesia": "Pasar lokal"
+      },
+      "020-nedan": {
+        "id": "00311020",
+        "romaji": "nedan",
+        "kanji": "値段",
+        "furigana": "ねだん",
+        "indonesia": "Harga"
+      },
+      "021-kingaku": {
+        "id": "00311021",
+        "romaji": "kingaku",
+        "kanji": "金額",
+        "furigana": "きんがく",
+        "indonesia": "Jumlah uang"
+      },
+      "022-en_makeru": {
+        "id": "00311022",
+        "romaji": "(~en) makeru",
+        "kanji": "（～円）負ける",
+        "furigana": "（～えん）まける",
+        "indonesia": "Memberikan korting"
+      },
+      "023-seeru_tokubai": {
+        "id": "00311023",
+        "romaji": "seeru, tokubai",
+        "kanji": "セール、特売",
+        "furigana": "せーる、とくばい",
+        "indonesia": "Obral"
+      },
+      "024-seerukakaku": {
+        "id": "00311024",
+        "romaji": "seerukakaku",
+        "kanji": "セール価格",
+        "furigana": "せーるかかく",
+        "indonesia": "Harga obral"
+      },
+      "025-niwaribiki": {
+        "id": "00311025",
+        "romaji": "niwaribiki",
+        "kanji": "2割引き",
+        "furigana": "2わりびき",
+        "indonesia": "Diskon 20%"
+      },
+      "026-teikanohangaku": {
+        "id": "00311026",
+        "romaji": "teika no hangaku",
+        "kanji": "定価の半額",
+        "furigana": "ていかのはんがく",
+        "indonesia": "Setengah harga normal"
+      },
+      "027-kyouretsuninarabu": {
+        "id": "00311027",
+        "romaji": "kyouretsu ni narabu",
+        "kanji": "行列に並ぶ",
+        "furigana": "ぎょうれつにならぶ",
+        "indonesia": "Beridiri dalam antrean"
+      },
+      "028-zeikin": {
+        "id": "00311028",
+        "romaji": "zeikin",
+        "kanji": "税金",
+        "furigana": "ぜいきん",
+        "indonesia": "Pajak"
+      },
+      "029-shouhizeiwofukumu": {
+        "id": "00311029",
+        "romaji": "shouhizei wo fukumu",
+        "kanji": "消費税を含む",
+        "furigana": "しょうひぜいをふくむ",
+        "indonesia": "Termasuk pajak konsumsi"
+      },
+      "030-bukkagatakai": {
+        "id": "00311030",
+        "romaji": "bukka ga takai",
+        "kanji": "物価が高い",
+        "furigana": "ぶっかがたかい",
+        "indonesia": "Harga barang-barang tinggi"
+      },
+      "031-pointokaado": {
+        "id": "00311031",
+        "romaji": "pointokaado",
+        "kanji": "ポイントカード",
+        "furigana": "ぽいんとかーど",
+        "indonesia": "Kartu poin"
+      },
+      "032-kuupon": {
+        "id": "00311032",
+        "romaji": "kuupon",
+        "kanji": "クーポン",
+        "furigana": "くーぽん",
+        "indonesia": "Kupon"
+      },
+      "033-tokuwosuru": {
+        "id": "00311033",
+        "romaji": "toku wo suru",
+        "kanji": "得をする",
+        "furigana": "とくをする",
+        "indonesia": "Untung"
+      },
+      "034-sonwosuru": {
+        "id": "00311034",
+        "romaji": "son wo suru",
+        "kanji": "損をする",
+        "furigana": "そんをする",
+        "indonesia": "Rugi"
+      },
+      "035-shakkinwokaesu": {
+        "id": "00311035",
+        "romaji": "shakkin wo kaesu",
+        "kanji": "借金を返す",
+        "furigana": "しゃっきんをかえす",
+        "indonesia": "Mengembalikan Utang"
+      }
+    },
+	"003-N3スピードマスター「第12課」": {
+		"001-wanpiisu": {
+			"id": "00312001",
+			"romaji": "wanpiisu",
+			"kanji": "ワンピース",
+			"furigana": "わんぴーす",
+			"indonesia": "Baju terusan"
+		},
+		"002-burausu": {
+			"id": "00312002",
+			"romaji": "burausu",
+			"kanji": "ブラウス",
+			"furigana": "ぶらうす",
+			"indonesia": "Blus"
+		},
+		"003-pantsu": {
+			"id": "00312003",
+			"romaji": "pantsu",
+			"kanji": "パンツ",
+			"furigana": "ぱんつ",
+			"indonesia": "Celana dalam"
+		},
+		"004-jiinzu": {
+			"id": "00312004",
+			"romaji": "jiinzu",
+			"kanji": "ジーンズ",
+			"furigana": "じーんず",
+			"indonesia": "Celana jin"
+		},
+		"005-mafuraa": {
+			"id": "00312005",
+			"romaji": "mafuraa",
+			"kanji": "マフラー",
+			"furigana": "まふらー",
+			"indonesia": "Syal, mafela"
+		},
+		"006-tebukuro": {
+			"id": "00312006",
+			"romaji": "tebukuro",
+			"kanji": "手袋",
+			"furigana": "てぶくろ",
+			"indonesia": "Sarung tangan"
+		},
+		"007-haihiiru": {
+			"id": "00312007",
+			"romaji": "haihiiru",
+			"kanji": "ハイヒール",
+			"furigana": "はいひーる",
+			"indonesia": "Sepatu hak tinggi"
+		},
+		"008-sandaru": {
+			"id": "00312008",
+			"romaji": "sandaru",
+			"kanji": "サンダル",
+			"furigana": "さんだる",
+			"indonesia": "Sendal"
+		},
+		"009-suniikaa": {
+			"id": "00312009",
+			"romaji": "suniikaa",
+			"kanji": "スニーカー",
+			"furigana": "すにーかー",
+			"indonesia": "Sepatu kets"
+		},
+		"010-iyaringu": {
+			"id": "00312010",
+			"romaji": "iyaringu",
+			"kanji": "イヤリング",
+			"furigana": "いやりんぐ",
+			"indonesia": "Anting jepit"
+		},
+		"011-piasu": {
+			"id": "00312011",
+			"romaji": "piasu",
+			"kanji": "ピアス",
+			"furigana": "ぴあす",
+			"indonesia": "Anting tusuk"
+		},
+		"012-eri": {
+			"id": "00312012",
+			"romaji": "eri",
+			"kanji": "襟",
+			"furigana": "えり",
+			"indonesia": "Kerah"
+		},
+		"013-nagasode": {
+			"id": "00312013",
+			"romaji": "nagasode",
+			"kanji": "長袖",
+			"furigana": "ながそで",
+			"indonesia": "Lengan panjang"
+		},
+		"014-hansode": {
+			"id": "00312014",
+			"romaji": "hansode",
+			"kanji": "半袖",
+			"furigana": "はんそで",
+			"indonesia": "Lengan pendek"
+		},
+		"015-gara": {
+			"id": "00312015",
+			"romaji": "gara",
+			"kanji": "柄",
+			"furigana": "がら",
+			"indonesia": "Pola, corak"
+		},
+		"016-moyou": {
+			"id": "00312016",
+			"romaji": "moyou",
+			"kanji": "模様",
+			"furigana": "もよう",
+			"indonesia": "Motif"
+		},
+		"017-dezain": {
+			"id": "00312017",
+			"romaji": "dezain",
+			"kanji": "デザイン",
+			"furigana": "でざいん",
+			"indonesia": "Desain"
+		},
+		"018-wafuku": {
+			"id": "00312018",
+			"romaji": "wafuku",
+			"kanji": "和服",
+			"furigana": "わふく",
+			"indonesia": "Pakaian gaya Jepang"
+		},
+		"019-kiru": {
+			"id": "00312019",
+			"romaji": "kiru",
+			"kanji": "着る",
+			"furigana": "きる",
+			"indonesia": "Memakai (baju/kaos)"
+		},
+		"020-nugu": {
+			"id": "00312020",
+			"romaji": "nugu",
+			"kanji": "ぬぐ",
+			"furigana": "",
+			"indonesia": "Melepaskan (baju, celana, kaos, sepatu, rok)"
+		},
+		"021-simeru-suru": {
+			"id": "00312021",
+			"romaji": "simeru/suru",
+			"kanji": "しめる/する",
+			"furigana": "",
+			"indonesia": "Mengenakan, mengencangkan (dasi)"
+		},
+		"022-suru-maku": {
+			"id": "00312022",
+			"romaji": "suru/maku",
+			"kanji": "する/巻く",
+			"furigana": "する/まく",
+			"indonesia": "Mengenakan, gulung (syal)"
+		},
+		"023-suru-tsukeru-hameru": {
+			"id": "00312023",
+			"romaji": "suru/tsukeru/hameru",
+			"kanji": "する/つける/はめる",
+			"furigana": "",
+			"indonesia": "Mengenakan, menutup (sarung tangan, cincin, jam)"
+		},
+		"024-tsukeru": {
+			"id": "00312024",
+			"romaji": "tsukeru",
+			"kanji": "つける",
+			"furigana": "",
+			"indonesia": "Mengenakan (kalung, masker)"
+		},
+		"025-kakeru": {
+			"id": "00312025",
+			"romaji": "kakeru",
+			"kanji": "かける",
+			"furigana": "",
+			"indonesia": "Mengenakan (kacamata)"
+		},
+		"026-hazusu-toru": {
+			"id": "00312026",
+			"romaji": "hazusu/toru",
+			"kanji": "はずす/とる",
+			"furigana": "",
+			"indonesia": "Lepaskan, tanggalkan (dasi, syal, sarung tangan, cincin, jam tangan, kalung, kacamata, masker)"
+		},
+		"027-hadena": {
+			"id": "00312027",
+			"romaji": "hadena",
+			"kanji": "派手な",
+			"furigana": "はでな",
+			"indonesia": "Mencolok"
+		},
+		"028-jimina": {
+			"id": "00312028",
+			"romaji": "jimina",
+			"kanji": "地味な",
+			"furigana": "じみな",
+			"indonesia": "Tidak mencolok"
+		},
+		"029-sinpuruna": {
+			"id": "00312029",
+			"romaji": "sinpuruna",
+			"kanji": "シンプルな",
+			"furigana": "しんぷるな",
+			"indonesia": "Sederhana, simpel"
+		},
+		"030-osharena": {
+			"id": "00312030",
+			"romaji": "osharena",
+			"kanji": "おしゃれな",
+			"furigana": "",
+			"indonesia": "Modis, keren"
+		},
+		"031-jouhinna": {
+			"id": "00312031",
+			"romaji": "jouhinna",
+			"kanji": "上品な",
+			"furigana": "じょうひんな",
+			"indonesia": "Elegan, anggun"
+		},
+		"032-saizu": {
+			"id": "00312032",
+			"romaji": "saizu",
+			"kanji": "サイズ",
+			"furigana": "さいず",
+			"indonesia": "Ukuran"
+		}
+	},
     "001-みんなの日本語「第01課」": {
       "001-watashi": {
         "furigana": "わたし",
@@ -4585,8 +5058,8 @@
         "romaji": "kenkoku kinen no hi",
         "id": "001-05-062"
       },
-      "063-shunbinnohi": {
-        "furigana": "しゅんびんのひ",
+      "063-shunbunnohi": {
+        "furigana": "しゅんぶんのひ",
         "indonesia": "Hari Equinox Musim Semi",
         "kanji": "春分の日",
         "romaji": "shunbun no hi",
@@ -8436,7 +8909,7 @@
         "romaji": "tsukemasu",
         "kanji": "点けます、付けます、着けます",
         "furigana": "つけます、つけます、つけます、",
-        "indonesia": "Menyalakan, menghidupkan (lampu, listrik, api, dll.), memasang, menempelkan (aksesori, parfum, dll.), mengenakan (pakaian, sabuk, dll)",
+        "indonesia": "Menyalakan, menghidupkan (lampu, listrik, api, dll.), memasang, menempelkan (aksesori, parfum, dll.), mengenakan (Kalung, anting, sabuk, dll)",
         "id": "001-14-001"
       },
       "002-keshimasu": {
