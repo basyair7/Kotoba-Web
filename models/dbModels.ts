@@ -1,10 +1,10 @@
 // models/dbModels.ts
 // deno-lint-ignore-file no-explicit-any
-import { Firebase, FirestoreDB, firebaseConfig_1 } from "../database/index.ts";
+import { Firebase, FirestoreDB, firebaseConfig } from "../database/index.ts";
 import { path_RBDB, path_Collection } from "../database/firebaseKeys/path.ts";
 
 export class dbModelsRealtime {
-  private static firebase: Firebase = new Firebase(firebaseConfig_1);
+  private static firebase: Firebase = new Firebase(firebaseConfig);
 
   static async getAll(): Promise<any> {
     try {
@@ -26,7 +26,7 @@ export class dbModelsRealtime {
 }
 
 export class dbModelsFirestore {
-  private static firestore = new FirestoreDB(firebaseConfig_1);
+  private static firestore = new FirestoreDB(firebaseConfig);
 
   static async getAll(): Promise<any> {
     try {

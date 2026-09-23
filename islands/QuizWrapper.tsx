@@ -2,7 +2,7 @@
 // islands/QuizWrapper.tsx
 import { useState, useEffect } from "preact/hooks";
 import QuizGame from "./QuizGame.tsx";
-import firebaseConfig from "../database/firebaseKeys/serviceAccount.ts";
+import { firebaseConfig } from "../database/firebaseKeys/serviceAccount.ts";
 import { useTheme } from "../hooks/useTheme.ts";
 import ThemeToggle from "../components/ThemeToggle.tsx";
 

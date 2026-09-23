@@ -8,12 +8,18 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $quiz from "./routes/quiz.tsx";
+import * as $test_sim_1 from "./routes/test-sim-1.tsx";
+import * as $test_sim_2 from "./routes/test-sim-2.tsx";
 import * as $test from "./routes/test.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $KotobaList from "./islands/KotobaList.tsx";
 import * as $KotobaWrapper from "./islands/KotobaWrapper.tsx";
 import * as $QuizGame from "./islands/QuizGame.tsx";
 import * as $QuizWrapper from "./islands/QuizWrapper.tsx";
+import * as $TestSim1 from "./islands/TestSim1.tsx";
+import * as $TestSim2 from "./islands/TestSim2.tsx";
+import * as $TestSimWrapper1 from "./islands/TestSimWrapper1.tsx";
+import * as $TestSimWrapper2 from "./islands/TestSimWrapper2.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -24,6 +30,8 @@ const manifest = {
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/quiz.tsx": $quiz,
+    "./routes/test-sim-1.tsx": $test_sim_1,
+    "./routes/test-sim-2.tsx": $test_sim_2,
     "./routes/test.tsx": $test,
   },
   islands: {
@@ -32,6 +40,10 @@ const manifest = {
     "./islands/KotobaWrapper.tsx": $KotobaWrapper,
     "./islands/QuizGame.tsx": $QuizGame,
     "./islands/QuizWrapper.tsx": $QuizWrapper,
+    "./islands/TestSim1.tsx": $TestSim1,
+    "./islands/TestSim2.tsx": $TestSim2,
+    "./islands/TestSimWrapper1.tsx": $TestSimWrapper1,
+    "./islands/TestSimWrapper2.tsx": $TestSimWrapper2,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
